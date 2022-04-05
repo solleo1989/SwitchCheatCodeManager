@@ -70,7 +70,8 @@ namespace SwitchCheatCodeManager.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This application is designed and written by solleo1989. You can check the releases as:.
+        ///   Looks up a localized string similar to This application is designed and written by solleo1989. 
+        ///	You can check the releases at:.
         /// </summary>
         public static string ABOUT_FORM_MESSAGE_TEXT {
             get {
@@ -111,6 +112,15 @@ namespace SwitchCheatCodeManager.Properties {
         public static string BuildIdLabel_Text {
             get {
                 return ResourceManager.GetString("BuildIdLabel_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Images.
+        /// </summary>
+        public static string ChoosePreviewImagesOpenDialogue_Title {
+            get {
+                return ResourceManager.GetString("ChoosePreviewImagesOpenDialogue_Title", resourceCulture);
             }
         }
         
@@ -237,6 +247,24 @@ namespace SwitchCheatCodeManager.Properties {
         public static string DEFAULT_CONFIRM_MESSAGE_FOR_FORMAT_FILE_NAMES {
             get {
                 return ResourceManager.GetString("DEFAULT_CONFIRM_MESSAGE_FOR_FORMAT_FILE_NAMES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to remove current game folder: {0}?.
+        /// </summary>
+        public static string DEFAULT_CONFIRM_MESSAGE_TO_REMOVE_CURRENT_CHEAT_FOLDER {
+            get {
+                return ResourceManager.GetString("DEFAULT_CONFIRM_MESSAGE_TO_REMOVE_CURRENT_CHEAT_FOLDER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to remove this selected cheat file: {0}?.
+        /// </summary>
+        public static string DEFAULT_CONFIRM_MESSAGE_TO_REMOVE_SELECTED_CHEAT {
+            get {
+                return ResourceManager.GetString("DEFAULT_CONFIRM_MESSAGE_TO_REMOVE_SELECTED_CHEAT", resourceCulture);
             }
         }
         
@@ -446,6 +474,51 @@ namespace SwitchCheatCodeManager.Properties {
         public static string DEFAULT_INVALID_DIRECTORY_MESSAGE {
             get {
                 return ResourceManager.GetString("DEFAULT_INVALID_DIRECTORY_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} cheat(s).
+        /// </summary>
+        public static string DEFAULT_NUMBER_OF_CHEATS_LOADED_LABEL {
+            get {
+                return ResourceManager.GetString("DEFAULT_NUMBER_OF_CHEATS_LOADED_LABEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current folder is invalid, please refresh your game folder!.
+        /// </summary>
+        public static string DEFAULT_REMOVE_CURRENT_GAME_FOLDER_ERROR_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_REMOVE_CURRENT_GAME_FOLDER_ERROR_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game folder has been removed!.
+        /// </summary>
+        public static string DEFAULT_REMOVE_CURRENT_GAME_FOLDER_SUCCESS_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_REMOVE_CURRENT_GAME_FOLDER_SUCCESS_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current selected cheat file is invalid, please refresh your list!.
+        /// </summary>
+        public static string DEFAULT_REMOVE_SELECTED_CHEAT_FILE_ERROR_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_REMOVE_SELECTED_CHEAT_FILE_ERROR_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cheat has been removed!.
+        /// </summary>
+        public static string DEFAULT_REMOVE_SELECTED_CHEAT_FILE_SUCCESS_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_REMOVE_SELECTED_CHEAT_FILE_SUCCESS_MESSAGE", resourceCulture);
             }
         }
         
@@ -945,6 +1018,24 @@ namespace SwitchCheatCodeManager.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Remove Selected Cheat.
+        /// </summary>
+        public static string RemoveCheatButton_Text {
+            get {
+                return ResourceManager.GetString("RemoveCheatButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove Current Cheat Folder.
+        /// </summary>
+        public static string RemoveFolderButton_Text {
+            get {
+                return ResourceManager.GetString("RemoveFolderButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Save a Text File.
         /// </summary>
         public static string SAVE_DIALOGUE_TITLE {
@@ -999,7 +1090,7 @@ namespace SwitchCheatCodeManager.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Convert.
+        ///   Looks up a localized string similar to Format.
         /// </summary>
         public static string UpdateButton_Text {
             get {

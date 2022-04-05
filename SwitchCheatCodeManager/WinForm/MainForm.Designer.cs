@@ -51,24 +51,26 @@ namespace SwitchCheatCodeManager.WinForm
             this.ToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PathGroupBox = new System.Windows.Forms.GroupBox();
-            this.FilterTextBox = new System.Windows.Forms.TextBox();
             this.PathTextBox = new SwitchCheatCodeManager.FormEntity.TextBoxEx();
+            this.FilterTextBox = new System.Windows.Forms.TextBox();
+            this.GameListComboBox = new SwitchCheatCodeManager.FormEntity.ComboBoxEx();
             this.OpenFolderButton = new System.Windows.Forms.Button();
             this.IconImageList = new System.Windows.Forms.ImageList(this.components);
-            this.GameListComboBox = new SwitchCheatCodeManager.FormEntity.ComboBoxEx();
             this.GameNameGroupBox = new System.Windows.Forms.GroupBox();
-            this.GameDBTidTextBox = new System.Windows.Forms.TextBox();
-            this.CopyFolderButton = new System.Windows.Forms.Button();
-            this.VersionFileModeUpdateButton = new System.Windows.Forms.Button();
             this.GameNameTextBox = new SwitchCheatCodeManager.FormEntity.TextBoxEx();
+            this.VersionFileModeUpdateButton = new System.Windows.Forms.Button();
+            this.GameDBTidTextBox = new System.Windows.Forms.TextBox();
             this.GameDBNameTextBox = new System.Windows.Forms.TextBox();
+            this.CopyFolderButton = new System.Windows.Forms.Button();
             this.CodeModifierGroupBox = new System.Windows.Forms.GroupBox();
             this.CodeSelectorGroupBox = new System.Windows.Forms.GroupBox();
             this.PreviewImage = new System.Windows.Forms.PictureBox();
             this.CodeSelectorListBox = new SwitchCheatCodeManager.FormEntity.ListBoxEx();
+            this.NumOfCheatsLabel = new System.Windows.Forms.Label();
             this.AscendingOrderButton = new System.Windows.Forms.Button();
             this.DescendingOrderButton = new System.Windows.Forms.Button();
             this.InsertNewCheatButton = new System.Windows.Forms.Button();
+            this.RemoveCheatButton = new System.Windows.Forms.Button();
             this.FormatFilesButton = new System.Windows.Forms.Button();
             this.CodeEditorGroupBox = new System.Windows.Forms.GroupBox();
             this.CodeStatusLabel = new System.Windows.Forms.Label();
@@ -82,13 +84,13 @@ namespace SwitchCheatCodeManager.WinForm
             this.NewBlockButton = new System.Windows.Forms.Button();
             this.UpdateButton = new System.Windows.Forms.Button();
             this.SubCheatsGroupBox = new System.Windows.Forms.GroupBox();
-            this.CodeModifiedTextBox = new SwitchCheatCodeManager.FormEntity.TextAreaEx();
             this.SaveFormatedButton = new System.Windows.Forms.Button();
             this.NavigationFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.DefaultFileButton = new System.Windows.Forms.Button();
             this.NavigationImageList = new System.Windows.Forms.ImageList(this.components);
             this.OpenFileButton = new System.Windows.Forms.Button();
             this.InsertNewCheatsButton = new System.Windows.Forms.Button();
+            this.RemoveFolderButton = new System.Windows.Forms.Button();
             this.StatusStrip = new System.Windows.Forms.StatusStrip();
             this.InputFolderPathLabelToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.OutputFolderPathLabelToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
@@ -223,26 +225,16 @@ namespace SwitchCheatCodeManager.WinForm
             // 
             // PathGroupBox
             // 
-            this.PathGroupBox.Controls.Add(this.FilterTextBox);
             this.PathGroupBox.Controls.Add(this.PathTextBox);
-            this.PathGroupBox.Controls.Add(this.OpenFolderButton);
+            this.PathGroupBox.Controls.Add(this.FilterTextBox);
             this.PathGroupBox.Controls.Add(this.GameListComboBox);
+            this.PathGroupBox.Controls.Add(this.OpenFolderButton);
             this.PathGroupBox.Location = new System.Drawing.Point(38, 107);
             this.PathGroupBox.Name = "PathGroupBox";
             this.PathGroupBox.Size = new System.Drawing.Size(1838, 90);
             this.PathGroupBox.TabIndex = 2;
             this.PathGroupBox.TabStop = false;
             this.PathGroupBox.Text = "Path";
-            // 
-            // FilterTextBox
-            // 
-            this.FilterTextBox.Enabled = false;
-            this.FilterTextBox.Location = new System.Drawing.Point(700, 33);
-            this.FilterTextBox.Name = "FilterTextBox";
-            this.FilterTextBox.PlaceholderText = global::SwitchCheatCodeManager.Properties.Resources.KeywordSearchPlaceholderText;
-            this.FilterTextBox.Size = new System.Drawing.Size(140, 35);
-            this.FilterTextBox.TabIndex = 4;
-            this.FilterTextBox.TextChanged += new System.EventHandler(this.FilterTextBox_TextChanged);
             // 
             // PathTextBox
             // 
@@ -254,11 +246,34 @@ namespace SwitchCheatCodeManager.WinForm
             this.PathTextBox.TabIndex = 2;
             this.PathTextBox.WordWrap = false;
             // 
+            // FilterTextBox
+            // 
+            this.FilterTextBox.Enabled = false;
+            this.FilterTextBox.Location = new System.Drawing.Point(700, 33);
+            this.FilterTextBox.Name = "FilterTextBox";
+            this.FilterTextBox.PlaceholderText = global::SwitchCheatCodeManager.Properties.Resources.KeywordSearchPlaceholderText;
+            this.FilterTextBox.Size = new System.Drawing.Size(140, 35);
+            this.FilterTextBox.TabIndex = 4;
+            this.FilterTextBox.TextChanged += new System.EventHandler(this.FilterTextBox_TextChanged);
+            // 
+            // GameListComboBox
+            // 
+            this.GameListComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.GameListComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GameListComboBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.GameListComboBox.FormattingEnabled = true;
+            this.GameListComboBox.ItemHeight = 30;
+            this.GameListComboBox.Location = new System.Drawing.Point(855, 35);
+            this.GameListComboBox.Name = "GameListComboBox";
+            this.GameListComboBox.Size = new System.Drawing.Size(810, 36);
+            this.GameListComboBox.TabIndex = 3;
+            this.GameListComboBox.SelectedIndexChanged += new System.EventHandler(this.GameListComboBox_SelectedIndexChanged);
+            // 
             // OpenFolderButton
             // 
             this.OpenFolderButton.Enabled = false;
             this.OpenFolderButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.OpenFolderButton.ImageIndex = 8;
+            this.OpenFolderButton.ImageKey = "Open3.png";
             this.OpenFolderButton.ImageList = this.IconImageList;
             this.OpenFolderButton.Location = new System.Drawing.Point(1685, 31);
             this.OpenFolderButton.Name = "OpenFolderButton";
@@ -289,27 +304,17 @@ namespace SwitchCheatCodeManager.WinForm
             this.IconImageList.Images.SetKeyName(11, "Save.png");
             this.IconImageList.Images.SetKeyName(12, "Settings.png");
             this.IconImageList.Images.SetKeyName(13, "Up2.png");
-            // 
-            // GameListComboBox
-            // 
-            this.GameListComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.GameListComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.GameListComboBox.Font = new System.Drawing.Font("Ubuntu Mono", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.GameListComboBox.FormattingEnabled = true;
-            this.GameListComboBox.ItemHeight = 30;
-            this.GameListComboBox.Location = new System.Drawing.Point(855, 35);
-            this.GameListComboBox.Name = "GameListComboBox";
-            this.GameListComboBox.Size = new System.Drawing.Size(810, 36);
-            this.GameListComboBox.TabIndex = 3;
-            this.GameListComboBox.SelectedIndexChanged += new System.EventHandler(this.GameListComboBox_SelectedIndexChanged);
+            this.IconImageList.Images.SetKeyName(14, "Remove.png");
+            this.IconImageList.Images.SetKeyName(15, "Open3.png");
+            this.IconImageList.Images.SetKeyName(16, "Save3.png");
             // 
             // GameNameGroupBox
             // 
-            this.GameNameGroupBox.Controls.Add(this.GameDBTidTextBox);
-            this.GameNameGroupBox.Controls.Add(this.CopyFolderButton);
-            this.GameNameGroupBox.Controls.Add(this.VersionFileModeUpdateButton);
             this.GameNameGroupBox.Controls.Add(this.GameNameTextBox);
+            this.GameNameGroupBox.Controls.Add(this.VersionFileModeUpdateButton);
+            this.GameNameGroupBox.Controls.Add(this.GameDBTidTextBox);
             this.GameNameGroupBox.Controls.Add(this.GameDBNameTextBox);
+            this.GameNameGroupBox.Controls.Add(this.CopyFolderButton);
             this.GameNameGroupBox.Location = new System.Drawing.Point(38, 201);
             this.GameNameGroupBox.Name = "GameNameGroupBox";
             this.GameNameGroupBox.Size = new System.Drawing.Size(1838, 90);
@@ -317,37 +322,21 @@ namespace SwitchCheatCodeManager.WinForm
             this.GameNameGroupBox.TabStop = false;
             this.GameNameGroupBox.Text = "Name";
             // 
-            // GameDBTidTextBox
+            // GameNameTextBox
             // 
-            this.GameDBTidTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.GameDBTidTextBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.GameDBTidTextBox.Location = new System.Drawing.Point(855, 33);
-            this.GameDBTidTextBox.Name = "GameDBTidTextBox";
-            this.GameDBTidTextBox.ReadOnly = true;
-            this.GameDBTidTextBox.Size = new System.Drawing.Size(225, 35);
-            this.GameDBTidTextBox.TabIndex = 6;
-            // 
-            // CopyFolderButton
-            // 
-            this.CopyFolderButton.Enabled = false;
-            this.CopyFolderButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.CopyFolderButton.ImageIndex = 3;
-            this.CopyFolderButton.ImageList = this.IconImageList;
-            this.CopyFolderButton.Location = new System.Drawing.Point(1685, 27);
-            this.CopyFolderButton.Name = "CopyFolderButton";
-            this.CopyFolderButton.Size = new System.Drawing.Size(135, 50);
-            this.CopyFolderButton.TabIndex = 4;
-            this.CopyFolderButton.Text = global::SwitchCheatCodeManager.Properties.Resources.CopyFolderButton_Text;
-            this.CopyFolderButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ToolTip.SetToolTip(this.CopyFolderButton, global::SwitchCheatCodeManager.Properties.Resources.CopyFolderButton_Tooltip_Text);
-            this.CopyFolderButton.UseVisualStyleBackColor = true;
-            this.CopyFolderButton.Click += new System.EventHandler(this.CopyFolderButton_Click);
+            this.GameNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.GameNameTextBox.Location = new System.Drawing.Point(10, 33);
+            this.GameNameTextBox.Margin = new System.Windows.Forms.Padding(33);
+            this.GameNameTextBox.Name = "GameNameTextBox";
+            this.GameNameTextBox.Size = new System.Drawing.Size(680, 38);
+            this.GameNameTextBox.TabIndex = 2;
+            this.GameNameTextBox.TextChanged += new System.EventHandler(this.GameNameTextBox_TextChanged);
             // 
             // VersionFileModeUpdateButton
             // 
             this.VersionFileModeUpdateButton.Enabled = false;
             this.VersionFileModeUpdateButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.VersionFileModeUpdateButton.ImageIndex = 12;
+            this.VersionFileModeUpdateButton.ImageKey = "Settings.png";
             this.VersionFileModeUpdateButton.ImageList = this.IconImageList;
             this.VersionFileModeUpdateButton.Location = new System.Drawing.Point(700, 27);
             this.VersionFileModeUpdateButton.Margin = new System.Windows.Forms.Padding(4);
@@ -360,15 +349,15 @@ namespace SwitchCheatCodeManager.WinForm
             this.VersionFileModeUpdateButton.UseVisualStyleBackColor = true;
             this.VersionFileModeUpdateButton.Click += new System.EventHandler(this.VersionFileModeUpdateButton_Click);
             // 
-            // GameNameTextBox
+            // GameDBTidTextBox
             // 
-            this.GameNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.GameNameTextBox.Location = new System.Drawing.Point(10, 33);
-            this.GameNameTextBox.Margin = new System.Windows.Forms.Padding(33);
-            this.GameNameTextBox.Name = "GameNameTextBox";
-            this.GameNameTextBox.Size = new System.Drawing.Size(680, 38);
-            this.GameNameTextBox.TabIndex = 2;
-            this.GameNameTextBox.TextChanged += new System.EventHandler(this.GameNameTextBox_TextChanged);
+            this.GameDBTidTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.GameDBTidTextBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.GameDBTidTextBox.Location = new System.Drawing.Point(855, 33);
+            this.GameDBTidTextBox.Name = "GameDBTidTextBox";
+            this.GameDBTidTextBox.ReadOnly = true;
+            this.GameDBTidTextBox.Size = new System.Drawing.Size(225, 35);
+            this.GameDBTidTextBox.TabIndex = 6;
             // 
             // GameDBNameTextBox
             // 
@@ -379,6 +368,22 @@ namespace SwitchCheatCodeManager.WinForm
             this.GameDBNameTextBox.ReadOnly = true;
             this.GameDBNameTextBox.Size = new System.Drawing.Size(585, 35);
             this.GameDBNameTextBox.TabIndex = 5;
+            // 
+            // CopyFolderButton
+            // 
+            this.CopyFolderButton.Enabled = false;
+            this.CopyFolderButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CopyFolderButton.ImageKey = "Save3.png";
+            this.CopyFolderButton.ImageList = this.IconImageList;
+            this.CopyFolderButton.Location = new System.Drawing.Point(1685, 27);
+            this.CopyFolderButton.Name = "CopyFolderButton";
+            this.CopyFolderButton.Size = new System.Drawing.Size(135, 50);
+            this.CopyFolderButton.TabIndex = 4;
+            this.CopyFolderButton.Text = global::SwitchCheatCodeManager.Properties.Resources.CopyFolderButton_Text;
+            this.CopyFolderButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ToolTip.SetToolTip(this.CopyFolderButton, global::SwitchCheatCodeManager.Properties.Resources.CopyFolderButton_Tooltip_Text);
+            this.CopyFolderButton.UseVisualStyleBackColor = true;
+            this.CopyFolderButton.Click += new System.EventHandler(this.CopyFolderButton_Click);
             // 
             // CodeModifierGroupBox
             // 
@@ -393,16 +398,18 @@ namespace SwitchCheatCodeManager.WinForm
             // 
             this.CodeSelectorGroupBox.Controls.Add(this.PreviewImage);
             this.CodeSelectorGroupBox.Controls.Add(this.CodeSelectorListBox);
+            this.CodeSelectorGroupBox.Controls.Add(this.NumOfCheatsLabel);
             this.CodeSelectorGroupBox.Controls.Add(this.AscendingOrderButton);
             this.CodeSelectorGroupBox.Controls.Add(this.DescendingOrderButton);
             this.CodeSelectorGroupBox.Controls.Add(this.InsertNewCheatButton);
+            this.CodeSelectorGroupBox.Controls.Add(this.RemoveCheatButton);
             this.CodeSelectorGroupBox.Controls.Add(this.FormatFilesButton);
             this.CodeSelectorGroupBox.Location = new System.Drawing.Point(38, 285);
             this.CodeSelectorGroupBox.Name = "CodeSelectorGroupBox";
-            this.CodeSelectorGroupBox.Size = new System.Drawing.Size(372, 918);
+            this.CodeSelectorGroupBox.Size = new System.Drawing.Size(372, 968);
             this.CodeSelectorGroupBox.TabIndex = 3;
             this.CodeSelectorGroupBox.TabStop = false;
-            this.CodeSelectorGroupBox.Text = Resources.CodeSelectorGroupBox_Text;
+            this.CodeSelectorGroupBox.Text = "Cheats";
             // 
             // PreviewImage
             // 
@@ -419,24 +426,34 @@ namespace SwitchCheatCodeManager.WinForm
             // 
             this.CodeSelectorListBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CodeSelectorListBox.Enabled = false;
-            this.CodeSelectorListBox.Font = new System.Drawing.Font("Ubuntu Mono", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CodeSelectorListBox.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CodeSelectorListBox.FormattingEnabled = true;
             this.CodeSelectorListBox.ItemHeight = 30;
             this.CodeSelectorListBox.Location = new System.Drawing.Point(10, 404);
             this.CodeSelectorListBox.Margin = new System.Windows.Forms.Padding(24);
             this.CodeSelectorListBox.Name = "CodeSelectorListBox";
             this.CodeSelectorListBox.ScrollAlwaysVisible = true;
-            this.CodeSelectorListBox.Size = new System.Drawing.Size(350, 424);
+            this.CodeSelectorListBox.Size = new System.Drawing.Size(350, 454);
             this.CodeSelectorListBox.TabIndex = 3;
             this.CodeSelectorListBox.SelectedIndexChanged += new System.EventHandler(this.CodeSelectorListBox_SelectedIndexChanged);
             this.CodeSelectorListBox.DoubleClick += new System.EventHandler(this.CodeSelectorListBox_DoubleClick);
             // 
+            // NumOfCheatsLabel
+            // 
+            this.NumOfCheatsLabel.AutoSize = true;
+            this.NumOfCheatsLabel.Location = new System.Drawing.Point(251, 863);
+            this.NumOfCheatsLabel.Name = "NumOfCheatsLabel";
+            this.NumOfCheatsLabel.Size = new System.Drawing.Size(109, 30);
+            this.NumOfCheatsLabel.TabIndex = 10;
+            this.NumOfCheatsLabel.Text = "";
+            this.NumOfCheatsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // AscendingOrderButton
             // 
             this.AscendingOrderButton.Enabled = false;
-            this.AscendingOrderButton.ImageIndex = 13;
+            this.AscendingOrderButton.ImageKey = "Up2.png";
             this.AscendingOrderButton.ImageList = this.IconImageList;
-            this.AscendingOrderButton.Location = new System.Drawing.Point(20, 850);
+            this.AscendingOrderButton.Location = new System.Drawing.Point(10, 900);
             this.AscendingOrderButton.Name = "AscendingOrderButton";
             this.AscendingOrderButton.Size = new System.Drawing.Size(60, 50);
             this.AscendingOrderButton.TabIndex = 8;
@@ -447,9 +464,9 @@ namespace SwitchCheatCodeManager.WinForm
             // DescendingOrderButton
             // 
             this.DescendingOrderButton.Enabled = false;
-            this.DescendingOrderButton.ImageIndex = 4;
+            this.DescendingOrderButton.ImageKey = "Down2.png";
             this.DescendingOrderButton.ImageList = this.IconImageList;
-            this.DescendingOrderButton.Location = new System.Drawing.Point(100, 850);
+            this.DescendingOrderButton.Location = new System.Drawing.Point(80, 900);
             this.DescendingOrderButton.Name = "DescendingOrderButton";
             this.DescendingOrderButton.Size = new System.Drawing.Size(60, 50);
             this.DescendingOrderButton.TabIndex = 7;
@@ -460,28 +477,39 @@ namespace SwitchCheatCodeManager.WinForm
             // InsertNewCheatButton
             // 
             this.InsertNewCheatButton.Enabled = false;
-            this.InsertNewCheatButton.ImageIndex = 0;
+            this.InsertNewCheatButton.ImageKey = "Add.png";
             this.InsertNewCheatButton.ImageList = this.IconImageList;
-            this.InsertNewCheatButton.Location = new System.Drawing.Point(180, 850);
+            this.InsertNewCheatButton.Location = new System.Drawing.Point(150, 900);
             this.InsertNewCheatButton.Margin = new System.Windows.Forms.Padding(4);
             this.InsertNewCheatButton.Name = "InsertNewCheatButton";
             this.InsertNewCheatButton.Size = new System.Drawing.Size(60, 50);
             this.InsertNewCheatButton.TabIndex = 5;
-            this.InsertNewCheatButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ToolTip.SetToolTip(this.InsertNewCheatButton, global::SwitchCheatCodeManager.Properties.Resources.InsertNewCheatButton_Text);
             this.InsertNewCheatButton.UseVisualStyleBackColor = true;
             this.InsertNewCheatButton.Click += new System.EventHandler(this.InsertNewCheatButton_Click);
             // 
+            // RemoveCheatButton
+            // 
+            this.RemoveCheatButton.Enabled = false;
+            this.RemoveCheatButton.ImageKey = "Remove.png";
+            this.RemoveCheatButton.ImageList = this.IconImageList;
+            this.RemoveCheatButton.Location = new System.Drawing.Point(220, 900);
+            this.RemoveCheatButton.Name = "RemoveCheatButton";
+            this.RemoveCheatButton.Size = new System.Drawing.Size(60, 50);
+            this.RemoveCheatButton.TabIndex = 9;
+            this.ToolTip.SetToolTip(this.RemoveCheatButton, global::SwitchCheatCodeManager.Properties.Resources.RemoveCheatButton_Text);
+            this.RemoveCheatButton.UseVisualStyleBackColor = true;
+            this.RemoveCheatButton.Click += new System.EventHandler(this.RemoveCheatButton_Click);
+            // 
             // FormatFilesButton
             // 
             this.FormatFilesButton.Enabled = false;
-            this.FormatFilesButton.ImageIndex = 5;
+            this.FormatFilesButton.ImageKey = "Format.png";
             this.FormatFilesButton.ImageList = this.IconImageList;
-            this.FormatFilesButton.Location = new System.Drawing.Point(260, 850);
+            this.FormatFilesButton.Location = new System.Drawing.Point(290, 900);
             this.FormatFilesButton.Name = "FormatFilesButton";
             this.FormatFilesButton.Size = new System.Drawing.Size(60, 50);
             this.FormatFilesButton.TabIndex = 5;
-            this.FormatFilesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ToolTip.SetToolTip(this.FormatFilesButton, global::SwitchCheatCodeManager.Properties.Resources.FormatFilesButton_Text);
             this.FormatFilesButton.UseVisualStyleBackColor = true;
             this.FormatFilesButton.Click += new System.EventHandler(this.FormatFilesButton_Click);
@@ -500,7 +528,7 @@ namespace SwitchCheatCodeManager.WinForm
             this.CodeEditorGroupBox.Controls.Add(this.UpdateButton);
             this.CodeEditorGroupBox.Location = new System.Drawing.Point(418, 285);
             this.CodeEditorGroupBox.Name = "CodeEditorGroupBox";
-            this.CodeEditorGroupBox.Size = new System.Drawing.Size(675, 918);
+            this.CodeEditorGroupBox.Size = new System.Drawing.Size(675, 968);
             this.CodeEditorGroupBox.TabIndex = 4;
             this.CodeEditorGroupBox.TabStop = false;
             this.CodeEditorGroupBox.Text = "Cheats";
@@ -556,10 +584,9 @@ namespace SwitchCheatCodeManager.WinForm
             // CodeTextBox
             // 
             this.CodeTextBox.Enabled = false;
-            this.CodeTextBox.Font = new System.Drawing.Font("Ubuntu Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CodeTextBox.Location = new System.Drawing.Point(10, 75);
             this.CodeTextBox.Name = "CodeTextBox";
-            this.CodeTextBox.Size = new System.Drawing.Size(630, 768);
+            this.CodeTextBox.Size = new System.Drawing.Size(630, 818);
             this.CodeTextBox.TabIndex = 4;
             this.CodeTextBox.Text = "";
             // 
@@ -567,9 +594,9 @@ namespace SwitchCheatCodeManager.WinForm
             // 
             this.SaveOriginalButton.Enabled = false;
             this.SaveOriginalButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.SaveOriginalButton.ImageIndex = 11;
+            this.SaveOriginalButton.ImageKey = "Save.png";
             this.SaveOriginalButton.ImageList = this.IconImageList;
-            this.SaveOriginalButton.Location = new System.Drawing.Point(10, 854);
+            this.SaveOriginalButton.Location = new System.Drawing.Point(10, 904);
             this.SaveOriginalButton.Name = "SaveOriginalButton";
             this.SaveOriginalButton.Size = new System.Drawing.Size(135, 50);
             this.SaveOriginalButton.TabIndex = 6;
@@ -583,9 +610,9 @@ namespace SwitchCheatCodeManager.WinForm
             // 
             this.CopyFileButton.Enabled = false;
             this.CopyFileButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.CopyFileButton.ImageIndex = 9;
+            this.CopyFileButton.ImageKey = "Overwrite.png";
             this.CopyFileButton.ImageList = this.IconImageList;
-            this.CopyFileButton.Location = new System.Drawing.Point(160, 854);
+            this.CopyFileButton.Location = new System.Drawing.Point(160, 904);
             this.CopyFileButton.Name = "CopyFileButton";
             this.CopyFileButton.Size = new System.Drawing.Size(155, 50);
             this.CopyFileButton.TabIndex = 7;
@@ -599,9 +626,9 @@ namespace SwitchCheatCodeManager.WinForm
             // 
             this.NewBlockButton.Enabled = false;
             this.NewBlockButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.NewBlockButton.ImageIndex = 1;
+            this.NewBlockButton.ImageKey = "AddNew.png";
             this.NewBlockButton.ImageList = this.IconImageList;
-            this.NewBlockButton.Location = new System.Drawing.Point(330, 854);
+            this.NewBlockButton.Location = new System.Drawing.Point(330, 904);
             this.NewBlockButton.Name = "NewBlockButton";
             this.NewBlockButton.Size = new System.Drawing.Size(150, 50);
             this.NewBlockButton.TabIndex = 7;
@@ -615,9 +642,9 @@ namespace SwitchCheatCodeManager.WinForm
             // 
             this.UpdateButton.Enabled = false;
             this.UpdateButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.UpdateButton.ImageIndex = 2;
+            this.UpdateButton.ImageKey = "Convert.png";
             this.UpdateButton.ImageList = this.IconImageList;
-            this.UpdateButton.Location = new System.Drawing.Point(495, 854);
+            this.UpdateButton.Location = new System.Drawing.Point(495, 904);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(145, 50);
             this.UpdateButton.TabIndex = 5;
@@ -631,20 +658,10 @@ namespace SwitchCheatCodeManager.WinForm
             // 
             this.SubCheatsGroupBox.Location = new System.Drawing.Point(1103, 285);
             this.SubCheatsGroupBox.Name = "SubCheatsGroupBox";
-            this.SubCheatsGroupBox.Size = new System.Drawing.Size(775, 918);
+            this.SubCheatsGroupBox.Size = new System.Drawing.Size(775, 968);
             this.SubCheatsGroupBox.TabIndex = 4;
             this.SubCheatsGroupBox.TabStop = false;
             this.SubCheatsGroupBox.Text = "Cheat Sections";
-            // 
-            // CodeModifiedTextBox
-            // 
-            this.CodeModifiedTextBox.Enabled = false;
-            this.CodeModifiedTextBox.Font = new System.Drawing.Font("Ubuntu Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CodeModifiedTextBox.Location = new System.Drawing.Point(9, 75);
-            this.CodeModifiedTextBox.Name = "CodeModifiedTextBox";
-            this.CodeModifiedTextBox.Size = new System.Drawing.Size(630, 768);
-            this.CodeModifiedTextBox.TabIndex = 4;
-            this.CodeModifiedTextBox.Text = "";
             // 
             // SaveFormatedButton
             // 
@@ -661,6 +678,7 @@ namespace SwitchCheatCodeManager.WinForm
             this.NavigationFlowLayoutPanel.Controls.Add(this.DefaultFileButton);
             this.NavigationFlowLayoutPanel.Controls.Add(this.OpenFileButton);
             this.NavigationFlowLayoutPanel.Controls.Add(this.InsertNewCheatsButton);
+            this.NavigationFlowLayoutPanel.Controls.Add(this.RemoveFolderButton);
             this.NavigationFlowLayoutPanel.Location = new System.Drawing.Point(40, 41);
             this.NavigationFlowLayoutPanel.Name = "NavigationFlowLayoutPanel";
             this.NavigationFlowLayoutPanel.Size = new System.Drawing.Size(1838, 66);
@@ -669,7 +687,7 @@ namespace SwitchCheatCodeManager.WinForm
             // DefaultFileButton
             // 
             this.DefaultFileButton.Enabled = false;
-            this.DefaultFileButton.ImageIndex = 0;
+            this.DefaultFileButton.ImageKey = "Home.png";
             this.DefaultFileButton.ImageList = this.NavigationImageList;
             this.DefaultFileButton.Location = new System.Drawing.Point(3, 3);
             this.DefaultFileButton.Name = "DefaultFileButton";
@@ -687,10 +705,11 @@ namespace SwitchCheatCodeManager.WinForm
             this.NavigationImageList.Images.SetKeyName(0, "Home.png");
             this.NavigationImageList.Images.SetKeyName(1, "Open.png");
             this.NavigationImageList.Images.SetKeyName(2, "Open2.png");
+            this.NavigationImageList.Images.SetKeyName(3, "Remove2.png");
             // 
             // OpenFileButton
             // 
-            this.OpenFileButton.ImageIndex = 1;
+            this.OpenFileButton.ImageKey = "Open.png";
             this.OpenFileButton.ImageList = this.NavigationImageList;
             this.OpenFileButton.Location = new System.Drawing.Point(69, 3);
             this.OpenFileButton.Name = "OpenFileButton";
@@ -703,7 +722,7 @@ namespace SwitchCheatCodeManager.WinForm
             // InsertNewCheatsButton
             // 
             this.InsertNewCheatsButton.Enabled = false;
-            this.InsertNewCheatsButton.ImageIndex = 2;
+            this.InsertNewCheatsButton.ImageKey = "Open2.png";
             this.InsertNewCheatsButton.ImageList = this.NavigationImageList;
             this.InsertNewCheatsButton.Location = new System.Drawing.Point(135, 3);
             this.InsertNewCheatsButton.Name = "InsertNewCheatsButton";
@@ -713,13 +732,26 @@ namespace SwitchCheatCodeManager.WinForm
             this.InsertNewCheatsButton.UseVisualStyleBackColor = true;
             this.InsertNewCheatsButton.Click += new System.EventHandler(this.InsertNewCheatsButton_Click);
             // 
+            // RemoveFolderButton
+            // 
+            this.RemoveFolderButton.Enabled = false;
+            this.RemoveFolderButton.ImageKey = "Remove2.png";
+            this.RemoveFolderButton.ImageList = this.NavigationImageList;
+            this.RemoveFolderButton.Location = new System.Drawing.Point(201, 3);
+            this.RemoveFolderButton.Name = "RemoveFolderButton";
+            this.RemoveFolderButton.Size = new System.Drawing.Size(60, 60);
+            this.RemoveFolderButton.TabIndex = 3;
+            this.ToolTip.SetToolTip(this.RemoveFolderButton, global::SwitchCheatCodeManager.Properties.Resources.RemoveFolderButton_Text);
+            this.RemoveFolderButton.UseVisualStyleBackColor = true;
+            this.RemoveFolderButton.Click += new System.EventHandler(this.RemoveFolderButton_Click);
+            // 
             // StatusStrip
             // 
             this.StatusStrip.ImageScalingSize = new System.Drawing.Size(28, 28);
             this.StatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.InputFolderPathLabelToolStripStatusLabel,
             this.OutputFolderPathLabelToolStripStatusLabel});
-            this.StatusStrip.Location = new System.Drawing.Point(0, 1229);
+            this.StatusStrip.Location = new System.Drawing.Point(0, 1279);
             this.StatusStrip.Name = "StatusStrip";
             this.StatusStrip.Size = new System.Drawing.Size(1917, 43);
             this.StatusStrip.TabIndex = 5;
@@ -760,7 +792,7 @@ namespace SwitchCheatCodeManager.WinForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1917, 1272);
+            this.ClientSize = new System.Drawing.Size(1917, 1322);
             this.Controls.Add(this.StatusStrip);
             this.Controls.Add(this.NavigationFlowLayoutPanel);
             this.Controls.Add(this.MenuStrip);
@@ -781,6 +813,7 @@ namespace SwitchCheatCodeManager.WinForm
             this.GameNameGroupBox.ResumeLayout(false);
             this.GameNameGroupBox.PerformLayout();
             this.CodeSelectorGroupBox.ResumeLayout(false);
+            this.CodeSelectorGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PreviewImage)).EndInit();
             this.CodeEditorGroupBox.ResumeLayout(false);
             this.CodeEditorGroupBox.PerformLayout();
@@ -793,7 +826,6 @@ namespace SwitchCheatCodeManager.WinForm
         }
 
         #endregion
-
 
         private MenuStrip MenuStrip;
         private ToolStripMenuItem FileToolStripMenuItem;
@@ -809,50 +841,69 @@ namespace SwitchCheatCodeManager.WinForm
         private ToolStripMenuItem HelpToolStripMenuItem;
         private ToolStripSeparator ToolStripSeparator2;
         private ToolStripMenuItem AboutToolStripMenuItem;
-        private ToolTip ToolTip;
-        private FormEntity.ListBoxEx CodeSelectorListBox;
-        private FormEntity.TextBoxEx GameNameTextBox;
-        private Label CodeStatusLabel;
-        private Label VersionLabel;
-        private TextBox VersionNumberTextBox;
-        private Button FormatFilesButton;
-        private Button InsertNewCheatButton;
-        private FormEntity.TextAreaEx CodeTextBox;
-        private FormEntity.TextAreaEx CodeModifiedTextBox;
-        private Button UpdateButton;
-        private Button SaveOriginalButton;
-        private Button SaveFormatedButton;
-        private GroupBox PathGroupBox;
-        private FormEntity.TextBoxEx PathTextBox;
-        private Button VersionFileModeUpdateButton;
-        private GroupBox CodeSelectorGroupBox;
-        private GroupBox CodeEditorGroupBox;
-        private GroupBox CodeModifierGroupBox;
-        private GroupBox SubCheatsGroupBox;
-        private GroupBox GameNameGroupBox;
-        private FormEntity.ComboBoxEx GameListComboBox;
-        private PictureBox PreviewImage;
-        private Button OpenFolderButton;
-        private Button CopyFolderButton;
-        private Button CopyFileButton;
-        private Button NewBlockButton;
-        private TextBox GameDBNameTextBox;
         private ImageList IconImageList;
-        private Button AscendingOrderButton;
-        private Button DescendingOrderButton;
+        private ImageList NavigationImageList;
+        private ImageList PreviewImageList;
+        private ToolTip ToolTip;
+
+        // NavigationFlowLayoutPanel
         private FlowLayoutPanel NavigationFlowLayoutPanel;
         private Button DefaultFileButton;
         private Button OpenFileButton;
-        private ImageList NavigationImageList;
-        private TextBox BuildIdTextBox;
-        private TextBox GameDBTidTextBox;
-        private Label BuildIdLabel;
+        private Button InsertNewCheatsButton;
+        private Button RemoveFolderButton;
+
+        // PathGroupBox
+        private GroupBox PathGroupBox;
+        private FormEntity.TextBoxEx PathTextBox;
         private TextBox FilterTextBox;
+        private FormEntity.ComboBoxEx GameListComboBox;
+        private Button OpenFolderButton;
+
+        // GameNameGroupBox
+        private GroupBox GameNameGroupBox;
+        private FormEntity.TextBoxEx GameNameTextBox;
+        private Button VersionFileModeUpdateButton;
+        private TextBox GameDBTidTextBox;
+        private TextBox GameDBNameTextBox;
+        private Button CopyFolderButton;
+
+        // CodeSelectorGroupBox
+        private GroupBox CodeSelectorGroupBox;
+        private PictureBox PreviewImage;
+        private FormEntity.ListBoxEx CodeSelectorListBox;
+        private Label NumOfCheatsLabel;
+        private Button AscendingOrderButton;
+        private Button DescendingOrderButton;
+        private Button InsertNewCheatButton;
+        private Button RemoveCheatButton;
+        private Button FormatFilesButton;
+
+        // CodeEditorGroupBox
+        private GroupBox CodeEditorGroupBox;
+        private Label CodeStatusLabel;
+        private Label BuildIdLabel;
+        private TextBox BuildIdTextBox;
+        private Label VersionLabel;
+        private TextBox VersionNumberTextBox;
+        private FormEntity.TextAreaEx CodeTextBox;
+        private Button SaveOriginalButton;
+        private Button CopyFileButton;
+        private Button NewBlockButton;
+        private Button UpdateButton;
+
+        // -Removed
+        private GroupBox CodeModifierGroupBox;
+        private FormEntity.TextAreaEx CodeModifiedTextBox;
+        private Button SaveFormatedButton;
+
+        // SubCheatsGroupBox
+        private GroupBox SubCheatsGroupBox;
+
+        // SwitchCheatCodeManager
         private StatusStrip StatusStrip;
         private ToolStripStatusLabel InputFolderPathLabelToolStripStatusLabel;
         private ToolStripStatusLabel OutputFolderPathLabelToolStripStatusLabel;
-        private Button InsertNewCheatsButton;
-        private ImageList PreviewImageList;
     }
 }
 

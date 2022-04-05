@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 using DirectoryMode = SwitchCheatCodeManager.Mode.EnumMode.DirectoryMode;
 
 namespace SwitchCheatCodeManager.Helper
@@ -42,14 +43,41 @@ namespace SwitchCheatCodeManager.Helper
         /// </summary>
         /// <param name="file"></param>
         /// <returns></returns>
-        public string GetInfoFileName(FileInfo file, int maxLength)
+        public string GetInfoFileName(FileInfo file)
         {
             var infoFileName = file != null ? " - " + GetTxtFileBuildId(file.Name) : string.Empty;
-            return (infoFileName.Length > 0 ? infoFileName.Substring(0, Math.Min(infoFileName.Length, maxLength)) : string.Empty);
+            if (infoFileName.Length == 0)
+            { 
+                return string.Empty;
+            }
+
+            return infoFileName.Length >= Constants.DEFAULT_DROPDOWNLIST_ITEM_MAX_LENGTH
+                ? infoFileName.Substring(0, Constants.DEFAULT_DROPDOWNLIST_ITEM_MAX_LENGTH - 3) + "..." 
+                : infoFileName;
         }
         public string GetTxtFileNameExtension(string filename) => !filename.EndsWith(Constants.TXT_FILE_SUFFIX)
             ? filename + Constants.TXT_FILE_SUFFIX : filename;
-        public string GetVersionNameSuffix(string version) => $" (v{ (version.Length <= 7 ? version : version.Substring(0, 7)) })";
+        public string GetVersionNameSuffix(string version)
+        {
+            if (version.Length <= 7)
+            { 
+                return $" (v{version})";
+            }
+            return $" (v{version.Substring(0, Constants.DEFAULT_SELECTORBOX_ITEM_MAX_LENGTH) + ".."}";
+        }
+
+        public string GetCorrectedFilename(string filename)
+        {
+            var correctedFilename = string.Empty;
+            foreach (char c in filename)
+            {
+                if (!Constants.FilenameIllegalChars.Contains(c))
+                {
+                    correctedFilename += c;
+                }   
+            }
+            return correctedFilename;
+        }
         #endregion
 
         /// <summary>

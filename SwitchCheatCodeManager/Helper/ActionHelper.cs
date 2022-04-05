@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
+using System.Windows.Forms;
 using System.IO;
 using System.Text;
 using SwitchCheatCodeManager.CheatCode;
+using Resources = SwitchCheatCodeManager.Properties.Resources;
 
 namespace SwitchCheatCodeManager.Helper
 {
@@ -27,9 +28,36 @@ namespace SwitchCheatCodeManager.Helper
         /// <param name="image"></param>
         public void OpenGameDirectoryFromImage(string path, Image image)
         {
-            if (image != null & !String.IsNullOrEmpty(path))
+            if (String.IsNullOrEmpty(path))
+            {
+                return;
+            }
+            else if (image != null)
             {
                 Process.Start("explorer.exe", path);
+            }
+            else
+            {
+                using (OpenFileDialog openFileDialog = new OpenFileDialog())
+                {
+                    openFileDialog.Filter = "Images (*.jpg;*.png;*.gif)|*.jpg;*.png;*.gif";// + "All files (*.*)|*.*";
+                    // Allow the user to select multiple images.
+                    openFileDialog.Multiselect = true;
+                    openFileDialog.Title = Resources.ChoosePreviewImagesOpenDialogue_Title;
+
+                    DialogResult dr = openFileDialog.ShowDialog();                    
+                    if (dr == System.Windows.Forms.DialogResult.OK)
+                    {
+                        MainHelper helper = new MainHelper();
+                        var gameDir = helper.GetDirectoryPath(path);
+                        // Read images files
+                        foreach (String file in openFileDialog.FileNames)
+                        {
+                            FileInfo fi = new FileInfo(file);
+                            fi.CopyTo(helper.GetPath(gameDir) + fi.Name);
+                        }
+                    }
+                }
             }
         }
 

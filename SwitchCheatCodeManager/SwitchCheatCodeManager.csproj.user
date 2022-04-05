@@ -4,6 +4,9 @@
     <Compile Update="FormEntity\InputBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Update="FormEntity\TextAreaEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Update="WinForm\AboutForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -27,6 +30,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Update="WinForm\MainForm.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>

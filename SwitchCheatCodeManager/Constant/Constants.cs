@@ -19,6 +19,10 @@ namespace SwitchCheatCodeManager.Constant
         public const int DEFAULT_GAMEID_MAX_LENGTH = 16;
         public const int DEFAULT_BUILDID_LENGTH = 16;
         public const int DEFAULT_CHEAT_FILE_NAME_LENGTH = 20;
+        public const int DEFAULT_TEXTBOX_CHARACTER_HEIGHT = 210;
+        public const int DEFAULT_TEXTBOX_CHARACTER_LINE_SPACING = 3;
+        public const int DEFAULT_DROPDOWNLIST_ITEM_MAX_LENGTH = 45;
+        public const int DEFAULT_SELECTORBOX_ITEM_MAX_LENGTH = 7;
         #endregion
 
         #region String
@@ -50,6 +54,41 @@ namespace SwitchCheatCodeManager.Constant
         #region Font
         public static Font DEFAULT_POPUP_DIALOGUE_TITLE_FONT = new Font("Arial", 14F, System.Drawing.FontStyle.Regular);
         public static Font DEFAULT_POPUP_DIALOGUE_TEXT_FONT = new Font("Arial", 9F, System.Drawing.FontStyle.Regular);
+
+        public static string Font_Arial = "Arial";
+        public static string Font_Ubuntu = "Ubuntu Mono";
+        public static string Font_Consolas = "Consolas";
+        public static string Font_MSYaHei = "Microsoft Yahei";      // SChinese Character
+        public static string Font_KaiTi = "KaiTi";                  // SChinese Character
+        public static string Font_MingLiu = "MingLiU";              // TChinese Character
+        public static string Font_MSGothic = "MS Gothic";           // Japanese Character
+        public static string Font_MSMincho = "MS Mincho";           // Japanese Character
         #endregion
+
+        /// <summary>
+        /// Illegal Filename Characters
+        /// Do not use any of these common illegal characters or symbols in your filenames or folders:
+        /// </summary>
+        public static ISet<char> FilenameIllegalChars = new HashSet<char>(){
+            //'#',    // pound
+            //'%',    // percent
+            //'&',    // ampersand
+            //'{',    // left curly bracket
+            //'}',    // right curly bracket
+            '|',    // vertical bar
+            '\\',   // back slash
+            '<',    // left angle bracket
+            '>',    // right angle bracket
+            '*',    // asterisk
+            '?',    // question mark
+            '/',    // forward slash
+                    // blank spaces
+            //'$',    // dollar sign
+            //'!',    // exclamation point
+            //'\'',   // single quotes
+            '\"',   // double quotes
+            ':',    //  colon
+            //'@'     // at sign@ 
+        };
     }
 }

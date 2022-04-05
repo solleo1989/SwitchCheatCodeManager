@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -16,6 +17,7 @@ namespace SwitchCheatCodeManager.CheatCode
         public bool HasMasterCodes;
         public bool HasSubCheats;
         public string ErrorLine;
+        public string FilePath;
 
         public CheatFile()
         {
@@ -23,12 +25,13 @@ namespace SwitchCheatCodeManager.CheatCode
             Legit = false;
             HasMasterCodes = false;
             HasSubCheats = false;
+            FilePath = null;
         }
 
-        public CheatFile(String code)
+        public CheatFile(String code, string filePath = null)
         {
             code = this.ProcessMasterCode(code);
-
+            this.FilePath = filePath;
             if (code.Contains("[--SectionStart:"))
             {
                 String[] subCheats = code.Split("[--SectionStart:");
