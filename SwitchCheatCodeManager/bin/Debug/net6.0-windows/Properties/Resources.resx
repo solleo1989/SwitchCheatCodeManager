@@ -268,6 +268,10 @@
     <value>Title not found</value>
     <comment>警示：当目标标题未被找到</comment>
   </data>
+  <data name="DEFAULT_INPUT_FOLDER_LABEL_TEXT" xml:space="preserve">
+    <value>Input folder: {0}</value>
+    <comment>标签 &gt; 默认输入{0路径}</comment>
+  </data>
   <data name="DEFAULT_INSERT_NEW_CHEATS_FOLDER_EXISTS_MESSAGE" xml:space="preserve">
     <value>New cheats folder already exists!</value>
     <comment>警告：该游戏金手指目录已经存在了！</comment>
@@ -311,6 +315,10 @@
   <data name="DEFAULT_NUMBER_OF_CHEATS_LOADED_LABEL" xml:space="preserve">
     <value>{0} cheat(s)</value>
     <comment>标签 &gt; 读取了{0}条金手指</comment>
+  </data>
+  <data name="DEFAULT_OUTPUT_FOLDER_LABEL_TEXT" xml:space="preserve">
+    <value>Output folder: {0}</value>
+    <comment>标签 &gt; 默认输出{0路径}</comment>
   </data>
   <data name="DEFAULT_REMOVE_CURRENT_GAME_FOLDER_ERROR_MESSAGE" xml:space="preserve">
     <value>Current folder is invalid, please refresh your game folder!</value>
@@ -517,7 +525,7 @@
   </data>
   <data name="NewBlockButton_Tooltip_Text" xml:space="preserve">
     <value>Insert a New SubSection Block</value>
-    <comment>按键 &gt; 插入新的分取组</comment>
+    <comment>按键 &gt; 插入新的分区组</comment>
   </data>
   <data name="OpenFileButton_Tooltip_Text" xml:space="preserve">
     <value>Open Cheat Files Folder</value>
@@ -567,6 +575,59 @@
     <value>Save a Text File</value>
     <comment>保存窗口标题</comment>
   </data>
+  <data name="SettingsForm_BackgroundColorGroupBox_Text" xml:space="preserve">
+    <value>Background Color</value>
+    <comment>设置 &gt; 区域 &gt; 背景颜色</comment>
+  </data>
+  <data name="SettingsForm_ColorSectionEndLabel_Text" xml:space="preserve">
+    <value>[--SectionEnd:Items--]</value>
+    <comment>设置 &gt; 颜色 &gt; 分区前背景</comment>
+  </data>
+  <data name="SettingsForm_ColorSectionStartLabel_Text" xml:space="preserve">
+    <value>[--SectionStart:Items--]</value>
+    <comment>设置 &gt; 颜色 &gt; 分区后背景</comment>
+  </data>
+  <data name="SettingsForm_ColorTitleLabel_Text" xml:space="preserve">
+    <value>Moonjump (press B)</value>
+    <comment>设置 &gt; 颜色 &gt; 标题</comment>
+  </data>
+  <data name="SettingsForm_DirectoryGroupBox_Text" xml:space="preserve">
+    <value>Directory</value>
+    <comment>设置 &gt; 路径 &gt; 标题</comment>
+  </data>
+  <data name="SettingsForm_InputPathButton_Text" xml:space="preserve">
+    <value>Select</value>
+    <comment>按键 &gt; 输入路径 &gt; 选择</comment>
+  </data>
+  <data name="SettingsForm_InputPathLabel_Text" xml:space="preserve">
+    <value>Select</value>
+    <comment>设置 &gt; 路径 &gt; 输入标签</comment>
+  </data>
+  <data name="SettingsForm_LanguageGroupBox_Text" xml:space="preserve">
+    <value>Language</value>
+    <comment>设置 &gt; 语言 &gt; 标题</comment>
+  </data>
+  <data name="SettingsForm_LanguageLabel_Text" xml:space="preserve">
+    <value>Language</value>
+    <comment>设置 &gt; 标签 &gt; 标签</comment>
+  </data>
+  <data name="SettingsForm_OutputPathButton_Text" xml:space="preserve">
+    <value>Select</value>
+    <comment>按键 &gt; 输出路径 &gt; 选择</comment>
+  </data>
+  <data name="SettingsForm_OutputPathLabel_Text" xml:space="preserve">
+    <value>Output Path</value>
+    <comment>设置 &gt; 路径 &gt; 输出标签</comment>
+  </data>
+  <data name="SettingsForm_PreferredImageLabel_Text" xml:space="preserve">
+    <value>Preferred
+	Image</value>
+    <comment>设置 &gt; 语言 &gt; 图片</comment>
+  </data>
+  <data name="SettingsForm_Title" xml:space="preserve">
+    <value>Settings</value>
+    <comment>设置 &gt; 标题</comment>
+  </data>
   <data name="StatusStrip_Text" xml:space="preserve">
     <value>Status Strip</value>
     <comment>状态条</comment>
@@ -611,6 +672,10 @@
     <value>Save (S)</value>
     <comment>按键 &gt; 保存当前金手指文件-版本</comment>
   </data>
+  <data name="VersionFileModeCreateButton_Text" xml:space="preserve">
+    <value>Create</value>
+    <comment>按键 &gt; 创建版本文件</comment>
+  </data>
   <data name="VersionFileModeEditButton_Text" xml:space="preserve">
     <value>Edit</value>
     <comment>按键 &gt; 修改版本文件</comment>
@@ -630,5 +695,9 @@
   <data name="VersionNumberTextBox_Text" xml:space="preserve">
     <value>N/A</value>
     <comment>输入 &gt; 版本号 (默认 N/A)</comment>
+  </data>
+  <data name="VERSION_FORM_TITLE" xml:space="preserve">
+    <value>Edit Version Index Form</value>
+    <comment>标题 &gt; 更新BID与版本序列</comment>
   </data>
 </root>

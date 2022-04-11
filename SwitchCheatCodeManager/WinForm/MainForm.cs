@@ -8,9 +8,11 @@ using SwitchCheatCodeManager.Properties;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 using DirectoryMode = SwitchCheatCodeManager.Mode.EnumMode.DirectoryMode;
 using VersionFileMode = SwitchCheatCodeManager.Mode.EnumMode.VersionFileMode;
@@ -41,6 +43,7 @@ namespace SwitchCheatCodeManager.WinForm
 
         private MainHelper Helper;
         private ActionHelper Action;
+        private CultureInfo CurrentCulture;
 
         public MainForm(
             MainHelper mainHelper,
@@ -48,9 +51,9 @@ namespace SwitchCheatCodeManager.WinForm
         {
             this.Helper = mainHelper;
             this.Action = actionHelper;
-
-            this.Configs = Helper.LoadDefinedPathsConfig();
-            
+            this.Configs = Action.LoadDefinedPathsConfig();
+            this.CurrentCulture = CultureInfo.GetCultureInfo(Helper.GetLcid(this.Configs.FormLanguage));
+            ResetCultureInfo();
             InitializeComponent();
             InitializeStatusBar();
         }
@@ -78,31 +81,31 @@ namespace SwitchCheatCodeManager.WinForm
                         OpenVersionIndexEditForm();
                         return true;
                     case Keys.D1:
-                        SelectCodeSelectorListBox(1);
+                        SelectCodeSelectorListBox(0);
                         return true;
                     case Keys.D2:
-                        SelectCodeSelectorListBox(2);
+                        SelectCodeSelectorListBox(1);
                         return true;
                     case Keys.D3:
-                        SelectCodeSelectorListBox(3);
+                        SelectCodeSelectorListBox(2);
                         return true;
                     case Keys.D4:
-                        SelectCodeSelectorListBox(4);
+                        SelectCodeSelectorListBox(3);
                         return true;
                     case Keys.D5:
-                        SelectCodeSelectorListBox(5);
+                        SelectCodeSelectorListBox(4);
                         return true;
                     case Keys.D6:
-                        SelectCodeSelectorListBox(6);
+                        SelectCodeSelectorListBox(5);
                         return true;
                     case Keys.D7:
-                        SelectCodeSelectorListBox(7);
+                        SelectCodeSelectorListBox(6);
                         return true;
                     case Keys.D8:
-                        SelectCodeSelectorListBox(8);
+                        SelectCodeSelectorListBox(7);
                         return true;
                     case Keys.D9:
-                        SelectCodeSelectorListBox(9);
+                        SelectCodeSelectorListBox(8);
                         return true;
 
                     default:
@@ -175,7 +178,7 @@ namespace SwitchCheatCodeManager.WinForm
         private void InitializeStatusBar()
         {
             InputFolderPathLabelToolStripStatusLabel.Text = 
-                Constants.DEFAULT_DEFAULT_INPUT_FOLDER_LABEL_TEXT + (String.IsNullOrEmpty(Configs.InputFolder)
+                string.Format(Resources.DEFAULT_INPUT_FOLDER_LABEL_TEXT, (String.IsNullOrEmpty(Configs.InputFolder))
                     ? Resources.DEFAULT_DEFAULT_INPUT_FOLDER_NOT_SET_TEXT
                     : Configs.InputFolder);
             if (!String.IsNullOrEmpty(Configs.InputFolder))
@@ -185,9 +188,9 @@ namespace SwitchCheatCodeManager.WinForm
             }
 
             OutputFolderPathLabelToolStripStatusLabel.Text = 
-                Constants.DEFAULT_DEFAULT_OUTPUT_FOLDER_LABEL_TEXT + (String.IsNullOrEmpty(Configs.OutputFolder)
+                string.Format(Resources.DEFAULT_OUTPUT_FOLDER_LABEL_TEXT, (String.IsNullOrEmpty(Configs.OutputFolder)
                     ? Resources.DEFAULT_DEFAULT_OUTPUT_FOLDER_NOT_SET_TEXT
-                    : Configs.OutputFolder);
+                    : Configs.OutputFolder));
         }
         
         private void EnableFolderButtons()
@@ -229,10 +232,18 @@ namespace SwitchCheatCodeManager.WinForm
             this.NewBlockButton.Enabled = false;
             this.RemoveCheatButton.Enabled = false;
         }
+        private void ResetFilterKeyword()
+        {
+            this.FilterTextBox.Text = String.Empty;
+        }
         private void ResetSubCheatsSection()
         {
             this.SubCheatsGroupBox.Controls.Clear();
             this.SubCheatsGroupBox.Visible = false;
+        }
+        private void ResetCultureInfo()
+        {
+            Thread.CurrentThread.CurrentUICulture = this.CurrentCulture;
         }
         private void UpdateGameDBName(string buildId)
             => this.GameDBNameTextBox.Text = this.GamesList.Where(g => g.BuildId == buildId).FirstOrDefault()?.GameName;
@@ -250,6 +261,7 @@ namespace SwitchCheatCodeManager.WinForm
             InitializeForm();
             this.PathTextBox.Text = this.CurrentPath;
             this.NumOfCheatsLabel.Text = string.Empty;
+            //this.FilterTextBox.Text = string.Empty;
             DirectoryInfo dir = new DirectoryInfo(correctedPath);
             if (dir.Exists)
             {
@@ -260,10 +272,10 @@ namespace SwitchCheatCodeManager.WinForm
                 if (cheatFileDir.Exists)
                 {
                     var file = Helper.CheckInfoFileExist(cheatFileDirPath);
-                    var image = Helper.CheckImageExist(cheatFileDirPath);
+                    var image = Helper.CheckImageExist(cheatFileDirPath, Configs.ImagePreferred);
                     var title = file?.Name;
 
-                    this.CurrentVersionFileMode = file != null ? VersionFileMode.Edit : VersionFileMode.Creat;
+                    this.CurrentVersionFileMode = file != null ? VersionFileMode.Edit : VersionFileMode.Create;
                     UpdateVersionFileModeUpdateButton();
                     if (file != null)
                     {
@@ -418,7 +430,7 @@ namespace SwitchCheatCodeManager.WinForm
                 if (cheats.HasSubCheats)
                 {
                     this.CodeStatusLabel.Text = Resources.VALIDATION_CHECK_FOR_CHEATS_VALID;
-                    this.CodeStatusLabel.BackColor = System.Drawing.Color.Blue;
+                    this.CodeStatusLabel.BackColor = Color.Blue;
                     UpdateSubCheatsSectionOnPanel(cheats);
                 }
                 else
@@ -522,19 +534,19 @@ namespace SwitchCheatCodeManager.WinForm
         {
             if (IsListMode())
             {
-                if (this.CurrentVersionFileMode == VersionFileMode.Creat)
+                if (this.CurrentVersionFileMode == VersionFileMode.Create)
                 {
                     ///this.VersionFileModeUpdateButton.Enabled = true;
-                    this.VersionFileModeUpdateButton.Text = "Creat";
+                    this.VersionFileModeUpdateButton.Text = Resources.VersionFileModeCreateButton_Text;
                 }
                 else if (this.CurrentVersionFileMode == VersionFileMode.Edit)
                 {
                     this.VersionFileModeUpdateButton.Enabled = true;
-                    this.VersionFileModeUpdateButton.Text = "Edit";
+                    this.VersionFileModeUpdateButton.Text = Resources.VersionFileModeEditButton_Text;
                 }
                 else
                 {
-                    this.VersionFileModeUpdateButton.Text = "Update";
+                    this.VersionFileModeUpdateButton.Text = Resources.VersionFileModeUpdateButton_Text;
                 }
             }
             else
@@ -627,12 +639,12 @@ namespace SwitchCheatCodeManager.WinForm
         /// <summary>
         /// Select specific cheat file at specific index.
         /// </summary>
-        /// <param name="index">The index of the item aimimng to choose, starting from 1 instead of 0.</param>
+        /// <param name="index">The index of the item aimimng to choose, starting from 0 instead of 1.</param>
         public void SelectCodeSelectorListBox(int index)
         {
             if (this.CodeSelectorListBox != null 
                 && this.CodeSelectorListBox.Items.Count > 0
-                && this.CodeSelectorListBox.Items.Count >= index)
+                && this.CodeSelectorListBox.Items.Count > index)
             {
                 // Check if the contents have updated
                 if (IsTextContentsChanged())
@@ -641,9 +653,39 @@ namespace SwitchCheatCodeManager.WinForm
                 }
                 else 
                 {
-                    this.CodeSelectorListBox.SelectedIndex = index - 1;
+                    this.CodeSelectorListBox.SelectedIndex = index;
                     ScrollToSpecificPosition("");
                 }
+            }
+        }
+
+        /// <summary>
+        /// Select specific game at given index.
+        /// </summary>
+        /// <param name="index"></param>
+        public void SelectGameListDropDown(int index)
+        { 
+            this.GameListComboBox.SelectedIndex = index;
+        }
+
+        /// <summary>
+        /// Select specific game by given gameId.
+        /// </summary>
+        /// <param name="gameId"></param>
+        public void SelectGameListDropDown(string gameId)
+        {
+            if (!string.IsNullOrEmpty(gameId) && Helper.ValidateGameId(gameId))
+            { 
+                DropDownItem newItem = null;
+                foreach (DropDownItem item in this.GameListComboBox.Items)
+                {
+                    if (item.Value.Contains(gameId))
+                    {
+                        newItem = item;
+                    }
+                }
+                var newIndex = this.GameListComboBox.Items.IndexOf(newItem);            
+                SelectGameListDropDown(newIndex);
             }
         }
 
@@ -707,16 +749,7 @@ namespace SwitchCheatCodeManager.WinForm
 
                         ShowInformationMessage(String.Format(Resources.DEFAULT_INSERT_NEW_CHEATS_FOLDER_MESSAGE, cFilename, buildId, gameId), "Success", false);
                         UpdateDropdownComboBox(this.CurrentEditMode, this.CurrentPath);
-                        DropDownItem newItem = null;
-                        foreach (DropDownItem item in this.GameListComboBox.Items)
-                        {
-                            if (item.Value.Contains(gameId))
-                            {
-                                newItem = item;
-                            }
-                        }
-                        var newIndex = this.GameListComboBox.Items.IndexOf(newItem);
-                        this.GameListComboBox.SelectedIndex = newIndex;
+                        SelectGameListDropDown(gameId);
                     }
                 } //End of validation check
             }
@@ -1025,9 +1058,9 @@ namespace SwitchCheatCodeManager.WinForm
                     this.CodeTextBox.SelectionBackColor = 
                         isSubSection 
                             ? isSubStart 
-                                ? Constants.DEFAULT_SUBSECTION_START_BACKGROUND_COLOR 
-                                : Constants.DEFAULT_SUBSECTION_END_BACKGROUND_COLOR
-                            : Constants.DEFAULT_CHEATS_TITLE_BACKGROUND_COLOR;
+                                ? Configs.SectionStartColor 
+                                : Configs.SectionEndColor
+                            : Configs.TitleColor;
                     lPos = -1;
                 }
             }
@@ -1042,21 +1075,20 @@ namespace SwitchCheatCodeManager.WinForm
             //CodeTextBox.AutoScrollOffset = new Point(Math.Abs(CodeTextBox.Width / 2), CodeTextBox.Height / 2);
             if (string.IsNullOrEmpty(keywords))
             {
-                CodeTextBox.Select(0, 0);
-                CodeTextBox.ScrollToCaret();
-                CodeTextBox.SelectionStart = 0;
-                CodeTextBox.SelectionLength = 0;
+                this.CodeTextBox.Select(0, 0);
+                this.CodeTextBox.ScrollToCaret();
+                this.CodeTextBox.SelectionStart = 0;
+                this.CodeTextBox.SelectionLength = 0;
+                return;
             }
-            else if (!string.IsNullOrEmpty(keywords))
+
+            var index = this.CodeTextBox.Text.IndexOf(keywords);
+            if (index >= 0)
             {
-                var index = this.CodeTextBox.Text.IndexOf(keywords);
-                if (index >= 0)
-                {
-                    CodeTextBox.Select(index, index + keywords.Length);
-                    CodeTextBox.ScrollToCaret();
-                    CodeTextBox.SelectionStart = index;
-                    CodeTextBox.SelectionLength = 0;
-                }
+                this.CodeTextBox.Select(index, index + keywords.Length);
+                this.CodeTextBox.ScrollToCaret();
+                this.CodeTextBox.SelectionStart = index;
+                this.CodeTextBox.SelectionLength = 0;
             }
         }
 
@@ -1089,6 +1121,7 @@ namespace SwitchCheatCodeManager.WinForm
                 tempTextBox.Location = new Point(15, 30);
                 tempTextBox.Text = cheat.SubTile;
                 tempTextBox.TextAlign = HorizontalAlignment.Center;
+                tempTextBox.BackColor = Configs.SectionStartColor;
                 tempTextBox.Size = new Size(320, 25);
                 tempTextBox.TabIndex = 100 + index;
 
@@ -1132,14 +1165,15 @@ namespace SwitchCheatCodeManager.WinForm
 
             Panel tempPanel = new Panel();
             tempPanel.Size = new Size(760, 880);
-            tempPanel.Location = new Point(50, 30);
+            tempPanel.Location = new Point(10, 30);
             //tempPanel.AutoScroll = true;
             
             // Add subsection contents
             ListBox tempListBox = new ListBox();
             tempListBox.Name = "MainCheatsListBox";
-            tempListBox.Location = new Point(15, 25);
-            tempListBox.Size = new Size(420, 600);
+            tempListBox.Location = new Point(20, 20);
+            tempListBox.Size = new Size(400, 600);
+            tempListBox.BorderStyle = BorderStyle.Fixed3D;
             foreach (var cheat in cheats.Cheats)
             {
                 tempListBox.Items.Add(cheat.CodeTitle);
@@ -1150,52 +1184,6 @@ namespace SwitchCheatCodeManager.WinForm
             SubCheatsGroupBox.Controls.Add(tempPanel);
         }
 
-        /// <summary>
-        /// Copy the sourceDir to the destDir. If dest has no aiming dir, it will create them correspodingly.
-        /// </summary>
-        /// <param name="sourceDirName">Source directory path</param>
-        /// <param name="destDirName">Destination directory path</param>
-        /// <param name="copySubDirs">Include sub-directory or not</param>
-        /// <exception cref="DirectoryNotFoundException"></exception>
-        private static void DirectoryCopy(string sourceDirName, string destDirName, bool copySubDirs)
-        {
-            // Get the subdirectories for the specified directory.
-            DirectoryInfo dir = new DirectoryInfo(sourceDirName);
-
-            if (!dir.Exists)
-            {
-                throw new DirectoryNotFoundException(
-                    $"Source directory does not exist or could not be found: {sourceDirName}");
-            }
-
-            DirectoryInfo[] dirs = dir.GetDirectories();
-
-            // If the destination directory doesn't exist, create it.       
-            Directory.CreateDirectory(destDirName);
-
-            // Get the files in the directory and copy them to the new location.
-            FileInfo[] files = dir.GetFiles();
-            foreach (FileInfo file in files)
-            {
-                string tempPath = Path.Combine(destDirName, file.Name);
-                file.CopyTo(tempPath, true);
-            }
-
-            // If copying subdirectories, copy them and their contents to new location.
-            if (copySubDirs)
-            {
-                foreach (DirectoryInfo subdir in dirs)
-                {
-                    string tempPath = Path.Combine(destDirName, subdir.Name);
-                    DirectoryCopy(subdir.FullName, tempPath, copySubDirs);
-                }
-            }
-        }
-
-        private static void CopyImages()
-        { 
-
-        }
 
         /// <summary>
         /// Open version index edit form.
@@ -1211,11 +1199,22 @@ namespace SwitchCheatCodeManager.WinForm
                 if (this.CurrentVersionFileMode == VersionFileMode.Edit)
                 {
                     this.Hide();
-                    EditVersionIndexForm editForm = new EditVersionIndexForm(Helper, Action);
+                    EditVersionIndexForm editForm = new EditVersionIndexForm(Helper, Action, CurrentCulture);
                     editForm.FormClosed += new FormClosedEventHandler(EditVersionIndexForm_FormClosed);
                     editForm.Show();
                 }
             }
+        }
+
+        /// <summary>
+        /// Open options form.
+        /// </summary>
+        private void OpenOptionsForm()
+        {
+            this.Hide();
+            SettingsForm settingsForm = new SettingsForm(Helper, Action, CurrentCulture);
+            settingsForm.FormClosed += new FormClosedEventHandler(OptionsForm_FormClosed);
+            settingsForm.Show();
         }
 
         /// <summary>
@@ -1224,7 +1223,7 @@ namespace SwitchCheatCodeManager.WinForm
         private void OpenAboutForm()
         {
             this.Hide();
-            AboutForm aboutForm = new AboutForm();
+            AboutForm aboutForm = new AboutForm(Helper, Action, CurrentCulture);
             aboutForm.FormClosed += new FormClosedEventHandler(AboutForm_FormClosed);
             aboutForm.Show();
         }
@@ -1245,6 +1244,7 @@ namespace SwitchCheatCodeManager.WinForm
                 this.CurrentPath = defaultPath;
                 this.GamesList = Action.LoadGamesDBFile(defaultPath);
                 UpdateDropdownComboBox(DirectoryMode.ListMode, defaultPath);
+                ResetFilterKeyword();
             }
         }
         private void MainMenuOpenButton_Click(object sender, EventArgs e)
@@ -1261,7 +1261,7 @@ namespace SwitchCheatCodeManager.WinForm
                     if (string.IsNullOrEmpty(Configs.InputFolder))
                     {
                         Configs.InputFolder = dialog.SelectedPath;
-                        Helper.SaveDefinedPathsConfig(Configs);
+                        Action.SaveDefinedPathsConfig(Configs);
                     }
                     
                     this.GamesList = Action.LoadGamesDBFile(dialog.SelectedPath);
@@ -1280,6 +1280,7 @@ namespace SwitchCheatCodeManager.WinForm
 
                 //ReadSelectedFile();
                 //this.PathLabel.Text = Path.GetFileName(dialog.SelectedPath);
+                ResetFilterKeyword();
             }
 
         }
@@ -1300,6 +1301,7 @@ namespace SwitchCheatCodeManager.WinForm
                 File.WriteAllText(saveFileDialog.FileName, this.CodeTextBox.Text);
             }
         }
+        private void OptionsButton_Click(object sender, EventArgs e) => OpenOptionsForm();
         private void AboutButton_Click(object sender, EventArgs e) => OpenAboutForm();
         private void InsertNewCheatsButton_Click(object sender, EventArgs e) => InsertNewCheatsFolder();
         private void RemoveFolderButton_Click(object sender, EventArgs e) => RemoveCurrentCheatFolder();
@@ -1310,7 +1312,8 @@ namespace SwitchCheatCodeManager.WinForm
         }
         private void VersionFileModeUpdateButton_Click(object sender, EventArgs e)
         {
-            if (this.CurrentVersionFileMode == VersionFileMode.Creat)
+            var selectedIndex = this.GameListComboBox.SelectedIndex;
+            if (this.CurrentVersionFileMode == VersionFileMode.Create)
             {
                 if (this.GameNameTextBox.Text.Length > 5)
                 {
@@ -1325,6 +1328,7 @@ namespace SwitchCheatCodeManager.WinForm
                         var newCheatFilePath = selectedDir + Helper.GetTxtFileNameExtension(cFilename);
                         Action.SaveNewCheatIndexFile(newCheatFilePath);
                         UpdateDropdownComboBox(this.CurrentEditMode, this.CurrentPath);
+                        SelectGameListDropDown(selectedIndex);
                     }
                 }
             }
@@ -1345,6 +1349,7 @@ namespace SwitchCheatCodeManager.WinForm
                         CurrentVersionFile.MoveTo(Helper.GetPath(CurrentVersionFile.DirectoryName) + inputName);
                         //SaveNewCheatIndexFile(newCheatFilePath);
                         UpdateDropdownComboBox(this.CurrentEditMode, this.CurrentPath);
+                        SelectGameListDropDown(selectedIndex);
                     }
                 }
                 else if (inputName.Length > 5)
@@ -1372,7 +1377,7 @@ namespace SwitchCheatCodeManager.WinForm
                     if (dir.Exists && destDir.Exists)
                     {
                         var destPath = Configs.OutputFolder + dir.Name;
-                        DirectoryCopy(dir.FullName, destPath, true);
+                        Action.DirectoryCopy(dir.FullName, destPath, true);
                         ShowInformationMessage(string.Format(Resources.DEFAULT_COPY_FOLDER_DESTINATION_SUCCESS, destPath),
                             Resources.INFORMATION_MESSAGE_TITLE_RESULT, false);
                     }
@@ -1394,10 +1399,11 @@ namespace SwitchCheatCodeManager.WinForm
         {
             if (this.CodeTextBox.Enabled)
             {
+                var selectedIndex = this.CodeSelectorListBox.SelectedIndex;
                 SaveContentsIntoSelectedFile(this.CodeTextBox.Text);
                 ShowInformationMessage(string.Format(Resources.DEFAULT_SAVE_NOTIFICATION_MESSAGE, this.CurrentOpenFilePath),
                     Resources.INFORMATION_MESSAGE_TITLE_SAVE);
-                SelectCodeSelectorListBox();
+                SelectCodeSelectorListBox(selectedIndex);
             }
         }
         // Copy cheat file to the directory
@@ -1457,10 +1463,12 @@ namespace SwitchCheatCodeManager.WinForm
             this.CodeModifiedTextBox.Text = updatedContents.Output();
             this.SaveFormatedButton.Enabled = true;
             */
+            var selectedIndex = this.CodeSelectorListBox.SelectedIndex;
             SaveContentsIntoSelectedFile(updatedContents.Output());
             ShowInformationMessage(string.Format(Resources.DEFAULT_SAVE_NOTIFICATION_MESSAGE, this.CurrentOpenFilePath), 
                 Resources.INFORMATION_MESSAGE_TITLE_SAVE);
-            SelectCodeSelectorListBox();
+
+            SelectCodeSelectorListBox(selectedIndex);
         }
 
         private void PanelSubSectionItem_Click(object sender, EventArgs e)
@@ -1477,6 +1485,18 @@ namespace SwitchCheatCodeManager.WinForm
             RefreshSelectedForm();
         }
 
+        private void OptionsForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Configs = (sender as SettingsForm).Configs;
+            Action.SaveDefinedPathsConfig(this.Configs);
+            this.Show();
+            if (!String.IsNullOrEmpty(this.CurrentPath))
+            {
+                this.RefreshSelectedForm();
+            }
+            InitializeStatusBar();
+        }
+
         private void AboutForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Show();
@@ -1484,7 +1504,7 @@ namespace SwitchCheatCodeManager.WinForm
 
         private void EditVersionIndexForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Versions = ((EditVersionIndexForm)sender).GetBuildVersionMapping();
+            this.Versions = (sender as EditVersionIndexForm).Versions;
             this.Show();
             this.RefreshSelectedForm();
         }
@@ -1539,7 +1559,7 @@ namespace SwitchCheatCodeManager.WinForm
             }
             else if (this.GameNameTextBox.Text.Length >= 5 && IsListMode())
             {
-                if (this.CurrentVersionFileMode == VersionFileMode.Creat)
+                if (this.CurrentVersionFileMode == VersionFileMode.Create)
                 {
                     this.VersionFileModeUpdateButton.Enabled = true;
                 }

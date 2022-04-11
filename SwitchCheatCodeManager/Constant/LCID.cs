@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SwitchCheatCodeManager.Model;
 
 namespace SwitchCheatCodeManager.Constant
 {
@@ -147,11 +148,16 @@ namespace SwitchCheatCodeManager.Constant
 
      * 
      */
-        public int English = 0x0409;             // en-us    English - United States
-        public int ChineseSimplified = 0x0804;     // zh-cn    Chinese - China
-        public int ChineseTraditional = 0x0404;    // zh-tw    Chinese - Taiwan
-        public int Japanese = 0x0411;              // ja       Japanese
-        public int Korean = 0x0412;                // ko       Korean
+        // en-us    English - United States
+        public LanguageModel English = new LanguageModel("en-us", 0x0409);
+        // zh-cn    Chinese - China
+        public LanguageModel ChineseSimplified = new LanguageModel("zh-cn", 0x0804);
+        // zh-tw    Chinese - Taiwan
+        public LanguageModel ChineseTraditional = new LanguageModel("zh-tw", 0x0404);
+        // ja       Japanese
+        public LanguageModel Japanese = new LanguageModel("ja", 0x0411);
+        // ko       Korean
+        public LanguageModel Korean = new LanguageModel("ko", 0x0412);
     }
 
     

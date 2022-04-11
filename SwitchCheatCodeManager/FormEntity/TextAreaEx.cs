@@ -1,5 +1,5 @@
 ﻿using SwitchCheatCodeManager.Constant;
-using SwitchCheatCodeManager.Entity;
+using SwitchCheatCodeManager.Model;
 using SwitchCheatCodeManager.Helper;
 using System;
 using System.Drawing;

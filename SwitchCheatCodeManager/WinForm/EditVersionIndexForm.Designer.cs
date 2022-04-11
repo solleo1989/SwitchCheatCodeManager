@@ -34,113 +34,93 @@ namespace SwitchCheatCodeManager.WinForm
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle titleDataGridViewCellStyle = new DataGridViewCellStyle();
-            DataGridViewCellStyle buildIdDataGridViewCellStyle = new DataGridViewCellStyle();
-            DataGridViewCellStyle versionDataGridViewCellStyle = new DataGridViewCellStyle();
-            this.VersionBuildIdDataGridView = new DataGridView();
-            this.BuildIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            this.VersionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            this.AddRowButton = new Button();
-            this.DeleteRowButton = new Button();
-            this.SaveButton = new Button();
-
-            ((ISupportInitialize)this.VersionBuildIdDataGridView).BeginInit();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditVersionIndexForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.VersionBuildIdDataGridView = new System.Windows.Forms.DataGridView();
+            this.BuildIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VersionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AddRowButton = new System.Windows.Forms.Button();
+            this.DeleteRowButton = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.VersionBuildIdDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // VersionBuildIdDataGridView
             // 
             this.VersionBuildIdDataGridView.AllowUserToResizeColumns = false;
             this.VersionBuildIdDataGridView.AllowUserToResizeRows = false;
-            this.VersionBuildIdDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            titleDataGridViewCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            titleDataGridViewCellStyle.BackColor = Color.Black;
-            titleDataGridViewCellStyle.Font = new Font("Ubuntu Mono", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            titleDataGridViewCellStyle.ForeColor = Color.White;
-            titleDataGridViewCellStyle.SelectionBackColor = SystemColors.Highlight;
-            titleDataGridViewCellStyle.SelectionForeColor = SystemColors.HighlightText;
-            titleDataGridViewCellStyle.WrapMode = DataGridViewTriState.True;
-            this.VersionBuildIdDataGridView.ColumnHeadersDefaultCellStyle = titleDataGridViewCellStyle;
-            this.VersionBuildIdDataGridView.ColumnHeadersHeight = 50;
-            this.VersionBuildIdDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.VersionBuildIdDataGridView.Columns.AddRange(new DataGridViewColumn[] {
+            this.VersionBuildIdDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Ubuntu Mono", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.VersionBuildIdDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            resources.ApplyResources(this.VersionBuildIdDataGridView, "VersionBuildIdDataGridView");
+            this.VersionBuildIdDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.VersionBuildIdDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.BuildIdDataGridViewTextBoxColumn,
             this.VersionDataGridViewTextBoxColumn});
-            this.VersionBuildIdDataGridView.GridColor = Color.Black;
-            this.VersionBuildIdDataGridView.Location = new Point(30, 30);
-            this.VersionBuildIdDataGridView.Margin = new Padding(4);
+            this.VersionBuildIdDataGridView.GridColor = System.Drawing.Color.Black;
             this.VersionBuildIdDataGridView.Name = "VersionBuildIdDataGridView";
             this.VersionBuildIdDataGridView.RowHeadersVisible = false;
-            this.VersionBuildIdDataGridView.RowHeadersWidth = 50;
-            this.VersionBuildIdDataGridView.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.VersionBuildIdDataGridView.Size = new Size(480, 825);
-            this.VersionBuildIdDataGridView.TabIndex = 0;
+            this.VersionBuildIdDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             // 
             // BuildIdDataGridViewTextBoxColumn
             // 
-            buildIdDataGridViewCellStyle.Padding = new Padding(10, 0, 0, 0);
-            buildIdDataGridViewCellStyle.Font = new Font("Ubuntu Mono", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            this.BuildIdDataGridViewTextBoxColumn.DefaultCellStyle = buildIdDataGridViewCellStyle;
-            this.BuildIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Ubuntu Mono", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.BuildIdDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(this.BuildIdDataGridViewTextBoxColumn, "BuildIdDataGridViewTextBoxColumn");
             this.BuildIdDataGridViewTextBoxColumn.Name = "BuildIdDataGridViewTextBoxColumn";
-            this.BuildIdDataGridViewTextBoxColumn.Width = 280;
             // 
             // VersionDataGridViewTextBoxColumn
             // 
-            versionDataGridViewCellStyle.Padding = new Padding(10, 0, 0, 0);
-            versionDataGridViewCellStyle.Font = new Font("Ubuntu Mono", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            this.VersionDataGridViewTextBoxColumn.DefaultCellStyle = versionDataGridViewCellStyle;
-            this.VersionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Ubuntu Mono", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.VersionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            resources.ApplyResources(this.VersionDataGridViewTextBoxColumn, "VersionDataGridViewTextBoxColumn");
             this.VersionDataGridViewTextBoxColumn.Name = "VersionDataGridViewTextBoxColumn";
-            this.VersionDataGridViewTextBoxColumn.Width = 140;
             // 
             // AddRowButton
             // 
-            this.AddRowButton.Location = new Point(550, 150);
-            this.AddRowButton.Margin = new Padding(4);
+            resources.ApplyResources(this.AddRowButton, "AddRowButton");
             this.AddRowButton.Name = "AddRowButton";
-            this.AddRowButton.Size = new Size(150, 45);
-            this.AddRowButton.TabIndex = 1;
-            this.AddRowButton.Text = Resources.VersionDataGridViewTextBoxColumn_AddRowButton_Text;
+            this.AddRowButton.Text = global::SwitchCheatCodeManager.Properties.Resources.VersionDataGridViewTextBoxColumn_AddRowButton_Text;
             this.AddRowButton.UseVisualStyleBackColor = true;
-            this.AddRowButton.Click += new EventHandler(this.AddRowButton_Click);
+            this.AddRowButton.Click += new System.EventHandler(this.AddRowButton_Click);
             // 
             // DeleteRowButton
             // 
-            this.DeleteRowButton.Location = new Point(550, 223);
-            this.DeleteRowButton.Margin = new Padding(4);
+            resources.ApplyResources(this.DeleteRowButton, "DeleteRowButton");
             this.DeleteRowButton.Name = "DeleteRowButton";
-            this.DeleteRowButton.Size = new Size(150, 45);
-            this.DeleteRowButton.TabIndex = 2;
-            this.DeleteRowButton.Text = Resources.VersionDataGridViewTextBoxColumn_DeleteRowButton_Text;
+            this.DeleteRowButton.Text = global::SwitchCheatCodeManager.Properties.Resources.VersionDataGridViewTextBoxColumn_DeleteRowButton_Text;
             this.DeleteRowButton.UseVisualStyleBackColor = true;
-            this.DeleteRowButton.Click += new EventHandler(this.DeleteRowButton_Click);
+            this.DeleteRowButton.Click += new System.EventHandler(this.DeleteRowButton_Click);
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new Point(550, 30);
-            this.SaveButton.Margin = new Padding(4);
+            resources.ApplyResources(this.SaveButton, "SaveButton");
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new Size(150, 90);
-            this.SaveButton.TabIndex = 3;
-            this.SaveButton.Text = Resources.VersionDataGridViewTextBoxColumn_SaveButton_Text;
+            this.SaveButton.Text = global::SwitchCheatCodeManager.Properties.Resources.VersionDataGridViewTextBoxColumn_SaveButton_Text;
             this.SaveButton.UseVisualStyleBackColor = true;
-            this.SaveButton.Click += new EventHandler(this.SaveButton_Click);
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // EditVersionIndexForm
             // 
-            this.AutoScaleDimensions = new SizeF(12F, 30F);
-            this.AutoScaleMode = AutoScaleMode.Font;
-            this.ClientSize = new Size(750, 900);
+            resources.ApplyResources(this, "$this");
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.DeleteRowButton);
             this.Controls.Add(this.AddRowButton);
             this.Controls.Add(this.VersionBuildIdDataGridView);
-            this.Margin = new Padding(4);
-            this.StartPosition = FormStartPosition.CenterScreen;
             this.Name = "EditVersionIndexForm";
-            this.Text = "Edit Version Index Form";
-            ((System.ComponentModel.ISupportInitialize)this.VersionBuildIdDataGridView).EndInit();
-
+            this.Text = global::SwitchCheatCodeManager.Properties.Resources.VERSION_FORM_TITLE;
+            ((System.ComponentModel.ISupportInitialize)(this.VersionBuildIdDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }

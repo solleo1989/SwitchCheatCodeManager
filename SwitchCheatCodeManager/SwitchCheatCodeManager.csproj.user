@@ -33,6 +33,9 @@
     <EmbeddedResource Update="Properties\Resources.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Update="WinForm\EditVersionIndexForm.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Update="WinForm\MainForm.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SwitchCheatCodeManager.Constant;
+using SwitchCheatCodeManager.Model;
+using SwitchCheatCodeManager.Properties;
 
 namespace SwitchCheatCodeManager.Mode
 {
@@ -10,10 +13,12 @@ namespace SwitchCheatCodeManager.Mode
     {
         public enum Language
         {
-            English,
-            Spanish,
-            Chinese
+            NotSet = -1,
+            English = 0,
+            Chinese = 1,
+            Japanese = 2,
         }
+        
         public enum DirectoryMode 
         {
             OtherMode = 0,
@@ -22,7 +27,7 @@ namespace SwitchCheatCodeManager.Mode
         }
         public enum VersionFileMode 
         { 
-            Creat, 
+            Create, 
             Edit, 
             Update,
             None
@@ -31,9 +36,9 @@ namespace SwitchCheatCodeManager.Mode
         public static string VersionFileModeText(VersionFileMode mode) =>
         mode switch
         {
-            VersionFileMode.Creat => "Creat",
-            VersionFileMode.Edit => "Edit",
-            VersionFileMode.Update => "Update",
+            VersionFileMode.Create => Resources.VersionFileModeCreateButton_Text,
+            VersionFileMode.Edit => Resources.VersionFileModeEditButton_Text,
+            VersionFileMode.Update => Resources.VersionFileModeUpdateButton_Text,
             VersionFileMode.None => "Invalid",
             _ => throw new ArgumentException(message: "invalid enum value", paramName: nameof(mode)),
         };

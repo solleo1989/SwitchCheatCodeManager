@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SwitchCheatCodeManager.Constant;
-using SwitchCheatCodeManager.Entity;
+using SwitchCheatCodeManager.Model;
 using SwitchCheatCodeManager.FormEntity;
 
 namespace SwitchCheatCodeManager.Helper
@@ -156,7 +156,7 @@ namespace SwitchCheatCodeManager.Helper
             cf2.yHeight = Constants.DEFAULT_TEXTBOX_CHARACTER_HEIGHT;  //30 x font size;
 
             // Japanese
-            cf2.lcid = lcid.Japanese;
+            cf2.lcid = lcid.Japanese.Hex;
             cf2.bCharSet = charSet.SHIFTJIS_CHARSET;
             cf2.szFaceName = Constants.Font_MSGothic;
             TextAreaEx.SendMessage(new HandleRef(richTextBox, richTextBox.Handle),
@@ -164,7 +164,7 @@ namespace SwitchCheatCodeManager.Helper
                 RichTextBoxConstants.SCF_WORD, cf2);
 
             // T.Chinese
-            cf2.lcid = lcid.ChineseSimplified;
+            cf2.lcid = lcid.ChineseSimplified.Hex;
             cf2.bCharSet = charSet.CHINESEBIG5_CHARSET;
             cf2.szFaceName = Constants.Font_MingLiu;
             TextAreaEx.SendMessage(new HandleRef(richTextBox, richTextBox.Handle),
@@ -172,7 +172,7 @@ namespace SwitchCheatCodeManager.Helper
                 RichTextBoxConstants.SCF_WORD, cf2);
 
             // S.Chinese
-            cf2.lcid = lcid.ChineseSimplified;
+            cf2.lcid = lcid.ChineseSimplified.Hex;
             cf2.bCharSet = charSet.GB2312_CHARSET;
             cf2.szFaceName = Constants.Font_MSYaHei;
             TextAreaEx.SendMessage(new HandleRef(richTextBox, richTextBox.Handle),
@@ -180,7 +180,7 @@ namespace SwitchCheatCodeManager.Helper
                 RichTextBoxConstants.SCF_WORD, cf2);
 
             // English / Default
-            cf2.lcid = lcid.English;
+            cf2.lcid = lcid.English.Hex;
             cf2.bCharSet = charSet.DEFAULT_CHARSET;
             cf2.szFaceName = Constants.Font_Consolas;
             TextAreaEx.SendMessage(new HandleRef(richTextBox, richTextBox.Handle),

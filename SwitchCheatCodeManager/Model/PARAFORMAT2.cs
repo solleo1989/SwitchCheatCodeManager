@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace SwitchCheatCodeManager.Entity
+namespace SwitchCheatCodeManager.Model
 {
     [StructLayout(LayoutKind.Sequential, Pack = 4)]
     public class PARAFORMAT2

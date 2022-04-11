@@ -57,4 +57,161 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="VersionBuildIdDataGridView.ColumnHeadersHeight" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="BuildIdDataGridViewTextBoxColumn.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="BuildIdDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>280</value>
+  </data>
+  <data name="VersionDataGridViewTextBoxColumn.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="VersionDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>140</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="VersionBuildIdDataGridView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 30</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="VersionBuildIdDataGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="VersionBuildIdDataGridView.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="VersionBuildIdDataGridView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>480, 825</value>
+  </data>
+  <data name="VersionBuildIdDataGridView.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;VersionBuildIdDataGridView.Name" xml:space="preserve">
+    <value>VersionBuildIdDataGridView</value>
+  </data>
+  <data name="&gt;&gt;VersionBuildIdDataGridView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;VersionBuildIdDataGridView.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;VersionBuildIdDataGridView.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="AddRowButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>550, 150</value>
+  </data>
+  <data name="AddRowButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="AddRowButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 45</value>
+  </data>
+  <data name="AddRowButton.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;AddRowButton.Name" xml:space="preserve">
+    <value>AddRowButton</value>
+  </data>
+  <data name="&gt;&gt;AddRowButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AddRowButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AddRowButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="DeleteRowButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>550, 223</value>
+  </data>
+  <data name="DeleteRowButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="DeleteRowButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 45</value>
+  </data>
+  <data name="DeleteRowButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;DeleteRowButton.Name" xml:space="preserve">
+    <value>DeleteRowButton</value>
+  </data>
+  <data name="&gt;&gt;DeleteRowButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DeleteRowButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DeleteRowButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="SaveButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>550, 30</value>
+  </data>
+  <data name="SaveButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="SaveButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 90</value>
+  </data>
+  <data name="SaveButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;SaveButton.Name" xml:space="preserve">
+    <value>SaveButton</value>
+  </data>
+  <data name="&gt;&gt;SaveButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SaveButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;SaveButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>en-US</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>12, 30</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>750, 900</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Edit Version Index Form</value>
+  </data>
+  <data name="&gt;&gt;BuildIdDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>BuildIdDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;BuildIdDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;VersionDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>VersionDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;VersionDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>EditVersionIndexForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

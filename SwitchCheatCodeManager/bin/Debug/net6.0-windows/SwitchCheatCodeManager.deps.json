@@ -9,6 +9,14 @@
       "SwitchCheatCodeManager/1.0.0": {
         "runtime": {
           "SwitchCheatCodeManager.dll": {}
+        },
+        "resources": {
+          "zh-cn/SwitchCheatCodeManager.resources.dll": {
+            "locale": "zh-cn"
+          },
+          "en-US/SwitchCheatCodeManager.resources.dll": {
+            "locale": "en-US"
+          }
         }
       }
     }

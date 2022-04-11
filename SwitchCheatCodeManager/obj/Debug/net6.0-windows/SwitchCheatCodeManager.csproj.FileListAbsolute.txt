@@ -19,3 +19,13 @@ C:\Users\solle_000\source\repos\solleo1989\SwitchCheatCodeManager\SwitchCheatCod
 C:\Users\solle_000\source\repos\solleo1989\SwitchCheatCodeManager\SwitchCheatCodeManager\obj\Debug\net6.0-windows\refint\SwitchCheatCodeManager.dll
 C:\Users\solle_000\source\repos\solleo1989\SwitchCheatCodeManager\SwitchCheatCodeManager\obj\Debug\net6.0-windows\SwitchCheatCodeManager.genruntimeconfig.cache
 C:\Users\solle_000\source\repos\solleo1989\SwitchCheatCodeManager\SwitchCheatCodeManager\obj\Debug\net6.0-windows\ref\SwitchCheatCodeManager.dll
+C:\Users\solle_000\source\repos\solleo1989\SwitchCheatCodeManager\SwitchCheatCodeManager\bin\Debug\net6.0-windows\en-US\SwitchCheatCodeManager.resources.dll
+C:\Users\solle_000\source\repos\solleo1989\SwitchCheatCodeManager\SwitchCheatCodeManager\obj\Debug\net6.0-windows\SwitchCheatCodeManager.WinForm.AboutForm.en-US.resources
+C:\Users\solle_000\source\repos\solleo1989\SwitchCheatCodeManager\SwitchCheatCodeManager\obj\Debug\net6.0-windows\SwitchCheatCodeManager.WinForm.EditVersionIndexForm.en-US.resources
+C:\Users\solle_000\source\repos\solleo1989\SwitchCheatCodeManager\SwitchCheatCodeManager\obj\Debug\net6.0-windows\SwitchCheatCodeManager.WinForm.MainForm.en-US.resources
+C:\Users\solle_000\source\repos\solleo1989\SwitchCheatCodeManager\SwitchCheatCodeManager\obj\Debug\net6.0-windows\SwitchCheatCodeManager.WinForm.SettingsForm.en-US.resources
+C:\Users\solle_000\source\repos\solleo1989\SwitchCheatCodeManager\SwitchCheatCodeManager\obj\Debug\net6.0-windows\en-US\SwitchCheatCodeManager.resources.dll
+C:\Users\solle_000\source\repos\solleo1989\SwitchCheatCodeManager\SwitchCheatCodeManager\bin\Debug\net6.0-windows\zh-cn\SwitchCheatCodeManager.resources.dll
+C:\Users\solle_000\source\repos\solleo1989\SwitchCheatCodeManager\SwitchCheatCodeManager\obj\Debug\net6.0-windows\SwitchCheatCodeManager.Properties.Resources.zh-cn.resources
+C:\Users\solle_000\source\repos\solleo1989\SwitchCheatCodeManager\SwitchCheatCodeManager\obj\Debug\net6.0-windows\zh-cn\SwitchCheatCodeManager.resources.dll
+C:\Users\solle_000\source\repos\solleo1989\SwitchCheatCodeManager\SwitchCheatCodeManager\bin\Debug\net6.0-windows\Properties\Resources.zh-cn.resx

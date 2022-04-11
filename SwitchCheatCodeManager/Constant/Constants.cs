@@ -26,13 +26,19 @@ namespace SwitchCheatCodeManager.Constant
         #endregion
 
         #region String
+        // File path
         public const string DEFAULT_NO_IMAGE_FOUND_PLACEHOLDER_PATH = "img\\NoImage.jpg";
         public const string DEFAULT_CONFIG_FILE_PATH = "config\\settings.ini";
+        // Config settings
         public const string DEFAULT_INPUT_PATH_PREFIX = "[input_folder]";
         public const string DEFAULT_OUTPUT_PATH_PREFIX = "[output_folder]";
+        public const string DEFAULT_BACKGROUND_TITLE_COLOR_PREFIX = "[title_color]";
+        public const string DEFAULT_BACKGROUND_SECTIONSTART_COLOR_PREFIX = "[section_start_color]";
+        public const string DEFAULT_BACKGROUND_SECTIONEND_COLOR_PREFIX = "[section_end_color]";
+        public const string DEFAULT_FORM_LANGUAGE_COLOR_PREFIX = "[form_language]";
+        public const string DEFAULT_PREVIEW_IMAGE_PREFERRED_LANGUAGE_COLOR_PREFIX = "[image_preferred]";
+
         public const string DEFAULT_OUTPUT_FOLDER_PATH_SUFFIX = "atmosphere\\contents\\";
-        public const string DEFAULT_DEFAULT_INPUT_FOLDER_LABEL_TEXT = "Input folder: ";
-        public const string DEFAULT_DEFAULT_OUTPUT_FOLDER_LABEL_TEXT = "Output folder: ";
         public const string TXT_FILE_SUFFIX = ".txt";
         public const string JPG_FILE_SUFFIX = ".jpg";
         public const string PNG_FILE_SUFFIX = ".png";
@@ -89,6 +95,18 @@ namespace SwitchCheatCodeManager.Constant
             '\"',   // double quotes
             ':',    //  colon
             //'@'     // at sign@ 
+        };
+
+
+        public static string[] DisplayLanguageSet = new string[] {
+            "English",
+            "Chinese",
+        };
+
+        public static string[] PreviewImageLanguageSet = new string[] {
+            "English",
+            "Chinese",
+            "Japanese",
         };
     }
 }

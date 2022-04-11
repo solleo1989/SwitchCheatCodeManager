@@ -388,6 +388,15 @@ namespace SwitchCheatCodeManager.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Input folder: {0}.
+        /// </summary>
+        public static string DEFAULT_INPUT_FOLDER_LABEL_TEXT {
+            get {
+                return ResourceManager.GetString("DEFAULT_INPUT_FOLDER_LABEL_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to New cheat already exists!.
         /// </summary>
         public static string DEFAULT_INSERT_NEW_CHEAT_FILE_EXISTS_MESSAGE {
@@ -483,6 +492,15 @@ namespace SwitchCheatCodeManager.Properties {
         public static string DEFAULT_NUMBER_OF_CHEATS_LOADED_LABEL {
             get {
                 return ResourceManager.GetString("DEFAULT_NUMBER_OF_CHEATS_LOADED_LABEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Output folder: {0}.
+        /// </summary>
+        public static string DEFAULT_OUTPUT_FOLDER_LABEL_TEXT {
+            get {
+                return ResourceManager.GetString("DEFAULT_OUTPUT_FOLDER_LABEL_TEXT", resourceCulture);
             }
         }
         
@@ -1072,6 +1090,124 @@ namespace SwitchCheatCodeManager.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Background Color.
+        /// </summary>
+        public static string SettingsForm_BackgroundColorGroupBox_Text {
+            get {
+                return ResourceManager.GetString("SettingsForm_BackgroundColorGroupBox_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [--SectionEnd:Items--].
+        /// </summary>
+        public static string SettingsForm_ColorSectionEndLabel_Text {
+            get {
+                return ResourceManager.GetString("SettingsForm_ColorSectionEndLabel_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [--SectionStart:Items--].
+        /// </summary>
+        public static string SettingsForm_ColorSectionStartLabel_Text {
+            get {
+                return ResourceManager.GetString("SettingsForm_ColorSectionStartLabel_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Moonjump (press B).
+        /// </summary>
+        public static string SettingsForm_ColorTitleLabel_Text {
+            get {
+                return ResourceManager.GetString("SettingsForm_ColorTitleLabel_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Directory.
+        /// </summary>
+        public static string SettingsForm_DirectoryGroupBox_Text {
+            get {
+                return ResourceManager.GetString("SettingsForm_DirectoryGroupBox_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select.
+        /// </summary>
+        public static string SettingsForm_InputPathButton_Text {
+            get {
+                return ResourceManager.GetString("SettingsForm_InputPathButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select.
+        /// </summary>
+        public static string SettingsForm_InputPathLabel_Text {
+            get {
+                return ResourceManager.GetString("SettingsForm_InputPathLabel_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Language.
+        /// </summary>
+        public static string SettingsForm_LanguageGroupBox_Text {
+            get {
+                return ResourceManager.GetString("SettingsForm_LanguageGroupBox_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Language.
+        /// </summary>
+        public static string SettingsForm_LanguageLabel_Text {
+            get {
+                return ResourceManager.GetString("SettingsForm_LanguageLabel_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select.
+        /// </summary>
+        public static string SettingsForm_OutputPathButton_Text {
+            get {
+                return ResourceManager.GetString("SettingsForm_OutputPathButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Output Path.
+        /// </summary>
+        public static string SettingsForm_OutputPathLabel_Text {
+            get {
+                return ResourceManager.GetString("SettingsForm_OutputPathLabel_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Preferred
+        ///	Image.
+        /// </summary>
+        public static string SettingsForm_PreferredImageLabel_Text {
+            get {
+                return ResourceManager.GetString("SettingsForm_PreferredImageLabel_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        public static string SettingsForm_Title {
+            get {
+                return ResourceManager.GetString("SettingsForm_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Status Strip.
         /// </summary>
         public static string StatusStrip_Text {
@@ -1126,6 +1262,15 @@ namespace SwitchCheatCodeManager.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Edit Version Index Form.
+        /// </summary>
+        public static string VERSION_FORM_TITLE {
+            get {
+                return ResourceManager.GetString("VERSION_FORM_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Build ID.
         /// </summary>
         public static string VersionBuildIdDataGridView_BuildId_Text {
@@ -1167,6 +1312,15 @@ namespace SwitchCheatCodeManager.Properties {
         public static string VersionDataGridViewTextBoxColumn_SaveButton_Text {
             get {
                 return ResourceManager.GetString("VersionDataGridViewTextBoxColumn_SaveButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string VersionFileModeCreateButton_Text {
+            get {
+                return ResourceManager.GetString("VersionFileModeCreateButton_Text", resourceCulture);
             }
         }
         
