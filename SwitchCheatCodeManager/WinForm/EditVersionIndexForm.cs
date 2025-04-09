@@ -5,39 +5,39 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace SwitchCheatCodeManager.WinForm
 {
     public partial class EditVersionIndexForm : Form
     {
-        private Dictionary<string, string> Versions;
+        public Dictionary<string, string> Versions { get; set; }
 
         private FileInfo CurrentVersionFile;
 
         private MainHelper Helper;
         private ActionHelper Action;
+        private CultureInfo Culture;
 
         public EditVersionIndexForm(
             MainHelper mainHelper,
-            ActionHelper actionHelper)
+            ActionHelper actionHelper,
+            CultureInfo cultureInfo)
         {
             this.Helper = mainHelper;
             this.Action = actionHelper;
+            this.Culture = cultureInfo;
 
+            ResetCultureInfo();
             InitializeComponent();           
 
             this.Load += new EventHandler(Form_Load);
         }
-
-        /// <summary>
-        /// Return the save build version mapping before closed
-        /// </summary>
-        /// <returns></returns>
-        public Dictionary<string, string> GetBuildVersionMapping() => this.Versions;
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
@@ -231,6 +231,11 @@ namespace SwitchCheatCodeManager.WinForm
             }
 
             return orderedValues;
+        }
+
+        private void ResetCultureInfo()
+        {
+            Thread.CurrentThread.CurrentUICulture = this.Culture;
         }
     }
 }

@@ -1,42 +1,45 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    "net6.0-windows7.0": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    "net6.0-windows7.0": []
   },
   "packageFolders": {
     "C:\\Users\\solle_000\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\solle_000\\source\\repos\\SwitchCheatCodeManager\\SwitchCheatCodeManager\\SwitchCheatCodeManager.csproj",
+      "projectUniqueName": "C:\\Users\\solle_000\\source\\repos\\solleo1989\\SwitchCheatCodeManager\\SwitchCheatCodeManager\\SwitchCheatCodeManager.csproj",
       "projectName": "SwitchCheatCodeManager",
-      "projectPath": "C:\\Users\\solle_000\\source\\repos\\SwitchCheatCodeManager\\SwitchCheatCodeManager\\SwitchCheatCodeManager.csproj",
+      "projectPath": "C:\\Users\\solle_000\\source\\repos\\solleo1989\\SwitchCheatCodeManager\\SwitchCheatCodeManager\\SwitchCheatCodeManager.csproj",
       "packagesPath": "C:\\Users\\solle_000\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\solle_000\\source\\repos\\SwitchCheatCodeManager\\SwitchCheatCodeManager\\obj\\",
+      "outputPath": "C:\\Users\\solle_000\\source\\repos\\solleo1989\\SwitchCheatCodeManager\\SwitchCheatCodeManager\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\solle_000\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "netcoreapp3.1"
+        "net6.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
           "projectReferences": {}
         }
       },
@@ -44,18 +47,25 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
-      "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows",
         "imports": [
           "net461",
           "net462",
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -67,7 +77,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

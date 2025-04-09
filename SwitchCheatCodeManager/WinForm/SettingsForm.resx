@@ -1,4 +1,64 @@
-﻿<root>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
@@ -57,4 +117,632 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;ColorTitleDisabledLabel.Name" xml:space="preserve">
+    <value>ColorTitleDisabledLabel</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="PreferredImageLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;LanguageGroupBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="OutputPathTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>170, 140</value>
+  </data>
+  <data name="&gt;&gt;LanguageComboBox.Name" xml:space="preserve">
+    <value>LanguageComboBox</value>
+  </data>
+  <data name="ColorTitleLabel.Text" xml:space="preserve">
+    <value>[60 FPS Mod]</value>
+  </data>
+  <data name="OutputPathButton.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="InputPathLabel.Text" xml:space="preserve">
+    <value>Default Path</value>
+  </data>
+  <data name="ColorTitleButton.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;ColorSectionEndButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ColorSectionStartLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;ColorTitleEnabledButton.Parent" xml:space="preserve">
+    <value>BackgroundColorGroupBox</value>
+  </data>
+  <data name="OutputPathButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 45</value>
+  </data>
+  <data name="&gt;&gt;ColorTitleLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ImageCheckedListBox.Items2" xml:space="preserve">
+    <value>Japanese</value>
+  </data>
+  <data name="InputPathTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ColorTitleDisabledButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColorSectionEndLabel.Parent" xml:space="preserve">
+    <value>BackgroundColorGroupBox</value>
+  </data>
+  <data name="&gt;&gt;LanguageComboBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ColorTitleDisabledButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>360, 75</value>
+  </data>
+  <data name="&gt;&gt;InputPathLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LanguageComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 80</value>
+  </data>
+  <data name="LanguageComboBox.Items1" xml:space="preserve">
+    <value>Chinese</value>
+  </data>
+  <data name="ColorTitleEnabledLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="OutputPathLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 140</value>
+  </data>
+  <data name="ColorSectionStartLabel.Text" xml:space="preserve">
+    <value>[--SectionStart:Items--]</value>
+  </data>
+  <data name="&gt;&gt;ColorTitleDisabledButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="OutputPathLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;PreferredImageLabel.Parent" xml:space="preserve">
+    <value>LanguageGroupBox</value>
+  </data>
+  <data name="&gt;&gt;DirectoryGroupBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;ColorSectionStartButton.Name" xml:space="preserve">
+    <value>ColorSectionStartButton</value>
+  </data>
+  <data name="&gt;&gt;ColorTitleEnabledButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BackgroundColorGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PreferredImageLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 60</value>
+  </data>
+  <data name="&gt;&gt;OutputPathTextBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ImageCheckedListBox.Items1" xml:space="preserve">
+    <value>Chinese</value>
+  </data>
+  <data name="ColorTitleEnabledButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>360, 145</value>
+  </data>
+  <data name="ColorTitleEnabledButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="PreferredImageLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopRight</value>
+  </data>
+  <data name="DirectoryGroupBox.Text" xml:space="preserve">
+    <value>Directory</value>
+  </data>
+  <data name="ImageCheckedListBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 100</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1176, 636</value>
+  </data>
+  <data name="ColorTitleDisabledLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="&gt;&gt;InputPathTextBox.Name" xml:space="preserve">
+    <value>InputPathTextBox</value>
+  </data>
+  <data name="BackgroundColorGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;OutputPathButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="OutputPathLabel.Text" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="ColorTitleButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 40</value>
+  </data>
+  <data name="ColorTitleEnabledLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="OutputPathTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>750, 35</value>
+  </data>
+  <data name="&gt;&gt;InputPathLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="InputPathButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 45</value>
+  </data>
+  <data name="&gt;&gt;OutputPathTextBox.Parent" xml:space="preserve">
+    <value>DirectoryGroupBox</value>
+  </data>
+  <data name="&gt;&gt;OutputPathLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="DirectoryGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="ColorTitleDisabledLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 150</value>
+  </data>
+  <data name="&gt;&gt;OutputPathLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;InputPathButton.Parent" xml:space="preserve">
+    <value>DirectoryGroupBox</value>
+  </data>
+  <data name="LanguageGroupBox.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="ColorSectionEndLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 9pt</value>
+  </data>
+  <data name="PreferredImageLabel.Text" xml:space="preserve">
+    <value>Preferred
+	Image</value>
+  </data>
+  <data name="&gt;&gt;InputPathTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="InputPathLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="InputPathButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>946, 55</value>
+  </data>
+  <data name="ColorSectionEndButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>360, 215</value>
+  </data>
+  <data name="InputPathLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColorSectionStartLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="DirectoryGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 50</value>
+  </data>
+  <data name="LanguageComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 38</value>
+  </data>
+  <data name="InputPathTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>750, 35</value>
+  </data>
+  <data name="&gt;&gt;OutputPathLabel.Parent" xml:space="preserve">
+    <value>DirectoryGroupBox</value>
+  </data>
+  <data name="&gt;&gt;InputPathTextBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;LanguageLabel.Parent" xml:space="preserve">
+    <value>LanguageGroupBox</value>
+  </data>
+  <data name="OutputPathLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;ColorTitleEnabledButton.Name" xml:space="preserve">
+    <value>ColorTitleEnabledButton</value>
+  </data>
+  <data name="OutputPathTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;ColorTitleButton.Name" xml:space="preserve">
+    <value>ColorTitleButton</value>
+  </data>
+  <data name="&gt;&gt;PreferredImageLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColorSectionStartLabel.Parent" xml:space="preserve">
+    <value>BackgroundColorGroupBox</value>
+  </data>
+  <data name="ColorSectionStartLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 26</value>
+  </data>
+  <data name="ColorSectionEndButton.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;InputPathButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>360, 145</value>
+  </data>
+  <data name="BackgroundColorGroupBox.Text" xml:space="preserve">
+    <value>Background Color</value>
+  </data>
+  <data name="LanguageLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 80</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>12, 30</value>
+  </data>
+  <data name="&gt;&gt;LanguageLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ColorTitleLabel.Parent" xml:space="preserve">
+    <value>BackgroundColorGroupBox</value>
+  </data>
+  <data name="&gt;&gt;ImageCheckedListBox.Parent" xml:space="preserve">
+    <value>LanguageGroupBox</value>
+  </data>
+  <data name="&gt;&gt;OutputPathTextBox.Name" xml:space="preserve">
+    <value>OutputPathTextBox</value>
+  </data>
+  <data name="&gt;&gt;LanguageGroupBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ColorTitleEnabledButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="LanguageLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 30</value>
+  </data>
+  <data name="ColorTitleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 80</value>
+  </data>
+  <data name="InputPathTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>170, 60</value>
+  </data>
+  <data name="LanguageGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>610, 280</value>
+  </data>
+  <data name="&gt;&gt;OutputPathTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BackgroundColorGroupBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="ColorSectionEndLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 220</value>
+  </data>
+  <data name="&gt;&gt;PreferredImageLabel.Name" xml:space="preserve">
+    <value>PreferredImageLabel</value>
+  </data>
+  <data name="ImageCheckedListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>BackgroundColorGroupBox</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;DirectoryGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PreferredImageLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 155</value>
+  </data>
+  <data name="ColorTitleLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 9pt</value>
+  </data>
+  <data name="LanguageGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>530, 300</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>BackgroundColorGroupBox</value>
+  </data>
+  <data name="&gt;&gt;ImageCheckedListBox.Name" xml:space="preserve">
+    <value>ImageCheckedListBox</value>
+  </data>
+  <data name="LanguageComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ColorSectionEndLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;DirectoryGroupBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ColorTitleEnabledLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColorSectionStartButton.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="PreferredImageLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;PreferredImageLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ColorTitleEnabledLabel.Text" xml:space="preserve">
+    <value>[60 FPS Mod:ENABLED]</value>
+  </data>
+  <data name="InputPathLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 30</value>
+  </data>
+  <data name="&gt;&gt;ColorSectionEndLabel.Name" xml:space="preserve">
+    <value>ColorSectionEndLabel</value>
+  </data>
+  <data name="ColorSectionStartButton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="InputPathButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;ColorTitleLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LanguageLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;ColorSectionEndButton.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="BackgroundColorGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>530, 300</value>
+  </data>
+  <data name="&gt;&gt;BackgroundColorGroupBox.Name" xml:space="preserve">
+    <value>BackgroundColorGroupBox</value>
+  </data>
+  <data name="BackgroundColorGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 280</value>
+  </data>
+  <data name="&gt;&gt;ColorSectionStartLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LanguageGroupBox.Name" xml:space="preserve">
+    <value>LanguageGroupBox</value>
+  </data>
+  <data name="LanguageComboBox.Items" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="&gt;&gt;BackgroundColorGroupBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="ColorSectionStartButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 40</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>SettingsForm</value>
+  </data>
+  <data name="&gt;&gt;InputPathButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ImageCheckedListBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;LanguageLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;InputPathLabel.Parent" xml:space="preserve">
+    <value>DirectoryGroupBox</value>
+  </data>
+  <data name="&gt;&gt;InputPathLabel.Name" xml:space="preserve">
+    <value>InputPathLabel</value>
+  </data>
+  <data name="&gt;&gt;OutputPathButton.Name" xml:space="preserve">
+    <value>OutputPathButton</value>
+  </data>
+  <data name="&gt;&gt;ColorSectionStartButton.Parent" xml:space="preserve">
+    <value>BackgroundColorGroupBox</value>
+  </data>
+  <data name="ColorTitleDisabledLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ColorTitleDisabledLabel.Parent" xml:space="preserve">
+    <value>BackgroundColorGroupBox</value>
+  </data>
+  <data name="&gt;&gt;ColorTitleDisabledButton.Parent" xml:space="preserve">
+    <value>BackgroundColorGroupBox</value>
+  </data>
+  <data name="ColorTitleEnabledButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="ColorSectionStartButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>360, 145</value>
+  </data>
+  <data name="LanguageLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="ColorTitleEnabledLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 80</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;ColorSectionEndButton.Name" xml:space="preserve">
+    <value>ColorSectionEndButton</value>
+  </data>
+  <data name="ColorSectionEndButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 40</value>
+  </data>
+  <data name="&gt;&gt;ColorSectionEndLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DirectoryGroupBox.Name" xml:space="preserve">
+    <value>DirectoryGroupBox</value>
+  </data>
+  <data name="InputPathLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 60</value>
+  </data>
+  <data name="ColorTitleLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;ColorTitleButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="DirectoryGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1100, 210</value>
+  </data>
+  <data name="&gt;&gt;ColorTitleDisabledButton.Name" xml:space="preserve">
+    <value>ColorTitleDisabledButton</value>
+  </data>
+  <data name="OutputPathButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>946, 135</value>
+  </data>
+  <data name="&gt;&gt;ImageCheckedListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;ColorTitleButton.Parent" xml:space="preserve">
+    <value>BackgroundColorGroupBox</value>
+  </data>
+  <data name="&gt;&gt;ColorTitleLabel.Name" xml:space="preserve">
+    <value>ColorTitleLabel</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LanguageGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;OutputPathButton.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;ColorTitleDisabledLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ImageCheckedListBox.Items" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="ColorSectionStartLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;LanguageComboBox.Parent" xml:space="preserve">
+    <value>LanguageGroupBox</value>
+  </data>
+  <data name="ColorTitleLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;ColorTitleEnabledLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;ColorTitleEnabledLabel.Parent" xml:space="preserve">
+    <value>BackgroundColorGroupBox</value>
+  </data>
+  <data name="&gt;&gt;ColorTitleEnabledLabel.Name" xml:space="preserve">
+    <value>ColorTitleEnabledLabel</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="&gt;&gt;ColorTitleButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColorSectionEndButton.Parent" xml:space="preserve">
+    <value>BackgroundColorGroupBox</value>
+  </data>
+  <data name="&gt;&gt;InputPathTextBox.Parent" xml:space="preserve">
+    <value>DirectoryGroupBox</value>
+  </data>
+  <data name="&gt;&gt;ColorSectionStartLabel.Name" xml:space="preserve">
+    <value>ColorSectionStartLabel</value>
+  </data>
+  <data name="&gt;&gt;ColorTitleDisabledLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ColorSectionEndLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ColorTitleDisabledButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;ColorSectionStartButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LanguageComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LanguageLabel.Name" xml:space="preserve">
+    <value>LanguageLabel</value>
+  </data>
+  <data name="ColorSectionEndLabel.Text" xml:space="preserve">
+    <value>[--SectionEnd:Items--]</value>
+  </data>
+  <data name="LanguageLabel.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="ColorSectionStartLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 9pt</value>
+  </data>
+  <data name="OutputPathLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 30</value>
+  </data>
+  <data name="ImageCheckedListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 150</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 150</value>
+  </data>
+  <data name="&gt;&gt;OutputPathButton.Parent" xml:space="preserve">
+    <value>DirectoryGroupBox</value>
+  </data>
+  <data name="ColorSectionEndLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;InputPathButton.Name" xml:space="preserve">
+    <value>InputPathButton</value>
+  </data>
+  <data name="ColorTitleButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>360, 75</value>
+  </data>
+  <data name="ColorSectionStartLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 150</value>
+  </data>
+  <data name="ColorTitleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 26</value>
+  </data>
+  <data name="&gt;&gt;OutputPathLabel.Name" xml:space="preserve">
+    <value>OutputPathLabel</value>
+  </data>
+  <data name="ColorTitleDisabledButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ColorSectionEndLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>276, 26</value>
+  </data>
+  <data name="&gt;&gt;LanguageGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.Language" type="System.Globalization.CultureInfo, mscorlib">
+    <value>en-US</value>
+  </data>
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
 </root>

@@ -1,0 +1,9 @@
+C:\Users\solle_000\source\repos\solleo1989\SwitchCheatCodeManager\SwitchCheatCodeManager\bin\Release\net6.0-windows\publish\Properties\Resources.resx
+C:\Users\solle_000\source\repos\solleo1989\SwitchCheatCodeManager\SwitchCheatCodeManager\bin\Release\net6.0-windows\publish\Properties\Resources.zh-cn.resx
+C:\Users\solle_000\source\repos\solleo1989\SwitchCheatCodeManager\SwitchCheatCodeManager\bin\Release\net6.0-windows\publish\img\NoImage.jpg
+C:\Users\solle_000\source\repos\solleo1989\SwitchCheatCodeManager\SwitchCheatCodeManager\bin\Release\net6.0-windows\publish\SwitchCheatCodeManager.exe
+C:\Users\solle_000\source\repos\solleo1989\SwitchCheatCodeManager\SwitchCheatCodeManager\bin\Release\net6.0-windows\publish\SwitchCheatCodeManager.dll
+C:\Users\solle_000\source\repos\solleo1989\SwitchCheatCodeManager\SwitchCheatCodeManager\bin\Release\net6.0-windows\publish\SwitchCheatCodeManager.deps.json
+C:\Users\solle_000\source\repos\solleo1989\SwitchCheatCodeManager\SwitchCheatCodeManager\bin\Release\net6.0-windows\publish\SwitchCheatCodeManager.runtimeconfig.json
+C:\Users\solle_000\source\repos\solleo1989\SwitchCheatCodeManager\SwitchCheatCodeManager\bin\Release\net6.0-windows\publish\zh-cn\SwitchCheatCodeManager.resources.dll
+C:\Users\solle_000\source\repos\solleo1989\SwitchCheatCodeManager\SwitchCheatCodeManager\bin\Release\net6.0-windows\publish\en-US\SwitchCheatCodeManager.resources.dll

@@ -17,40 +17,46 @@ namespace SwitchCheatCodeManager.Comparator
     {
         public int Compare(string x, string y)
         {
-            // Main gold of comparison 2 digits.
+            // Main goal of comparison 2 digits.
+            // i.e., 1.0.0 vs 1.0.1
             if (x.Contains(".") && y.Contains("."))
             {
                 var xparts = x.Split(".");
-                var yparts = y.Split(".");
-                // Note: Here we only compare the same version format
-                if (xparts.Length == yparts.Length)
+                var yparts = y.Split(".");                
+                for (var i = 0; i < Math.Min(xparts.Length, yparts.Length); i++)
                 {
-                    for (var i = 0; i < xparts.Length; i++)
+                    long xdigit, ydigit;
+                    bool xConvert = long.TryParse(xparts[i], out xdigit);
+                    bool yConvert = long.TryParse(yparts[i], out ydigit);
+                    if (xConvert && yConvert)
                     {
-                        long xdigit, ydigit;
-                        bool xConvert = long.TryParse(xparts[i], out xdigit);
-                        bool yConvert = long.TryParse(yparts[i], out ydigit);
-                        if (xConvert && yConvert)
+                        if (xdigit > ydigit)        // 1.1.0 > 1.0.0 => 2
                         {
-                            if (xdigit > ydigit)
-                            {
-                                return i+1;
-                            }
-                            else if (xdigit < ydigit)
-                            {
-                                return -i-1;
-                            }
+                            return i + 1;
                         }
-                        else 
+                        else if (xdigit < ydigit)   // 1.0.0 < 1.0.1 => -3
                         {
-                            return string.Compare(x, y, true);
+                            return -i - 1;
                         }
                     }
-                    return 0;
+                    else
+                    {
+                        // 1.x2341312 will be consider as string compare
+                        return string.Compare(x, y, true);
+                    }
+                }
+
+                if (xparts.Length > yparts.Length)  // 1.0.0.1 > 1.0.0 -> -3
+                {
+                    return yparts.Length;
+                }
+                else if (xparts.Length < yparts.Length) // 1.0.2 < 1.0.2.1 -> 3
+                {
+                    return -xparts.Length;
                 }
                 else
                 {
-                    return string.Compare(x, y, true);
+                    return 0;
                 }
             }
             else

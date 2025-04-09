@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace SwitchCheatCodeManager.CheatCode
@@ -10,6 +8,7 @@ namespace SwitchCheatCodeManager.CheatCode
         private String Line;
         public bool Legit;
         public int NumberOfPieces;
+        public bool LineWithAllZeroes;
         public string ErrorLine;
 
         public CodeLine() 
@@ -21,6 +20,7 @@ namespace SwitchCheatCodeManager.CheatCode
 
         public CodeLine(String code)
         {
+            LineWithAllZeroes = false;
             if (code.Trim() == string.Empty)
             {
                 this.Line = string.Empty;
@@ -30,7 +30,13 @@ namespace SwitchCheatCodeManager.CheatCode
             else
             {
                 this.Line = code.Trim();
-                if (IsLegitOnePiece())
+                if (IsLegitZeroLine())
+                {
+                    Legit = true;
+                    NumberOfPieces = 3;
+                    LineWithAllZeroes = true;
+                }
+                else if (IsLegitOnePiece())
                 {
                     Legit = true;
                     NumberOfPieces = 1;
@@ -58,6 +64,13 @@ namespace SwitchCheatCodeManager.CheatCode
                 }
             }
         }
+
+        public bool IsLegitZeroLine()
+        {
+            Regex reg = new Regex(@"^(([0]{8})\s([0]{8})\s([0]{8}))$");
+            return reg.IsMatch(this.Line);
+        }
+
         public bool IsLegitOnePiece()
         {
             Regex reg = new Regex(@"^(([0-9]|[a-f]|[A-F]){8})$");
@@ -84,7 +97,7 @@ namespace SwitchCheatCodeManager.CheatCode
 
         public String Output()
         {
-            return String.IsNullOrEmpty(this.Line) ? String.Empty : this.Line.ToUpper() + "\r\n";
+            return String.IsNullOrEmpty(this.Line) ? String.Empty : this.Line.Trim().ToUpper();
         }
 
     }

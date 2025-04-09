@@ -95,7 +95,7 @@ namespace SwitchCheatCodeManager
             Buttons buttons = Buttons.Ok,
             Font formFont = null)
         {
-            InitializeForm(title, new Size(420, 320));
+            InitializeForm(title, new Size(520, 320));
             Panel panel = CreateDefaultPanel();
             frm.Controls.Add(panel);
 
@@ -122,15 +122,16 @@ namespace SwitchCheatCodeManager
             panel.Controls.Add(buildIdLabel);
 
             // Add input textbox
-            GameNameTextbox = ControlItem(Type.TextBox, null, new Size(250, 22), new Point(90, 30));
+            GameNameTextbox = ControlItem(Type.TextBox, null, new Size(350, 22), new Point(90, 30));
+            ((TextBox)GameNameTextbox).MaxLength = 100;
             ((TextBox)GameNameTextbox).PlaceholderText = Resources.INSERT_GAME_BUILD_DIALOGUE_GAMENAME_PLACEHOLDER_MESSAGE;
             panel.Controls.Add(GameNameTextbox);
 
-            GameIdTextbox = ControlItem(Type.TextBox, null, new Size(250, 22), new Point(90, 80));
+            GameIdTextbox = ControlItem(Type.TextBox, null, new Size(350, 22), new Point(90, 80));
             ((TextBox)GameIdTextbox).PlaceholderText = Resources.INSERT_GAME_BUILD_DIALOGUE_GAMEID_PLACEHOLDER_MESSAGE;
             panel.Controls.Add(GameIdTextbox);
 
-            BuildIdTextbox = ControlItem(Type.TextBox, null, new Size(250, 22), new Point(90, 130));
+            BuildIdTextbox = ControlItem(Type.TextBox, null, new Size(350, 22), new Point(90, 130));
             ((TextBox)BuildIdTextbox).PlaceholderText = Resources.INSERT_GAME_BUILD_DIALOGUE_BUILDID_PLACEHOLDER_MESSAGE;
             panel.Controls.Add(BuildIdTextbox);
 
@@ -184,7 +185,7 @@ namespace SwitchCheatCodeManager
             string buildPlaceholder = null,
             string versionPlaceholder = null)
         {
-            InitializeForm(title, new Size(420, 320));            
+            InitializeForm(title, new Size(470, 320));            
             Panel panel = CreateDefaultPanel();
             frm.Controls.Add(panel);
 
@@ -211,11 +212,11 @@ namespace SwitchCheatCodeManager
             panel.Controls.Add(versionLabel);
 
             //Add ComboBox or TextBox to the form
-            BuildIdTextbox = ControlItem(Type.TextBox, null, new Size(250, 22), new Point(30, 50));
+            BuildIdTextbox = ControlItem(Type.TextBox, null, new Size(300, 22), new Point(30, 50));
             ((TextBox)BuildIdTextbox).Text = !string.IsNullOrEmpty(buildPlaceholder) ? buildPlaceholder : string.Empty;
             panel.Controls.Add(BuildIdTextbox);
 
-            VersionTextbox = ControlItem(Type.TextBox, null, new Size(120, 22), new Point(30, 120));
+            VersionTextbox = ControlItem(Type.TextBox, null, new Size(170, 22), new Point(30, 120));
             ((TextBox)VersionTextbox).Text = !string.IsNullOrEmpty(buildPlaceholder) ? versionPlaceholder : string.Empty;
             panel.Controls.Add(VersionTextbox);            
 
@@ -272,7 +273,7 @@ namespace SwitchCheatCodeManager
             Buttons buttons = Buttons.Ok,
             Font font = null)
         {
-            InitializeForm(title, new Size(400, 320));
+            InitializeForm(title, new Size(550, 320));
             Panel panel = CreateDefaultPanel();
             frm.Controls.Add(panel);
 
@@ -280,12 +281,67 @@ namespace SwitchCheatCodeManager
             Label textLabel = new Label();
             textLabel.Font = font != null ? font : null;
             textLabel.Text = message;
-            textLabel.Size = new Size(325, 40);
+            textLabel.Size = new Size(385, 40);
             textLabel.Location = new Point(30, 50);
             textLabel.TextAlign = ContentAlignment.MiddleLeft;
             panel.Controls.Add(textLabel);
 
-            BuildIdTextbox = ControlItem(Type.TextBox, null, new Size(180, 30), new Point(30, 100));
+            BuildIdTextbox = ControlItem(Type.TextBox, null, new Size(460, 30), new Point(30, 100));
+            panel.Controls.Add(BuildIdTextbox);
+            frm.ActiveControl = BuildIdTextbox;
+
+            //Add buttons to the form
+            foreach (Button btn in ButtonItems(buttons))
+            {
+                if (btn != null)
+                {
+                    btn.Size = new Size(90, 50);
+                    btn.Click += new EventHandler(button_Click);
+                }
+                frm.Controls.Add(btn);
+            }
+
+            frm.ShowDialog();
+            if (DialogRes == DialogResult.OK || DialogRes == DialogResult.Yes)
+            {
+                ResultValue = BuildIdTextbox.Text;
+            }
+            return DialogRes;
+        }
+
+        /// <summary>
+        /// Add a MessageBox form for sub-section input dialog. 
+        /// </summary>
+        /// <param name="title">title of dialog (as System.String)</param>
+        /// <param name="message">message in dialog(as System.String)</param>
+        /// /// <param name="message">previous sub section name(as System.String)</param>
+        /// <param name="icon">Select icon (as InputBox.Icon)</param>
+        /// <param name="buttons">Select icon (as InputBox.Buttons)</param>
+        /// <param name="font">Font in form (as Font)</param>
+        /// <returns>Result from the user action.</returns>
+        public static DialogResult UpdateSubSectionNameDialog(
+            string title,
+            string message,
+            string sectionName,
+            Icon icon = Icon.Information,
+            Buttons buttons = Buttons.Ok,
+            Font font = null)
+        {
+            InitializeForm(title, new Size(550, 320));
+            Panel panel = CreateDefaultPanel();
+            frm.Controls.Add(panel);
+
+            //Label definition (message)
+            Label textLabel = new Label();
+            textLabel.Font = font != null ? font : null;
+            textLabel.Text = message;
+            textLabel.Size = new Size(385, 40);
+            textLabel.Location = new Point(30, 50);
+            textLabel.TextAlign = ContentAlignment.MiddleLeft;
+            panel.Controls.Add(textLabel);
+
+            BuildIdTextbox = ControlItem(Type.TextBox, null, new Size(460, 30), new Point(30, 100));
+            ((TextBox)BuildIdTextbox).Text = sectionName;
             panel.Controls.Add(BuildIdTextbox);
             frm.ActiveControl = BuildIdTextbox;
 
@@ -329,7 +385,7 @@ namespace SwitchCheatCodeManager
         {
             Panel panel = new Panel();
             panel.Location = new Point(0, 0);
-            panel.Size = new Size(430, 180);
+            panel.Size = new Size(530, 180);
             panel.BackColor = Color.White;
             //TODO: Add icon in to panel
             //panel.Controls.Add(Picture(Icon.Information));
@@ -372,7 +428,7 @@ namespace SwitchCheatCodeManager
 
                         hasError = true;
                     }
-                    if (VersionTextbox.Text?.Length > 0 && !Regex.Match(VersionTextbox.Text, @"\d{1}\.\d{1}\.\d{1}").Success)
+                    if (VersionTextbox.Text?.Length > 0 && !Regex.Match(VersionTextbox.Text, @"\d{1}\.\d{1,3}\.\d{1,10}").Success)
                     {
                         MessageBox.Show(Resources.DEFAULT_INSERT_NEW_CHEAT_VERSION_NAME_INVALID_MESSAGE, 
                             Resources.ERROR_MESSAGE_TITLE_ERROR, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -519,6 +575,7 @@ namespace SwitchCheatCodeManager
                     textBox.Location = point;
                     textBox.KeyDown += new KeyEventHandler(textBox_KeyDown);
                     textBox.Name = "textBox";
+                    textBox.MaxLength = 29;
                     returnControl = textBox;
                     break;
             }

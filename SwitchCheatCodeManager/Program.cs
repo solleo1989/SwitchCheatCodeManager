@@ -1,7 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SwitchCheatCodeManager
@@ -17,7 +14,11 @@ namespace SwitchCheatCodeManager
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.SetHighDpiMode(HighDpiMode.PerMonitor);
+            Application.Run(new WinForm.MainForm(
+                new Helper.MainHelper(),
+                new Helper.ActionHelper()
+                )); ;
         }
     }
 }

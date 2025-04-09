@@ -1,4 +1,5 @@
 ﻿using SwitchCheatCodeManager.Constant;
+using SwitchCheatCodeManager.FormEntity;
 using SwitchCheatCodeManager.Properties;
 using System.ComponentModel;
 using System.Drawing;
@@ -34,766 +35,650 @@ namespace SwitchCheatCodeManager.WinForm
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.MenuStrip = new System.Windows.Forms.MenuStrip();
-            this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.NewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.OpenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.SaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SaveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.ExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.HelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.AboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.ToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.OptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PathGroupBox = new System.Windows.Forms.GroupBox();
-            this.FilterTextBox = new System.Windows.Forms.TextBox();
-            this.PathTextBox = new SwitchCheatCodeManager.FormEntity.TextBoxEx();
-            this.OpenFolderButton = new System.Windows.Forms.Button();
-            this.IconImageList = new System.Windows.Forms.ImageList(this.components);
-            this.GameListComboBox = new SwitchCheatCodeManager.FormEntity.ComboBoxEx();
-            this.GameNameGroupBox = new System.Windows.Forms.GroupBox();
-            this.GameDBTidTextBox = new System.Windows.Forms.TextBox();
-            this.CopyFolderButton = new System.Windows.Forms.Button();
-            this.VersionFileModeUpdateButton = new System.Windows.Forms.Button();
-            this.GameNameTextBox = new SwitchCheatCodeManager.FormEntity.TextBoxEx();
-            this.GameDBNameTextBox = new System.Windows.Forms.TextBox();
-            this.CodeModifierGroupBox = new System.Windows.Forms.GroupBox();
-            this.CodeSelectorGroupBox = new System.Windows.Forms.GroupBox();
-            this.PreviewImage = new System.Windows.Forms.PictureBox();
-            this.CodeSelectorListBox = new SwitchCheatCodeManager.FormEntity.ListBoxEx();
-            this.AscendingOrderButton = new System.Windows.Forms.Button();
-            this.DescendingOrderButton = new System.Windows.Forms.Button();
-            this.InsertNewCheatButton = new System.Windows.Forms.Button();
-            this.FormatFilesButton = new System.Windows.Forms.Button();
-            this.CodeEditorGroupBox = new System.Windows.Forms.GroupBox();
-            this.CodeStatusLabel = new System.Windows.Forms.Label();
-            this.BuildIdLabel = new System.Windows.Forms.Label();
-            this.BuildIdTextBox = new System.Windows.Forms.TextBox();
-            this.VersionLabel = new System.Windows.Forms.Label();
-            this.VersionNumberTextBox = new System.Windows.Forms.TextBox();
-            this.CodeTextBox = new SwitchCheatCodeManager.FormEntity.TextAreaEx();
-            this.SaveOriginalButton = new System.Windows.Forms.Button();
-            this.CopyFileButton = new System.Windows.Forms.Button();
-            this.NewBlockButton = new System.Windows.Forms.Button();
-            this.UpdateButton = new System.Windows.Forms.Button();
-            this.SubCheatsGroupBox = new System.Windows.Forms.GroupBox();
-            this.CodeModifiedTextBox = new SwitchCheatCodeManager.FormEntity.TextAreaEx();
-            this.SaveFormatedButton = new System.Windows.Forms.Button();
-            this.NavigationFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.DefaultFileButton = new System.Windows.Forms.Button();
-            this.NavigationImageList = new System.Windows.Forms.ImageList(this.components);
-            this.OpenFileButton = new System.Windows.Forms.Button();
-            this.InsertNewCheatsButton = new System.Windows.Forms.Button();
-            this.StatusStrip = new System.Windows.Forms.StatusStrip();
-            this.InputFolderPathLabelToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.OutputFolderPathLabelToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.PreviewImageList = new System.Windows.Forms.ImageList(this.components);
-            this.MenuStrip.SuspendLayout();
-            this.PathGroupBox.SuspendLayout();
-            this.GameNameGroupBox.SuspendLayout();
-            this.CodeSelectorGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PreviewImage)).BeginInit();
-            this.CodeEditorGroupBox.SuspendLayout();
-            this.NavigationFlowLayoutPanel.SuspendLayout();
-            this.StatusStrip.SuspendLayout();
-            this.SuspendLayout();
+            components = new Container();
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(MainForm));
+            MenuStrip = new MenuStrip();
+            FileToolStripMenuItem = new ToolStripMenuItem();
+            NewToolStripMenuItem = new ToolStripMenuItem();
+            OpenToolStripMenuItem = new ToolStripMenuItem();
+            ToolStripSeparator = new ToolStripSeparator();
+            SaveToolStripMenuItem = new ToolStripMenuItem();
+            SaveAsToolStripMenuItem = new ToolStripMenuItem();
+            ToolStripSeparator1 = new ToolStripSeparator();
+            ExitToolStripMenuItem = new ToolStripMenuItem();
+            ToolsToolStripMenuItem = new ToolStripMenuItem();
+            OptionsToolStripMenuItem = new ToolStripMenuItem();
+            HelpToolStripMenuItem = new ToolStripMenuItem();
+            AboutToolStripMenuItem = new ToolStripMenuItem();
+            ToolStripSeparator2 = new ToolStripSeparator();
+            PathGroupBox = new GroupBox();
+            PathTextBox = new FormEntity.TextBoxEx();
+            FilterTextBox = new SearchTextBox();
+            GameListComboBox = new FormEntity.ComboBoxEx();
+            OpenFolderButton = new Button();
+            IconImageList = new ImageList(components);
+            GameNameGroupBox = new GroupBox();
+            GameNameTextBox = new FormEntity.TextBoxEx();
+            VersionFileModeUpdateButton = new Button();
+            GameDBTidTextBox = new TextBox();
+            GameDBNameTextBox = new TextBox();
+            CopyFolderButton = new Button();
+            CodeModifierGroupBox = new GroupBox();
+            CodeSelectorGroupBox = new GroupBox();
+            PreviewImage = new PictureBox();
+            CodeSelectorListBox = new FormEntity.ListBoxEx();
+            NumOfCheatsLabel = new Label();
+            AscendingOrderButton = new Button();
+            DescendingOrderButton = new Button();
+            InsertNewCheatButton = new Button();
+            RemoveCheatButton = new Button();
+            FormatFilesButton = new Button();
+            CodeEditorGroupBox = new GroupBox();
+            CodeStatusLabel = new Label();
+            BuildIdLabel = new Label();
+            BuildIdTextBox = new TextBox();
+            VersionLabel = new Label();
+            VersionNumberTextBox = new TextBox();
+            CodeTextBox = new FormEntity.TextAreaEx();
+            SaveOriginalButton = new Button();
+            CopyFileButton = new Button();
+            CodeBuilderButton = new Button();
+            NewBlockButton = new Button();
+            UpdateButton = new Button();
+            SubCheatsGroupBox = new GroupBox();
+            SaveFormatedButton = new Button();
+            NavigationFlowLayoutPanel = new FlowLayoutPanel();
+            DefaultFileButton = new Button();
+            NavigationImageList = new ImageList(components);
+            OpenFileButton = new Button();
+            InsertNewCheatsButton = new Button();
+            RemoveFolderButton = new Button();
+            CompareButton = new Button();
+            StatusStrip = new StatusStrip();
+            InputFolderPathLabelToolStripStatusLabel = new ToolStripStatusLabel();
+            OutputFolderPathLabelToolStripStatusLabel = new ToolStripStatusLabel();
+            ToolTip = new ToolTip(components);
+            PreviewImageList = new ImageList(components);
+            MenuStrip.SuspendLayout();
+            PathGroupBox.SuspendLayout();
+            GameNameGroupBox.SuspendLayout();
+            CodeSelectorGroupBox.SuspendLayout();
+            ((ISupportInitialize)PreviewImage).BeginInit();
+            CodeEditorGroupBox.SuspendLayout();
+            NavigationFlowLayoutPanel.SuspendLayout();
+            StatusStrip.SuspendLayout();
+            SuspendLayout();
             // 
             // MenuStrip
             // 
-            this.MenuStrip.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.FileToolStripMenuItem,
-            this.HelpToolStripMenuItem});
-            this.MenuStrip.Location = new System.Drawing.Point(0, 0);
-            this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Size = new System.Drawing.Size(1917, 38);
-            this.MenuStrip.TabIndex = 0;
-            this.MenuStrip.Text = "Menu Strip";
+            resources.ApplyResources(MenuStrip, "MenuStrip");
+            MenuStrip.ImageScalingSize = new Size(32, 32);
+            MenuStrip.Items.AddRange(new ToolStripItem[] { FileToolStripMenuItem, ToolsToolStripMenuItem, HelpToolStripMenuItem });
+            MenuStrip.Name = "MenuStrip";
+            ToolTip.SetToolTip(MenuStrip, resources.GetString("MenuStrip.ToolTip"));
             // 
             // FileToolStripMenuItem
             // 
-            this.FileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.NewToolStripMenuItem,
-            this.OpenToolStripMenuItem,
-            this.ToolStripSeparator,
-            this.SaveToolStripMenuItem,
-            this.SaveAsToolStripMenuItem,
-            this.ToolStripSeparator1,
-            this.ExitToolStripMenuItem});
-            this.FileToolStripMenuItem.Name = "FileToolStripMenuItem";
-            this.FileToolStripMenuItem.Size = new System.Drawing.Size(62, 34);
-            this.FileToolStripMenuItem.Text = global::SwitchCheatCodeManager.Properties.Resources.MenuStrip_FileText;
+            resources.ApplyResources(FileToolStripMenuItem, "FileToolStripMenuItem");
+            FileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { NewToolStripMenuItem, OpenToolStripMenuItem, ToolStripSeparator, SaveToolStripMenuItem, SaveAsToolStripMenuItem, ToolStripSeparator1, ExitToolStripMenuItem });
+            FileToolStripMenuItem.Name = "FileToolStripMenuItem";
+            FileToolStripMenuItem.Text = Resources.MenuStrip_FileText;
             // 
             // NewToolStripMenuItem
             // 
-            this.NewToolStripMenuItem.Enabled = false;
-            this.NewToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("NewToolStripMenuItem.Image")));
-            this.NewToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.NewToolStripMenuItem.Name = "NewToolStripMenuItem";
-            this.NewToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.NewToolStripMenuItem.Size = new System.Drawing.Size(274, 40);
-            this.NewToolStripMenuItem.Text = global::SwitchCheatCodeManager.Properties.Resources.MenuStrip_DefaultText;
-            this.NewToolStripMenuItem.Click += new System.EventHandler(this.DefaultFolderOpenButton_Click);
+            resources.ApplyResources(NewToolStripMenuItem, "NewToolStripMenuItem");
+            NewToolStripMenuItem.Name = "NewToolStripMenuItem";
+            NewToolStripMenuItem.Text = Resources.MenuStrip_DefaultText;
+            NewToolStripMenuItem.Click += DefaultFolderOpenButton_Click;
             // 
             // OpenToolStripMenuItem
             // 
-            this.OpenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("OpenToolStripMenuItem.Image")));
-            this.OpenToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem";
-            this.OpenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.OpenToolStripMenuItem.Size = new System.Drawing.Size(274, 40);
-            this.OpenToolStripMenuItem.Text = global::SwitchCheatCodeManager.Properties.Resources.MenuStrip_OpenText;
-            this.OpenToolStripMenuItem.Click += new System.EventHandler(this.MainMenuOpenButton_Click);
+            resources.ApplyResources(OpenToolStripMenuItem, "OpenToolStripMenuItem");
+            OpenToolStripMenuItem.Name = "OpenToolStripMenuItem";
+            OpenToolStripMenuItem.Text = Resources.MenuStrip_OpenText;
+            OpenToolStripMenuItem.Click += MainMenuOpenButton_Click;
             // 
             // ToolStripSeparator
             // 
-            this.ToolStripSeparator.Name = "ToolStripSeparator";
-            this.ToolStripSeparator.Size = new System.Drawing.Size(271, 6);
+            resources.ApplyResources(ToolStripSeparator, "ToolStripSeparator");
+            ToolStripSeparator.Name = "ToolStripSeparator";
             // 
             // SaveToolStripMenuItem
             // 
-            this.SaveToolStripMenuItem.Enabled = false;
-            this.SaveToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("SaveToolStripMenuItem.Image")));
-            this.SaveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem";
-            this.SaveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.SaveToolStripMenuItem.Size = new System.Drawing.Size(274, 40);
-            this.SaveToolStripMenuItem.Text = global::SwitchCheatCodeManager.Properties.Resources.MenuStrip_SaveText;
-            this.SaveToolStripMenuItem.Click += new System.EventHandler(this.SaveOriginalButton_Click);
+            resources.ApplyResources(SaveToolStripMenuItem, "SaveToolStripMenuItem");
+            SaveToolStripMenuItem.Name = "SaveToolStripMenuItem";
+            SaveToolStripMenuItem.Text = Resources.MenuStrip_SaveText;
+            SaveToolStripMenuItem.Click += SaveOriginalButton_Click;
             // 
             // SaveAsToolStripMenuItem
             // 
-            this.SaveAsToolStripMenuItem.Enabled = false;
-            this.SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem";
-            this.SaveAsToolStripMenuItem.Size = new System.Drawing.Size(274, 40);
-            this.SaveAsToolStripMenuItem.Text = global::SwitchCheatCodeManager.Properties.Resources.MenuStrip_SaveAsText;
-            this.SaveAsToolStripMenuItem.Click += new System.EventHandler(this.SaveAsButton_Click);
+            resources.ApplyResources(SaveAsToolStripMenuItem, "SaveAsToolStripMenuItem");
+            SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem";
+            SaveAsToolStripMenuItem.Text = Resources.MenuStrip_SaveAsText;
+            SaveAsToolStripMenuItem.Click += SaveAsButton_Click;
             // 
             // ToolStripSeparator1
             // 
-            this.ToolStripSeparator1.Name = "ToolStripSeparator1";
-            this.ToolStripSeparator1.Size = new System.Drawing.Size(271, 6);
+            resources.ApplyResources(ToolStripSeparator1, "ToolStripSeparator1");
+            ToolStripSeparator1.Name = "ToolStripSeparator1";
             // 
             // ExitToolStripMenuItem
             // 
-            this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
-            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(274, 40);
-            this.ExitToolStripMenuItem.Text = global::SwitchCheatCodeManager.Properties.Resources.MenuStrip_ExitText;
-            this.ExitToolStripMenuItem.Click += new System.EventHandler(this.CloseApplication);
-            // 
-            // HelpToolStripMenuItem
-            // 
-            this.HelpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AboutToolStripMenuItem});
-            this.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem";
-            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(74, 34);
-            this.HelpToolStripMenuItem.Text = global::SwitchCheatCodeManager.Properties.Resources.MenuStrip_HelpText;
-            // 
-            // AboutToolStripMenuItem
-            // 
-            this.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem";
-            this.AboutToolStripMenuItem.Size = new System.Drawing.Size(203, 40);
-            this.AboutToolStripMenuItem.Text = global::SwitchCheatCodeManager.Properties.Resources.MenuStrip_About;
-            this.AboutToolStripMenuItem.Click += new System.EventHandler(this.AboutButton_Click);
-            // 
-            // ToolStripSeparator2
-            // 
-            this.ToolStripSeparator2.Name = "ToolStripSeparator2";
-            this.ToolStripSeparator2.Size = new System.Drawing.Size(211, 6);
+            resources.ApplyResources(ExitToolStripMenuItem, "ExitToolStripMenuItem");
+            ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
+            ExitToolStripMenuItem.Text = Resources.MenuStrip_ExitText;
+            ExitToolStripMenuItem.Click += CloseApplication;
             // 
             // ToolsToolStripMenuItem
             // 
-            this.ToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.OptionsToolStripMenuItem});
-            this.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem";
-            this.ToolsToolStripMenuItem.Size = new System.Drawing.Size(89, 36);
-            this.ToolsToolStripMenuItem.Text = global::SwitchCheatCodeManager.Properties.Resources.MenuStrip_Tools;
+            resources.ApplyResources(ToolsToolStripMenuItem, "ToolsToolStripMenuItem");
+            ToolsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { OptionsToolStripMenuItem });
+            ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem";
+            ToolsToolStripMenuItem.Text = Resources.MenuStrip_Tools;
             // 
             // OptionsToolStripMenuItem
             // 
-            this.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem";
-            this.OptionsToolStripMenuItem.Size = new System.Drawing.Size(204, 40);
-            this.OptionsToolStripMenuItem.Text = global::SwitchCheatCodeManager.Properties.Resources.MenuStrip_Options;
+            resources.ApplyResources(OptionsToolStripMenuItem, "OptionsToolStripMenuItem");
+            OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem";
+            OptionsToolStripMenuItem.Text = Resources.MenuStrip_Options;
+            OptionsToolStripMenuItem.Click += OptionsButton_Click;
+            // 
+            // HelpToolStripMenuItem
+            // 
+            resources.ApplyResources(HelpToolStripMenuItem, "HelpToolStripMenuItem");
+            HelpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { AboutToolStripMenuItem });
+            HelpToolStripMenuItem.Name = "HelpToolStripMenuItem";
+            HelpToolStripMenuItem.Text = Resources.MenuStrip_HelpText;
+            // 
+            // AboutToolStripMenuItem
+            // 
+            resources.ApplyResources(AboutToolStripMenuItem, "AboutToolStripMenuItem");
+            AboutToolStripMenuItem.Name = "AboutToolStripMenuItem";
+            AboutToolStripMenuItem.Text = Resources.MenuStrip_About;
+            AboutToolStripMenuItem.Click += AboutButton_Click;
+            // 
+            // ToolStripSeparator2
+            // 
+            resources.ApplyResources(ToolStripSeparator2, "ToolStripSeparator2");
+            ToolStripSeparator2.Name = "ToolStripSeparator2";
             // 
             // PathGroupBox
             // 
-            this.PathGroupBox.Controls.Add(this.FilterTextBox);
-            this.PathGroupBox.Controls.Add(this.PathTextBox);
-            this.PathGroupBox.Controls.Add(this.OpenFolderButton);
-            this.PathGroupBox.Controls.Add(this.GameListComboBox);
-            this.PathGroupBox.Location = new System.Drawing.Point(38, 107);
-            this.PathGroupBox.Name = "PathGroupBox";
-            this.PathGroupBox.Size = new System.Drawing.Size(1838, 90);
-            this.PathGroupBox.TabIndex = 2;
-            this.PathGroupBox.TabStop = false;
-            this.PathGroupBox.Text = "Path";
-            // 
-            // FilterTextBox
-            // 
-            this.FilterTextBox.Enabled = false;
-            this.FilterTextBox.Location = new System.Drawing.Point(700, 33);
-            this.FilterTextBox.Name = "FilterTextBox";
-            this.FilterTextBox.PlaceholderText = global::SwitchCheatCodeManager.Properties.Resources.KeywordSearchPlaceholderText;
-            this.FilterTextBox.Size = new System.Drawing.Size(140, 35);
-            this.FilterTextBox.TabIndex = 4;
-            this.FilterTextBox.TextChanged += new System.EventHandler(this.FilterTextBox_TextChanged);
+            resources.ApplyResources(PathGroupBox, "PathGroupBox");
+            PathGroupBox.Controls.Add(PathTextBox);
+            PathGroupBox.Controls.Add(FilterTextBox);
+            PathGroupBox.Controls.Add(GameListComboBox);
+            PathGroupBox.Controls.Add(OpenFolderButton);
+            PathGroupBox.Name = "PathGroupBox";
+            PathGroupBox.TabStop = false;
+            ToolTip.SetToolTip(PathGroupBox, resources.GetString("PathGroupBox.ToolTip"));
             // 
             // PathTextBox
             // 
-            this.PathTextBox.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.PathTextBox.Location = new System.Drawing.Point(10, 33);
-            this.PathTextBox.Name = "PathTextBox";
-            this.PathTextBox.ReadOnly = true;
-            this.PathTextBox.Size = new System.Drawing.Size(680, 38);
-            this.PathTextBox.TabIndex = 2;
-            this.PathTextBox.WordWrap = false;
+            resources.ApplyResources(PathTextBox, "PathTextBox");
+            PathTextBox.BackColor = SystemColors.InactiveBorder;
+            PathTextBox.Name = "PathTextBox";
+            PathTextBox.ReadOnly = true;
+            ToolTip.SetToolTip(PathTextBox, resources.GetString("PathTextBox.ToolTip"));
             // 
-            // OpenFolderButton
+            // FilterTextBox
             // 
-            this.OpenFolderButton.Enabled = false;
-            this.OpenFolderButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.OpenFolderButton.ImageIndex = 8;
-            this.OpenFolderButton.ImageList = this.IconImageList;
-            this.OpenFolderButton.Location = new System.Drawing.Point(1685, 31);
-            this.OpenFolderButton.Name = "OpenFolderButton";
-            this.OpenFolderButton.Size = new System.Drawing.Size(135, 50);
-            this.OpenFolderButton.TabIndex = 3;
-            this.OpenFolderButton.Text = global::SwitchCheatCodeManager.Properties.Resources.OpenFolderButton_Text;
-            this.OpenFolderButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ToolTip.SetToolTip(this.OpenFolderButton, global::SwitchCheatCodeManager.Properties.Resources.OpenFolderButton_Tooltip_Text);
-            this.OpenFolderButton.UseVisualStyleBackColor = true;
-            this.OpenFolderButton.Click += new System.EventHandler(this.OpenFolderButton_Click);
-            // 
-            // IconImageList
-            // 
-            this.IconImageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            this.IconImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("IconImageList.ImageStream")));
-            this.IconImageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.IconImageList.Images.SetKeyName(0, "Add.png");
-            this.IconImageList.Images.SetKeyName(1, "AddNew.png");
-            this.IconImageList.Images.SetKeyName(2, "Convert.png");
-            this.IconImageList.Images.SetKeyName(3, "Copy.png");
-            this.IconImageList.Images.SetKeyName(4, "Down2.png");
-            this.IconImageList.Images.SetKeyName(5, "Format.png");
-            this.IconImageList.Images.SetKeyName(6, "Home.png");
-            this.IconImageList.Images.SetKeyName(7, "Left.png");
-            this.IconImageList.Images.SetKeyName(8, "Open.png");
-            this.IconImageList.Images.SetKeyName(9, "Overwrite.png");
-            this.IconImageList.Images.SetKeyName(10, "Right.png");
-            this.IconImageList.Images.SetKeyName(11, "Save.png");
-            this.IconImageList.Images.SetKeyName(12, "Settings.png");
-            this.IconImageList.Images.SetKeyName(13, "Up2.png");
+            resources.ApplyResources(FilterTextBox, "FilterTextBox");
+            FilterTextBox.Name = "FilterTextBox";
+            FilterTextBox.PlaceholderText = Resources.KeywordSearchPlaceholderText;
+            ToolTip.SetToolTip(FilterTextBox, resources.GetString("FilterTextBox.ToolTip"));
+            FilterTextBox.DelayedTextChanged += FilterTextBox_TextChanged;
             // 
             // GameListComboBox
             // 
-            this.GameListComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.GameListComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.GameListComboBox.Font = new System.Drawing.Font("Ubuntu Mono", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.GameListComboBox.FormattingEnabled = true;
-            this.GameListComboBox.ItemHeight = 30;
-            this.GameListComboBox.Location = new System.Drawing.Point(855, 35);
-            this.GameListComboBox.Name = "GameListComboBox";
-            this.GameListComboBox.Size = new System.Drawing.Size(810, 36);
-            this.GameListComboBox.TabIndex = 3;
-            this.GameListComboBox.SelectedIndexChanged += new System.EventHandler(this.GameListComboBox_SelectedIndexChanged);
+            resources.ApplyResources(GameListComboBox, "GameListComboBox");
+            GameListComboBox.DrawMode = DrawMode.OwnerDrawFixed;
+            GameListComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            GameListComboBox.FormattingEnabled = true;
+            GameListComboBox.DropDownHeight = 50 * 20;
+            GameListComboBox.Name = "GameListComboBox";
+            ToolTip.SetToolTip(GameListComboBox, resources.GetString("GameListComboBox.ToolTip"));
+            GameListComboBox.SelectedIndexChanged += GameListComboBox_SelectedIndexChanged;
+            // 
+            // OpenFolderButton
+            // 
+            resources.ApplyResources(OpenFolderButton, "OpenFolderButton");
+            OpenFolderButton.ImageList = IconImageList;
+            OpenFolderButton.Name = "OpenFolderButton";
+            OpenFolderButton.Text = Resources.OpenFolderButton_Text;
+            ToolTip.SetToolTip(OpenFolderButton, Resources.OpenFolderButton_Tooltip_Text);
+            OpenFolderButton.UseVisualStyleBackColor = true;
+            OpenFolderButton.Click += OpenFolderButton_Click;
+            // 
+            // IconImageList
+            // 
+            IconImageList.ColorDepth = ColorDepth.Depth32Bit;
+            IconImageList.ImageStream = (ImageListStreamer)resources.GetObject("IconImageList.ImageStream");
+            IconImageList.TransparentColor = Color.Transparent;
+            IconImageList.Images.SetKeyName(0, "Add.png");
+            IconImageList.Images.SetKeyName(1, "AddNew.png");
+            IconImageList.Images.SetKeyName(2, "Convert.png");
+            IconImageList.Images.SetKeyName(3, "Copy.png");
+            IconImageList.Images.SetKeyName(4, "Down2.png");
+            IconImageList.Images.SetKeyName(5, "Format.png");
+            IconImageList.Images.SetKeyName(6, "Home.png");
+            IconImageList.Images.SetKeyName(7, "Left.png");
+            IconImageList.Images.SetKeyName(8, "Open.png");
+            IconImageList.Images.SetKeyName(9, "Overwrite.png");
+            IconImageList.Images.SetKeyName(10, "Right.png");
+            IconImageList.Images.SetKeyName(11, "Save.png");
+            IconImageList.Images.SetKeyName(12, "Settings.png");
+            IconImageList.Images.SetKeyName(13, "Up2.png");
+            IconImageList.Images.SetKeyName(14, "Remove.png");
+            IconImageList.Images.SetKeyName(15, "Open3.png");
+            IconImageList.Images.SetKeyName(16, "Save3.png");
+            IconImageList.Images.SetKeyName(17, "");
             // 
             // GameNameGroupBox
             // 
-            this.GameNameGroupBox.Controls.Add(this.GameDBTidTextBox);
-            this.GameNameGroupBox.Controls.Add(this.CopyFolderButton);
-            this.GameNameGroupBox.Controls.Add(this.VersionFileModeUpdateButton);
-            this.GameNameGroupBox.Controls.Add(this.GameNameTextBox);
-            this.GameNameGroupBox.Controls.Add(this.GameDBNameTextBox);
-            this.GameNameGroupBox.Location = new System.Drawing.Point(38, 201);
-            this.GameNameGroupBox.Name = "GameNameGroupBox";
-            this.GameNameGroupBox.Size = new System.Drawing.Size(1838, 90);
-            this.GameNameGroupBox.TabIndex = 2;
-            this.GameNameGroupBox.TabStop = false;
-            this.GameNameGroupBox.Text = "Name";
-            // 
-            // GameDBTidTextBox
-            // 
-            this.GameDBTidTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.GameDBTidTextBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.GameDBTidTextBox.Location = new System.Drawing.Point(855, 33);
-            this.GameDBTidTextBox.Name = "GameDBTidTextBox";
-            this.GameDBTidTextBox.ReadOnly = true;
-            this.GameDBTidTextBox.Size = new System.Drawing.Size(225, 35);
-            this.GameDBTidTextBox.TabIndex = 6;
-            // 
-            // CopyFolderButton
-            // 
-            this.CopyFolderButton.Enabled = false;
-            this.CopyFolderButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.CopyFolderButton.ImageIndex = 3;
-            this.CopyFolderButton.ImageList = this.IconImageList;
-            this.CopyFolderButton.Location = new System.Drawing.Point(1685, 27);
-            this.CopyFolderButton.Name = "CopyFolderButton";
-            this.CopyFolderButton.Size = new System.Drawing.Size(135, 50);
-            this.CopyFolderButton.TabIndex = 4;
-            this.CopyFolderButton.Text = global::SwitchCheatCodeManager.Properties.Resources.CopyFolderButton_Text;
-            this.CopyFolderButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ToolTip.SetToolTip(this.CopyFolderButton, global::SwitchCheatCodeManager.Properties.Resources.CopyFolderButton_Tooltip_Text);
-            this.CopyFolderButton.UseVisualStyleBackColor = true;
-            this.CopyFolderButton.Click += new System.EventHandler(this.CopyFolderButton_Click);
-            // 
-            // VersionFileModeUpdateButton
-            // 
-            this.VersionFileModeUpdateButton.Enabled = false;
-            this.VersionFileModeUpdateButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.VersionFileModeUpdateButton.ImageIndex = 12;
-            this.VersionFileModeUpdateButton.ImageList = this.IconImageList;
-            this.VersionFileModeUpdateButton.Location = new System.Drawing.Point(700, 27);
-            this.VersionFileModeUpdateButton.Margin = new System.Windows.Forms.Padding(4);
-            this.VersionFileModeUpdateButton.Name = "VersionFileModeUpdateButton";
-            this.VersionFileModeUpdateButton.Size = new System.Drawing.Size(140, 50);
-            this.VersionFileModeUpdateButton.TabIndex = 2;
-            this.VersionFileModeUpdateButton.Text = global::SwitchCheatCodeManager.Properties.Resources.VersionFileModeUpdateButton_Text;
-            this.VersionFileModeUpdateButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ToolTip.SetToolTip(this.VersionFileModeUpdateButton, global::SwitchCheatCodeManager.Properties.Resources.VersionFileModeUpdateButton_Tooltip_Text);
-            this.VersionFileModeUpdateButton.UseVisualStyleBackColor = true;
-            this.VersionFileModeUpdateButton.Click += new System.EventHandler(this.VersionFileModeUpdateButton_Click);
+            resources.ApplyResources(GameNameGroupBox, "GameNameGroupBox");
+            GameNameGroupBox.Controls.Add(GameNameTextBox);
+            GameNameGroupBox.Controls.Add(VersionFileModeUpdateButton);
+            GameNameGroupBox.Controls.Add(GameDBTidTextBox);
+            GameNameGroupBox.Controls.Add(GameDBNameTextBox);
+            GameNameGroupBox.Controls.Add(CopyFolderButton);
+            GameNameGroupBox.Name = "GameNameGroupBox";
+            GameNameGroupBox.TabStop = false;
+            ToolTip.SetToolTip(GameNameGroupBox, resources.GetString("GameNameGroupBox.ToolTip"));
             // 
             // GameNameTextBox
             // 
-            this.GameNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.GameNameTextBox.Location = new System.Drawing.Point(10, 33);
-            this.GameNameTextBox.Margin = new System.Windows.Forms.Padding(33);
-            this.GameNameTextBox.Name = "GameNameTextBox";
-            this.GameNameTextBox.Size = new System.Drawing.Size(680, 38);
-            this.GameNameTextBox.TabIndex = 2;
-            this.GameNameTextBox.TextChanged += new System.EventHandler(this.GameNameTextBox_TextChanged);
+            resources.ApplyResources(GameNameTextBox, "GameNameTextBox");
+            GameNameTextBox.Name = "GameNameTextBox";
+            ToolTip.SetToolTip(GameNameTextBox, resources.GetString("GameNameTextBox.ToolTip"));
+            GameNameTextBox.TextChanged += GameNameTextBox_TextChanged;
+            // 
+            // VersionFileModeUpdateButton
+            // 
+            resources.ApplyResources(VersionFileModeUpdateButton, "VersionFileModeUpdateButton");
+            VersionFileModeUpdateButton.ImageList = IconImageList;
+            VersionFileModeUpdateButton.Name = "VersionFileModeUpdateButton";
+            VersionFileModeUpdateButton.Text = Resources.VersionFileModeUpdateButton_Text;
+            ToolTip.SetToolTip(VersionFileModeUpdateButton, Resources.VersionFileModeUpdateButton_Tooltip_Text);
+            VersionFileModeUpdateButton.UseVisualStyleBackColor = true;
+            VersionFileModeUpdateButton.Click += VersionFileModeUpdateButton_Click;
+            // 
+            // GameDBTidTextBox
+            // 
+            resources.ApplyResources(GameDBTidTextBox, "GameDBTidTextBox");
+            GameDBTidTextBox.BackColor = SystemColors.ControlLight;
+            GameDBTidTextBox.Name = "GameDBTidTextBox";
+            GameDBTidTextBox.ReadOnly = true;
+            ToolTip.SetToolTip(GameDBTidTextBox, resources.GetString("GameDBTidTextBox.ToolTip"));
             // 
             // GameDBNameTextBox
             // 
-            this.GameDBNameTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.GameDBNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.GameDBNameTextBox.Location = new System.Drawing.Point(1080, 33);
-            this.GameDBNameTextBox.Name = "GameDBNameTextBox";
-            this.GameDBNameTextBox.ReadOnly = true;
-            this.GameDBNameTextBox.Size = new System.Drawing.Size(585, 35);
-            this.GameDBNameTextBox.TabIndex = 5;
+            resources.ApplyResources(GameDBNameTextBox, "GameDBNameTextBox");
+            GameDBNameTextBox.BackColor = SystemColors.ControlLight;
+            GameDBNameTextBox.Name = "GameDBNameTextBox";
+            GameDBNameTextBox.ReadOnly = true;
+            ToolTip.SetToolTip(GameDBNameTextBox, resources.GetString("GameDBNameTextBox.ToolTip"));
+            // 
+            // CopyFolderButton
+            // 
+            resources.ApplyResources(CopyFolderButton, "CopyFolderButton");
+            CopyFolderButton.ImageList = IconImageList;
+            CopyFolderButton.Name = "CopyFolderButton";
+            CopyFolderButton.Text = Resources.CopyFolderButton_Text;
+            ToolTip.SetToolTip(CopyFolderButton, Resources.CopyFolderButton_Tooltip_Text);
+            CopyFolderButton.UseVisualStyleBackColor = true;
+            CopyFolderButton.Click += CopyFolderButton_Click;
             // 
             // CodeModifierGroupBox
             // 
-            this.CodeModifierGroupBox.Location = new System.Drawing.Point(1043, 84);
-            this.CodeModifierGroupBox.Name = "CodeModifierGroupBox";
-            this.CodeModifierGroupBox.Size = new System.Drawing.Size(675, 918);
-            this.CodeModifierGroupBox.TabIndex = 4;
-            this.CodeModifierGroupBox.TabStop = false;
-            this.CodeModifierGroupBox.Text = global::SwitchCheatCodeManager.Properties.Resources.CodeModifierGroupBox_Text;
+            resources.ApplyResources(CodeModifierGroupBox, "CodeModifierGroupBox");
+            CodeModifierGroupBox.Name = "CodeModifierGroupBox";
+            CodeModifierGroupBox.TabStop = false;
+            CodeModifierGroupBox.Text = Resources.CodeModifierGroupBox_Text;
+            ToolTip.SetToolTip(CodeModifierGroupBox, resources.GetString("CodeModifierGroupBox.ToolTip"));
             // 
             // CodeSelectorGroupBox
             // 
-            this.CodeSelectorGroupBox.Controls.Add(this.PreviewImage);
-            this.CodeSelectorGroupBox.Controls.Add(this.CodeSelectorListBox);
-            this.CodeSelectorGroupBox.Controls.Add(this.AscendingOrderButton);
-            this.CodeSelectorGroupBox.Controls.Add(this.DescendingOrderButton);
-            this.CodeSelectorGroupBox.Controls.Add(this.InsertNewCheatButton);
-            this.CodeSelectorGroupBox.Controls.Add(this.FormatFilesButton);
-            this.CodeSelectorGroupBox.Location = new System.Drawing.Point(38, 285);
-            this.CodeSelectorGroupBox.Name = "CodeSelectorGroupBox";
-            this.CodeSelectorGroupBox.Size = new System.Drawing.Size(372, 918);
-            this.CodeSelectorGroupBox.TabIndex = 3;
-            this.CodeSelectorGroupBox.TabStop = false;
-            this.CodeSelectorGroupBox.Text = Resources.CodeSelectorGroupBox_Text;
+            resources.ApplyResources(CodeSelectorGroupBox, "CodeSelectorGroupBox");
+            CodeSelectorGroupBox.Controls.Add(PreviewImage);
+            CodeSelectorGroupBox.Controls.Add(CodeSelectorListBox);
+            CodeSelectorGroupBox.Controls.Add(NumOfCheatsLabel);
+            CodeSelectorGroupBox.Controls.Add(AscendingOrderButton);
+            CodeSelectorGroupBox.Controls.Add(DescendingOrderButton);
+            CodeSelectorGroupBox.Controls.Add(InsertNewCheatButton);
+            CodeSelectorGroupBox.Controls.Add(RemoveCheatButton);
+            CodeSelectorGroupBox.Controls.Add(FormatFilesButton);
+            CodeSelectorGroupBox.Name = "CodeSelectorGroupBox";
+            CodeSelectorGroupBox.TabStop = false;
+            ToolTip.SetToolTip(CodeSelectorGroupBox, resources.GetString("CodeSelectorGroupBox.ToolTip"));
             // 
             // PreviewImage
             // 
-            this.PreviewImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PreviewImage.Location = new System.Drawing.Point(10, 35);
-            this.PreviewImage.Margin = new System.Windows.Forms.Padding(4);
-            this.PreviewImage.Name = "PreviewImage";
-            this.PreviewImage.Size = new System.Drawing.Size(350, 350);
-            this.PreviewImage.TabIndex = 6;
-            this.PreviewImage.TabStop = false;
-            this.PreviewImage.DoubleClick += new System.EventHandler(this.PreviewImage_DoubleClick);
+            resources.ApplyResources(PreviewImage, "PreviewImage");
+            PreviewImage.BorderStyle = BorderStyle.FixedSingle;
+            PreviewImage.Name = "PreviewImage";
+            PreviewImage.TabStop = false;
+            ToolTip.SetToolTip(PreviewImage, resources.GetString("PreviewImage.ToolTip"));
+            PreviewImage.DoubleClick += PreviewImage_DoubleClick;
             // 
             // CodeSelectorListBox
             // 
-            this.CodeSelectorListBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CodeSelectorListBox.Enabled = false;
-            this.CodeSelectorListBox.Font = new System.Drawing.Font("Ubuntu Mono", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CodeSelectorListBox.FormattingEnabled = true;
-            this.CodeSelectorListBox.ItemHeight = 30;
-            this.CodeSelectorListBox.Location = new System.Drawing.Point(10, 404);
-            this.CodeSelectorListBox.Margin = new System.Windows.Forms.Padding(24);
-            this.CodeSelectorListBox.Name = "CodeSelectorListBox";
-            this.CodeSelectorListBox.ScrollAlwaysVisible = true;
-            this.CodeSelectorListBox.Size = new System.Drawing.Size(350, 424);
-            this.CodeSelectorListBox.TabIndex = 3;
-            this.CodeSelectorListBox.SelectedIndexChanged += new System.EventHandler(this.CodeSelectorListBox_SelectedIndexChanged);
-            this.CodeSelectorListBox.DoubleClick += new System.EventHandler(this.CodeSelectorListBox_DoubleClick);
+            resources.ApplyResources(CodeSelectorListBox, "CodeSelectorListBox");
+            CodeSelectorListBox.DrawMode = DrawMode.OwnerDrawFixed;
+            CodeSelectorListBox.FormattingEnabled = true;
+            CodeSelectorListBox.Name = "CodeSelectorListBox";
+            ToolTip.SetToolTip(CodeSelectorListBox, resources.GetString("CodeSelectorListBox.ToolTip"));
+            CodeSelectorListBox.SelectedIndexChanged += CodeSelectorListBox_SelectedIndexChanged;
+            CodeSelectorListBox.DoubleClick += CodeSelectorListBox_DoubleClick;
+            // 
+            // NumOfCheatsLabel
+            // 
+            resources.ApplyResources(NumOfCheatsLabel, "NumOfCheatsLabel");
+            NumOfCheatsLabel.Name = "NumOfCheatsLabel";
+            ToolTip.SetToolTip(NumOfCheatsLabel, resources.GetString("NumOfCheatsLabel.ToolTip"));
             // 
             // AscendingOrderButton
             // 
-            this.AscendingOrderButton.Enabled = false;
-            this.AscendingOrderButton.ImageIndex = 13;
-            this.AscendingOrderButton.ImageList = this.IconImageList;
-            this.AscendingOrderButton.Location = new System.Drawing.Point(20, 850);
-            this.AscendingOrderButton.Name = "AscendingOrderButton";
-            this.AscendingOrderButton.Size = new System.Drawing.Size(60, 50);
-            this.AscendingOrderButton.TabIndex = 8;
-            this.ToolTip.SetToolTip(this.AscendingOrderButton, global::SwitchCheatCodeManager.Properties.Resources.AscendingOrderButton_Text);
-            this.AscendingOrderButton.UseVisualStyleBackColor = true;
-            this.AscendingOrderButton.Click += new System.EventHandler(this.AscendingOrderButton_Click);
+            resources.ApplyResources(AscendingOrderButton, "AscendingOrderButton");
+            AscendingOrderButton.ImageList = IconImageList;
+            AscendingOrderButton.Name = "AscendingOrderButton";
+            ToolTip.SetToolTip(AscendingOrderButton, Resources.AscendingOrderButton_Text);
+            AscendingOrderButton.UseVisualStyleBackColor = true;
+            AscendingOrderButton.Click += AscendingOrderButton_Click;
             // 
             // DescendingOrderButton
             // 
-            this.DescendingOrderButton.Enabled = false;
-            this.DescendingOrderButton.ImageIndex = 4;
-            this.DescendingOrderButton.ImageList = this.IconImageList;
-            this.DescendingOrderButton.Location = new System.Drawing.Point(100, 850);
-            this.DescendingOrderButton.Name = "DescendingOrderButton";
-            this.DescendingOrderButton.Size = new System.Drawing.Size(60, 50);
-            this.DescendingOrderButton.TabIndex = 7;
-            this.ToolTip.SetToolTip(this.DescendingOrderButton, global::SwitchCheatCodeManager.Properties.Resources.DescendingOrderButton_Text);
-            this.DescendingOrderButton.UseVisualStyleBackColor = true;
-            this.DescendingOrderButton.Click += new System.EventHandler(this.DescendingOrderButton_Click);
+            resources.ApplyResources(DescendingOrderButton, "DescendingOrderButton");
+            DescendingOrderButton.ImageList = IconImageList;
+            DescendingOrderButton.Name = "DescendingOrderButton";
+            ToolTip.SetToolTip(DescendingOrderButton, Resources.DescendingOrderButton_Text);
+            DescendingOrderButton.UseVisualStyleBackColor = true;
+            DescendingOrderButton.Click += DescendingOrderButton_Click;
             // 
             // InsertNewCheatButton
             // 
-            this.InsertNewCheatButton.Enabled = false;
-            this.InsertNewCheatButton.ImageIndex = 0;
-            this.InsertNewCheatButton.ImageList = this.IconImageList;
-            this.InsertNewCheatButton.Location = new System.Drawing.Point(180, 850);
-            this.InsertNewCheatButton.Margin = new System.Windows.Forms.Padding(4);
-            this.InsertNewCheatButton.Name = "InsertNewCheatButton";
-            this.InsertNewCheatButton.Size = new System.Drawing.Size(60, 50);
-            this.InsertNewCheatButton.TabIndex = 5;
-            this.InsertNewCheatButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ToolTip.SetToolTip(this.InsertNewCheatButton, global::SwitchCheatCodeManager.Properties.Resources.InsertNewCheatButton_Text);
-            this.InsertNewCheatButton.UseVisualStyleBackColor = true;
-            this.InsertNewCheatButton.Click += new System.EventHandler(this.InsertNewCheatButton_Click);
+            resources.ApplyResources(InsertNewCheatButton, "InsertNewCheatButton");
+            InsertNewCheatButton.ImageList = IconImageList;
+            InsertNewCheatButton.Name = "InsertNewCheatButton";
+            ToolTip.SetToolTip(InsertNewCheatButton, Resources.InsertNewCheatButton_Text);
+            InsertNewCheatButton.UseVisualStyleBackColor = true;
+            InsertNewCheatButton.Click += InsertNewCheatButton_Click;
+            // 
+            // RemoveCheatButton
+            // 
+            resources.ApplyResources(RemoveCheatButton, "RemoveCheatButton");
+            RemoveCheatButton.ImageList = IconImageList;
+            RemoveCheatButton.Name = "RemoveCheatButton";
+            ToolTip.SetToolTip(RemoveCheatButton, Resources.RemoveCheatButton_Text);
+            RemoveCheatButton.UseVisualStyleBackColor = true;
+            RemoveCheatButton.Click += RemoveCheatButton_Click;
             // 
             // FormatFilesButton
             // 
-            this.FormatFilesButton.Enabled = false;
-            this.FormatFilesButton.ImageIndex = 5;
-            this.FormatFilesButton.ImageList = this.IconImageList;
-            this.FormatFilesButton.Location = new System.Drawing.Point(260, 850);
-            this.FormatFilesButton.Name = "FormatFilesButton";
-            this.FormatFilesButton.Size = new System.Drawing.Size(60, 50);
-            this.FormatFilesButton.TabIndex = 5;
-            this.FormatFilesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ToolTip.SetToolTip(this.FormatFilesButton, global::SwitchCheatCodeManager.Properties.Resources.FormatFilesButton_Text);
-            this.FormatFilesButton.UseVisualStyleBackColor = true;
-            this.FormatFilesButton.Click += new System.EventHandler(this.FormatFilesButton_Click);
+            resources.ApplyResources(FormatFilesButton, "FormatFilesButton");
+            FormatFilesButton.ImageList = IconImageList;
+            FormatFilesButton.Name = "FormatFilesButton";
+            ToolTip.SetToolTip(FormatFilesButton, Resources.FormatFilesButton_Text);
+            FormatFilesButton.UseVisualStyleBackColor = true;
+            FormatFilesButton.Click += FormatFilesButton_Click;
             // 
             // CodeEditorGroupBox
             // 
-            this.CodeEditorGroupBox.Controls.Add(this.CodeStatusLabel);
-            this.CodeEditorGroupBox.Controls.Add(this.BuildIdLabel);
-            this.CodeEditorGroupBox.Controls.Add(this.BuildIdTextBox);
-            this.CodeEditorGroupBox.Controls.Add(this.VersionLabel);
-            this.CodeEditorGroupBox.Controls.Add(this.VersionNumberTextBox);
-            this.CodeEditorGroupBox.Controls.Add(this.CodeTextBox);
-            this.CodeEditorGroupBox.Controls.Add(this.SaveOriginalButton);
-            this.CodeEditorGroupBox.Controls.Add(this.CopyFileButton);
-            this.CodeEditorGroupBox.Controls.Add(this.NewBlockButton);
-            this.CodeEditorGroupBox.Controls.Add(this.UpdateButton);
-            this.CodeEditorGroupBox.Location = new System.Drawing.Point(418, 285);
-            this.CodeEditorGroupBox.Name = "CodeEditorGroupBox";
-            this.CodeEditorGroupBox.Size = new System.Drawing.Size(675, 918);
-            this.CodeEditorGroupBox.TabIndex = 4;
-            this.CodeEditorGroupBox.TabStop = false;
-            this.CodeEditorGroupBox.Text = "Cheats";
+            resources.ApplyResources(CodeEditorGroupBox, "CodeEditorGroupBox");
+            CodeEditorGroupBox.Controls.Add(CodeStatusLabel);
+            CodeEditorGroupBox.Controls.Add(BuildIdLabel);
+            CodeEditorGroupBox.Controls.Add(BuildIdTextBox);
+            CodeEditorGroupBox.Controls.Add(VersionLabel);
+            CodeEditorGroupBox.Controls.Add(VersionNumberTextBox);
+            CodeEditorGroupBox.Controls.Add(CodeTextBox);
+            CodeEditorGroupBox.Controls.Add(SaveOriginalButton);
+            CodeEditorGroupBox.Controls.Add(CopyFileButton);
+            CodeEditorGroupBox.Controls.Add(CodeBuilderButton);
+            CodeEditorGroupBox.Controls.Add(NewBlockButton);
+            CodeEditorGroupBox.Controls.Add(UpdateButton);
+            CodeEditorGroupBox.Name = "CodeEditorGroupBox";
+            CodeEditorGroupBox.TabStop = false;
+            ToolTip.SetToolTip(CodeEditorGroupBox, resources.GetString("CodeEditorGroupBox.ToolTip"));
             // 
             // CodeStatusLabel
             // 
-            this.CodeStatusLabel.AutoSize = true;
-            this.CodeStatusLabel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.CodeStatusLabel.Location = new System.Drawing.Point(9, 33);
-            this.CodeStatusLabel.Name = "CodeStatusLabel";
-            this.CodeStatusLabel.Size = new System.Drawing.Size(0, 24);
-            this.CodeStatusLabel.TabIndex = 2;
+            resources.ApplyResources(CodeStatusLabel, "CodeStatusLabel");
+            CodeStatusLabel.Name = "CodeStatusLabel";
+            ToolTip.SetToolTip(CodeStatusLabel, resources.GetString("CodeStatusLabel.ToolTip"));
             // 
             // BuildIdLabel
             // 
-            this.BuildIdLabel.AutoSize = true;
-            this.BuildIdLabel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BuildIdLabel.Location = new System.Drawing.Point(126, 33);
-            this.BuildIdLabel.Name = "BuildIdLabel";
-            this.BuildIdLabel.Size = new System.Drawing.Size(68, 24);
-            this.BuildIdLabel.TabIndex = 9;
-            this.BuildIdLabel.Text = "Build:";
+            resources.ApplyResources(BuildIdLabel, "BuildIdLabel");
+            BuildIdLabel.Name = "BuildIdLabel";
+            ToolTip.SetToolTip(BuildIdLabel, resources.GetString("BuildIdLabel.ToolTip"));
             // 
             // BuildIdTextBox
             // 
-            this.BuildIdTextBox.Location = new System.Drawing.Point(201, 28);
-            this.BuildIdTextBox.Name = "BuildIdTextBox";
-            this.BuildIdTextBox.ReadOnly = true;
-            this.BuildIdTextBox.Size = new System.Drawing.Size(225, 35);
-            this.BuildIdTextBox.TabIndex = 8;
-            this.BuildIdTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            resources.ApplyResources(BuildIdTextBox, "BuildIdTextBox");
+            BuildIdTextBox.Name = "BuildIdTextBox";
+            BuildIdTextBox.ReadOnly = true;
+            ToolTip.SetToolTip(BuildIdTextBox, resources.GetString("BuildIdTextBox.ToolTip"));
             // 
             // VersionLabel
             // 
-            this.VersionLabel.AutoSize = true;
-            this.VersionLabel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.VersionLabel.Location = new System.Drawing.Point(435, 33);
-            this.VersionLabel.Name = "VersionLabel";
-            this.VersionLabel.Size = new System.Drawing.Size(92, 24);
-            this.VersionLabel.TabIndex = 2;
-            this.VersionLabel.Text = "Version:";
+            resources.ApplyResources(VersionLabel, "VersionLabel");
+            VersionLabel.Name = "VersionLabel";
+            ToolTip.SetToolTip(VersionLabel, resources.GetString("VersionLabel.ToolTip"));
             // 
             // VersionNumberTextBox
             // 
-            this.VersionNumberTextBox.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.VersionNumberTextBox.Location = new System.Drawing.Point(538, 30);
-            this.VersionNumberTextBox.Name = "VersionNumberTextBox";
-            this.VersionNumberTextBox.ReadOnly = true;
-            this.VersionNumberTextBox.Size = new System.Drawing.Size(115, 32);
-            this.VersionNumberTextBox.TabIndex = 2;
-            this.VersionNumberTextBox.Text = "N/A";
+            resources.ApplyResources(VersionNumberTextBox, "VersionNumberTextBox");
+            VersionNumberTextBox.Name = "VersionNumberTextBox";
+            VersionNumberTextBox.ReadOnly = true;
+            ToolTip.SetToolTip(VersionNumberTextBox, resources.GetString("VersionNumberTextBox.ToolTip"));
             // 
             // CodeTextBox
             // 
-            this.CodeTextBox.Enabled = false;
-            this.CodeTextBox.Font = new System.Drawing.Font("Ubuntu Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CodeTextBox.Location = new System.Drawing.Point(10, 75);
-            this.CodeTextBox.Name = "CodeTextBox";
-            this.CodeTextBox.Size = new System.Drawing.Size(630, 768);
-            this.CodeTextBox.TabIndex = 4;
-            this.CodeTextBox.Text = "";
+            resources.ApplyResources(CodeTextBox, "CodeTextBox");
+            CodeTextBox.Name = "CodeTextBox";
+            //CodeTextBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.CodeTextBox_MouseMove);
+            CodeTextBox.MouseHover += new System.EventHandler(this.CodeTextBox_MouseHover);
             // 
             // SaveOriginalButton
             // 
-            this.SaveOriginalButton.Enabled = false;
-            this.SaveOriginalButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.SaveOriginalButton.ImageIndex = 11;
-            this.SaveOriginalButton.ImageList = this.IconImageList;
-            this.SaveOriginalButton.Location = new System.Drawing.Point(10, 854);
-            this.SaveOriginalButton.Name = "SaveOriginalButton";
-            this.SaveOriginalButton.Size = new System.Drawing.Size(135, 50);
-            this.SaveOriginalButton.TabIndex = 6;
-            this.SaveOriginalButton.Text = global::SwitchCheatCodeManager.Properties.Resources.SaveOriginalButton_Text;
-            this.SaveOriginalButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ToolTip.SetToolTip(this.SaveOriginalButton, global::SwitchCheatCodeManager.Properties.Resources.SaveOriginalButton_Tooltip_Text);
-            this.SaveOriginalButton.UseVisualStyleBackColor = true;
-            this.SaveOriginalButton.Click += new System.EventHandler(this.SaveOriginalButton_Click);
+            resources.ApplyResources(SaveOriginalButton, "SaveOriginalButton");
+            SaveOriginalButton.ImageList = IconImageList;
+            SaveOriginalButton.Name = "SaveOriginalButton";
+            SaveOriginalButton.Text = Resources.SaveOriginalButton_Text;
+            ToolTip.SetToolTip(SaveOriginalButton, Resources.SaveOriginalButton_Tooltip_Text);
+            SaveOriginalButton.UseVisualStyleBackColor = true;
+            SaveOriginalButton.Click += SaveOriginalButton_Click;
             // 
             // CopyFileButton
             // 
-            this.CopyFileButton.Enabled = false;
-            this.CopyFileButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.CopyFileButton.ImageIndex = 9;
-            this.CopyFileButton.ImageList = this.IconImageList;
-            this.CopyFileButton.Location = new System.Drawing.Point(160, 854);
-            this.CopyFileButton.Name = "CopyFileButton";
-            this.CopyFileButton.Size = new System.Drawing.Size(155, 50);
-            this.CopyFileButton.TabIndex = 7;
-            this.CopyFileButton.Text = global::SwitchCheatCodeManager.Properties.Resources.CopyFileButton_Text;
-            this.CopyFileButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ToolTip.SetToolTip(this.CopyFileButton, global::SwitchCheatCodeManager.Properties.Resources.CopyFileButton_ToolTip_Text);
-            this.CopyFileButton.UseVisualStyleBackColor = true;
-            this.CopyFileButton.Click += new System.EventHandler(this.CopyFileButton_Click);
+            resources.ApplyResources(CopyFileButton, "CopyFileButton");
+            CopyFileButton.ImageList = IconImageList;
+            CopyFileButton.Name = "CopyFileButton";
+            CopyFileButton.Text = Resources.CopyFileButton_Text;
+            ToolTip.SetToolTip(CopyFileButton, Resources.CopyFileButton_Tooltip_Text);
+            CopyFileButton.UseVisualStyleBackColor = true;
+            CopyFileButton.Click += CopyFileButton_Click;
+            // 
+            // CodeBuilderButton
+            // 
+            resources.ApplyResources(CodeBuilderButton, "CodeBuilderButton");
+            CodeBuilderButton.ImageList = IconImageList;
+            CodeBuilderButton.Name = "CodeBuilderButton";
+            CodeBuilderButton.Text = Resources.CodeBuilderButton_Text;
+            ToolTip.SetToolTip(CodeBuilderButton, Resources.CodeBuilderButton_Tooltip_Text);
+            CodeBuilderButton.UseVisualStyleBackColor = true;
+            CodeBuilderButton.Click += CodeBuilderButton_Click;
             // 
             // NewBlockButton
             // 
-            this.NewBlockButton.Enabled = false;
-            this.NewBlockButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.NewBlockButton.ImageIndex = 1;
-            this.NewBlockButton.ImageList = this.IconImageList;
-            this.NewBlockButton.Location = new System.Drawing.Point(330, 854);
-            this.NewBlockButton.Name = "NewBlockButton";
-            this.NewBlockButton.Size = new System.Drawing.Size(150, 50);
-            this.NewBlockButton.TabIndex = 7;
-            this.NewBlockButton.Text = global::SwitchCheatCodeManager.Properties.Resources.NewBlockButton_Text;
-            this.NewBlockButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ToolTip.SetToolTip(this.NewBlockButton, global::SwitchCheatCodeManager.Properties.Resources.NewBlockButton_Tooltip_Text);
-            this.NewBlockButton.UseVisualStyleBackColor = true;
-            this.NewBlockButton.Click += new System.EventHandler(this.InsertNewSubSectionBlockButton_Click);
+            resources.ApplyResources(NewBlockButton, "NewBlockButton");
+            NewBlockButton.ImageList = IconImageList;
+            NewBlockButton.Name = "NewBlockButton";
+            NewBlockButton.Text = Resources.NewBlockButton_Text;
+            ToolTip.SetToolTip(NewBlockButton, Resources.NewBlockButton_Tooltip_Text);
+            NewBlockButton.UseVisualStyleBackColor = true;
+            NewBlockButton.Click += InsertNewSubSectionBlockButton_Click;
             // 
             // UpdateButton
             // 
-            this.UpdateButton.Enabled = false;
-            this.UpdateButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.UpdateButton.ImageIndex = 2;
-            this.UpdateButton.ImageList = this.IconImageList;
-            this.UpdateButton.Location = new System.Drawing.Point(495, 854);
-            this.UpdateButton.Name = "UpdateButton";
-            this.UpdateButton.Size = new System.Drawing.Size(145, 50);
-            this.UpdateButton.TabIndex = 5;
-            this.UpdateButton.Text = global::SwitchCheatCodeManager.Properties.Resources.UpdateButton_Text;
-            this.UpdateButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ToolTip.SetToolTip(this.UpdateButton, global::SwitchCheatCodeManager.Properties.Resources.UpdateButton_Tooltip_Text);
-            this.UpdateButton.UseVisualStyleBackColor = true;
-            this.UpdateButton.Click += new System.EventHandler(this.UpdateCheatContentsInTextBoxButton_Click);
+            resources.ApplyResources(UpdateButton, "UpdateButton");
+            UpdateButton.ImageList = IconImageList;
+            UpdateButton.Name = "UpdateButton";
+            UpdateButton.Text = Resources.UpdateButton_Text;
+            ToolTip.SetToolTip(UpdateButton, Resources.UpdateButton_Tooltip_Text);
+            UpdateButton.UseVisualStyleBackColor = true;
+            UpdateButton.Click += UpdateCheatContentsInTextBoxButton_Click;
             // 
             // SubCheatsGroupBox
             // 
-            this.SubCheatsGroupBox.Location = new System.Drawing.Point(1103, 285);
-            this.SubCheatsGroupBox.Name = "SubCheatsGroupBox";
-            this.SubCheatsGroupBox.Size = new System.Drawing.Size(775, 918);
-            this.SubCheatsGroupBox.TabIndex = 4;
-            this.SubCheatsGroupBox.TabStop = false;
-            this.SubCheatsGroupBox.Text = "Cheat Sections";
-            // 
-            // CodeModifiedTextBox
-            // 
-            this.CodeModifiedTextBox.Enabled = false;
-            this.CodeModifiedTextBox.Font = new System.Drawing.Font("Ubuntu Mono", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CodeModifiedTextBox.Location = new System.Drawing.Point(9, 75);
-            this.CodeModifiedTextBox.Name = "CodeModifiedTextBox";
-            this.CodeModifiedTextBox.Size = new System.Drawing.Size(630, 768);
-            this.CodeModifiedTextBox.TabIndex = 4;
-            this.CodeModifiedTextBox.Text = "";
+            resources.ApplyResources(SubCheatsGroupBox, "SubCheatsGroupBox");
+            SubCheatsGroupBox.Name = "SubCheatsGroupBox";
+            SubCheatsGroupBox.TabStop = false;
+            ToolTip.SetToolTip(SubCheatsGroupBox, resources.GetString("SubCheatsGroupBox.ToolTip"));
             // 
             // SaveFormatedButton
             // 
-            this.SaveFormatedButton.Enabled = false;
-            this.SaveFormatedButton.Location = new System.Drawing.Point(9, 854);
-            this.SaveFormatedButton.Name = "SaveFormatedButton";
-            this.SaveFormatedButton.Size = new System.Drawing.Size(138, 46);
-            this.SaveFormatedButton.TabIndex = 7;
-            this.SaveFormatedButton.Text = global::SwitchCheatCodeManager.Properties.Resources.SaveFormatedButton_Text;
-            this.SaveFormatedButton.UseVisualStyleBackColor = true;
+            resources.ApplyResources(SaveFormatedButton, "SaveFormatedButton");
+            SaveFormatedButton.Name = "SaveFormatedButton";
+            SaveFormatedButton.Text = Resources.SaveFormatedButton_Text;
+            ToolTip.SetToolTip(SaveFormatedButton, resources.GetString("SaveFormatedButton.ToolTip"));
+            SaveFormatedButton.UseVisualStyleBackColor = true;
             // 
             // NavigationFlowLayoutPanel
             // 
-            this.NavigationFlowLayoutPanel.Controls.Add(this.DefaultFileButton);
-            this.NavigationFlowLayoutPanel.Controls.Add(this.OpenFileButton);
-            this.NavigationFlowLayoutPanel.Controls.Add(this.InsertNewCheatsButton);
-            this.NavigationFlowLayoutPanel.Location = new System.Drawing.Point(40, 41);
-            this.NavigationFlowLayoutPanel.Name = "NavigationFlowLayoutPanel";
-            this.NavigationFlowLayoutPanel.Size = new System.Drawing.Size(1838, 66);
-            this.NavigationFlowLayoutPanel.TabIndex = 4;
+            resources.ApplyResources(NavigationFlowLayoutPanel, "NavigationFlowLayoutPanel");
+            NavigationFlowLayoutPanel.Controls.Add(DefaultFileButton);
+            NavigationFlowLayoutPanel.Controls.Add(OpenFileButton);
+            NavigationFlowLayoutPanel.Controls.Add(InsertNewCheatsButton);
+            NavigationFlowLayoutPanel.Controls.Add(RemoveFolderButton);
+            NavigationFlowLayoutPanel.Controls.Add(CompareButton);
+            NavigationFlowLayoutPanel.Name = "NavigationFlowLayoutPanel";
+            ToolTip.SetToolTip(NavigationFlowLayoutPanel, resources.GetString("NavigationFlowLayoutPanel.ToolTip"));
             // 
             // DefaultFileButton
             // 
-            this.DefaultFileButton.Enabled = false;
-            this.DefaultFileButton.ImageIndex = 0;
-            this.DefaultFileButton.ImageList = this.NavigationImageList;
-            this.DefaultFileButton.Location = new System.Drawing.Point(3, 3);
-            this.DefaultFileButton.Name = "DefaultFileButton";
-            this.DefaultFileButton.Size = new System.Drawing.Size(60, 60);
-            this.DefaultFileButton.TabIndex = 0;
-            this.ToolTip.SetToolTip(this.DefaultFileButton, global::SwitchCheatCodeManager.Properties.Resources.DefaultFileButton_Tooltip_Text);
-            this.DefaultFileButton.UseVisualStyleBackColor = true;
-            this.DefaultFileButton.Click += new System.EventHandler(this.DefaultFolderOpenButton_Click);
+            resources.ApplyResources(DefaultFileButton, "DefaultFileButton");
+            DefaultFileButton.ImageList = NavigationImageList;
+            DefaultFileButton.Name = "DefaultFileButton";
+            ToolTip.SetToolTip(DefaultFileButton, Resources.DefaultFileButton_Tooltip_Text);
+            DefaultFileButton.UseVisualStyleBackColor = true;
+            DefaultFileButton.Click += DefaultFolderOpenButton_Click;
             // 
             // NavigationImageList
             // 
-            this.NavigationImageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            this.NavigationImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("NavigationImageList.ImageStream")));
-            this.NavigationImageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.NavigationImageList.Images.SetKeyName(0, "Home.png");
-            this.NavigationImageList.Images.SetKeyName(1, "Open.png");
-            this.NavigationImageList.Images.SetKeyName(2, "Open2.png");
+            NavigationImageList.ColorDepth = ColorDepth.Depth32Bit;
+            NavigationImageList.ImageStream = (ImageListStreamer)resources.GetObject("NavigationImageList.ImageStream");
+            NavigationImageList.TransparentColor = Color.Transparent;
+            NavigationImageList.Images.SetKeyName(0, "Home.png");
+            NavigationImageList.Images.SetKeyName(1, "Open.png");
+            NavigationImageList.Images.SetKeyName(2, "Open2.png");
+            NavigationImageList.Images.SetKeyName(3, "Remove2.png");
+            NavigationImageList.Images.SetKeyName(4, "Compare.png");
             // 
             // OpenFileButton
             // 
-            this.OpenFileButton.ImageIndex = 1;
-            this.OpenFileButton.ImageList = this.NavigationImageList;
-            this.OpenFileButton.Location = new System.Drawing.Point(69, 3);
-            this.OpenFileButton.Name = "OpenFileButton";
-            this.OpenFileButton.Size = new System.Drawing.Size(60, 60);
-            this.OpenFileButton.TabIndex = 1;
-            this.ToolTip.SetToolTip(this.OpenFileButton, global::SwitchCheatCodeManager.Properties.Resources.OpenFileButton_Tooltip_Text);
-            this.OpenFileButton.UseVisualStyleBackColor = true;
-            this.OpenFileButton.Click += new System.EventHandler(this.MainMenuOpenButton_Click);
+            resources.ApplyResources(OpenFileButton, "OpenFileButton");
+            OpenFileButton.ImageList = NavigationImageList;
+            OpenFileButton.Name = "OpenFileButton";
+            ToolTip.SetToolTip(OpenFileButton, Resources.OpenFileButton_Tooltip_Text);
+            OpenFileButton.UseVisualStyleBackColor = true;
+            OpenFileButton.Click += MainMenuOpenButton_Click;
             // 
             // InsertNewCheatsButton
             // 
-            this.InsertNewCheatsButton.Enabled = false;
-            this.InsertNewCheatsButton.ImageIndex = 2;
-            this.InsertNewCheatsButton.ImageList = this.NavigationImageList;
-            this.InsertNewCheatsButton.Location = new System.Drawing.Point(135, 3);
-            this.InsertNewCheatsButton.Name = "InsertNewCheatsButton";
-            this.InsertNewCheatsButton.Size = new System.Drawing.Size(60, 60);
-            this.InsertNewCheatsButton.TabIndex = 2;
-            this.ToolTip.SetToolTip(this.InsertNewCheatsButton, global::SwitchCheatCodeManager.Properties.Resources.InsertNewCheatsButton_Tooltip_Text);
-            this.InsertNewCheatsButton.UseVisualStyleBackColor = true;
-            this.InsertNewCheatsButton.Click += new System.EventHandler(this.InsertNewCheatsButton_Click);
+            resources.ApplyResources(InsertNewCheatsButton, "InsertNewCheatsButton");
+            InsertNewCheatsButton.ImageList = NavigationImageList;
+            InsertNewCheatsButton.Name = "InsertNewCheatsButton";
+            ToolTip.SetToolTip(InsertNewCheatsButton, Resources.InsertNewCheatsButton_Tooltip_Text);
+            InsertNewCheatsButton.UseVisualStyleBackColor = true;
+            InsertNewCheatsButton.Click += InsertNewCheatsButton_Click;
+            // 
+            // RemoveFolderButton
+            // 
+            resources.ApplyResources(RemoveFolderButton, "RemoveFolderButton");
+            RemoveFolderButton.ImageList = NavigationImageList;
+            RemoveFolderButton.Name = "RemoveFolderButton";
+            ToolTip.SetToolTip(RemoveFolderButton, Resources.RemoveFolderButton_Text);
+            RemoveFolderButton.UseVisualStyleBackColor = true;
+            RemoveFolderButton.Click += RemoveFolderButton_Click;
+            // 
+            // CompareButton
+            // 
+            resources.ApplyResources(CompareButton, "CompareButton");
+            CompareButton.ImageList = NavigationImageList;
+            CompareButton.Name = "CompareButton";
+            ToolTip.SetToolTip(CompareButton, Resources.CompareCheatsButton_Text);
+            CompareButton.UseVisualStyleBackColor = true;
+            CompareButton.Click += CompareCheatsButton_Click;
             // 
             // StatusStrip
             // 
-            this.StatusStrip.ImageScalingSize = new System.Drawing.Size(28, 28);
-            this.StatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.InputFolderPathLabelToolStripStatusLabel,
-            this.OutputFolderPathLabelToolStripStatusLabel});
-            this.StatusStrip.Location = new System.Drawing.Point(0, 1229);
-            this.StatusStrip.Name = "StatusStrip";
-            this.StatusStrip.Size = new System.Drawing.Size(1917, 43);
-            this.StatusStrip.TabIndex = 5;
-            this.StatusStrip.Text = "Status Strip";
+            resources.ApplyResources(StatusStrip, "StatusStrip");
+            StatusStrip.ImageScalingSize = new Size(28, 28);
+            StatusStrip.Items.AddRange(new ToolStripItem[] { InputFolderPathLabelToolStripStatusLabel, OutputFolderPathLabelToolStripStatusLabel });
+            StatusStrip.Name = "StatusStrip";
+            ToolTip.SetToolTip(StatusStrip, resources.GetString("StatusStrip.ToolTip"));
             // 
             // InputFolderPathLabelToolStripStatusLabel
             // 
-            this.InputFolderPathLabelToolStripStatusLabel.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
-            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
-            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
-            this.InputFolderPathLabelToolStripStatusLabel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.InputFolderPathLabelToolStripStatusLabel.Name = "InputFolderPathLabelToolStripStatusLabel";
-            this.InputFolderPathLabelToolStripStatusLabel.Size = new System.Drawing.Size(951, 34);
-            this.InputFolderPathLabelToolStripStatusLabel.Spring = true;
-            this.InputFolderPathLabelToolStripStatusLabel.Text = global::SwitchCheatCodeManager.Properties.Resources.InputFolderPathLabelToolStripStatusLabel_Text;
-            this.InputFolderPathLabelToolStripStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            resources.ApplyResources(InputFolderPathLabelToolStripStatusLabel, "InputFolderPathLabelToolStripStatusLabel");
+            InputFolderPathLabelToolStripStatusLabel.BorderSides = ToolStripStatusLabelBorderSides.Left | ToolStripStatusLabelBorderSides.Top | ToolStripStatusLabelBorderSides.Right | ToolStripStatusLabelBorderSides.Bottom;
+            InputFolderPathLabelToolStripStatusLabel.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            InputFolderPathLabelToolStripStatusLabel.Name = "InputFolderPathLabelToolStripStatusLabel";
+            InputFolderPathLabelToolStripStatusLabel.Spring = true;
+            InputFolderPathLabelToolStripStatusLabel.Text = Resources.InputFolderPathLabelToolStripStatusLabel_Text;
             // 
             // OutputFolderPathLabelToolStripStatusLabel
             // 
-            this.OutputFolderPathLabelToolStripStatusLabel.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
-            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
-            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
-            this.OutputFolderPathLabelToolStripStatusLabel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.OutputFolderPathLabelToolStripStatusLabel.Name = "OutputFolderPathLabelToolStripStatusLabel";
-            this.OutputFolderPathLabelToolStripStatusLabel.Size = new System.Drawing.Size(951, 34);
-            this.OutputFolderPathLabelToolStripStatusLabel.Spring = true;
-            this.OutputFolderPathLabelToolStripStatusLabel.Text = global::SwitchCheatCodeManager.Properties.Resources.OutputFolderPathLabelToolStripStatusLabel_Text;
-            this.OutputFolderPathLabelToolStripStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            resources.ApplyResources(OutputFolderPathLabelToolStripStatusLabel, "OutputFolderPathLabelToolStripStatusLabel");
+            OutputFolderPathLabelToolStripStatusLabel.BorderSides = ToolStripStatusLabelBorderSides.Left | ToolStripStatusLabelBorderSides.Top | ToolStripStatusLabelBorderSides.Right | ToolStripStatusLabelBorderSides.Bottom;
+            OutputFolderPathLabelToolStripStatusLabel.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            OutputFolderPathLabelToolStripStatusLabel.Name = "OutputFolderPathLabelToolStripStatusLabel";
+            OutputFolderPathLabelToolStripStatusLabel.Spring = true;
+            OutputFolderPathLabelToolStripStatusLabel.Text = Resources.OutputFolderPathLabelToolStripStatusLabel_Text;
             // 
             // PreviewImageList
             // 
-            this.PreviewImageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            this.PreviewImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("PreviewImageList.ImageStream")));
-            this.PreviewImageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.PreviewImageList.Images.SetKeyName(0, "NoImage.jpg");
+            PreviewImageList.ColorDepth = ColorDepth.Depth32Bit;
+            PreviewImageList.ImageStream = (ImageListStreamer)resources.GetObject("PreviewImageList.ImageStream");
+            PreviewImageList.TransparentColor = Color.Transparent;
+            PreviewImageList.Images.SetKeyName(0, "NoImage.jpg");
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1917, 1272);
-            this.Controls.Add(this.StatusStrip);
-            this.Controls.Add(this.NavigationFlowLayoutPanel);
-            this.Controls.Add(this.MenuStrip);
-            this.Controls.Add(this.PathGroupBox);
-            this.Controls.Add(this.GameNameGroupBox);
-            this.Controls.Add(this.CodeSelectorGroupBox);
-            this.Controls.Add(this.CodeEditorGroupBox);
-            this.Controls.Add(this.SubCheatsGroupBox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.MainMenuStrip = this.MenuStrip;
-            this.Name = "MainForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Nintendo Switch Cheat Code Manager";
-            this.MenuStrip.ResumeLayout(false);
-            this.MenuStrip.PerformLayout();
-            this.PathGroupBox.ResumeLayout(false);
-            this.PathGroupBox.PerformLayout();
-            this.GameNameGroupBox.ResumeLayout(false);
-            this.GameNameGroupBox.PerformLayout();
-            this.CodeSelectorGroupBox.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PreviewImage)).EndInit();
-            this.CodeEditorGroupBox.ResumeLayout(false);
-            this.CodeEditorGroupBox.PerformLayout();
-            this.NavigationFlowLayoutPanel.ResumeLayout(false);
-            this.StatusStrip.ResumeLayout(false);
-            this.StatusStrip.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            resources.ApplyResources(this, "$this");
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(StatusStrip);
+            Controls.Add(NavigationFlowLayoutPanel);
+            Controls.Add(MenuStrip);
+            Controls.Add(PathGroupBox);
+            Controls.Add(GameNameGroupBox);
+            Controls.Add(CodeSelectorGroupBox);
+            Controls.Add(CodeEditorGroupBox);
+            Controls.Add(SubCheatsGroupBox);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            MainMenuStrip = MenuStrip;
+            Name = "MainForm";
+            ToolTip.SetToolTip(this, resources.GetString("$this.ToolTip"));
+            MenuStrip.ResumeLayout(false);
+            MenuStrip.PerformLayout();
+            PathGroupBox.ResumeLayout(false);
+            PathGroupBox.PerformLayout();
+            GameNameGroupBox.ResumeLayout(false);
+            GameNameGroupBox.PerformLayout();
+            CodeSelectorGroupBox.ResumeLayout(false);
+            CodeSelectorGroupBox.PerformLayout();
+            ((ISupportInitialize)PreviewImage).EndInit();
+            CodeEditorGroupBox.ResumeLayout(false);
+            CodeEditorGroupBox.PerformLayout();
+            NavigationFlowLayoutPanel.ResumeLayout(false);
+            StatusStrip.ResumeLayout(false);
+            StatusStrip.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
 
         private MenuStrip MenuStrip;
         private ToolStripMenuItem FileToolStripMenuItem;
@@ -809,50 +694,71 @@ namespace SwitchCheatCodeManager.WinForm
         private ToolStripMenuItem HelpToolStripMenuItem;
         private ToolStripSeparator ToolStripSeparator2;
         private ToolStripMenuItem AboutToolStripMenuItem;
-        private ToolTip ToolTip;
-        private FormEntity.ListBoxEx CodeSelectorListBox;
-        private FormEntity.TextBoxEx GameNameTextBox;
-        private Label CodeStatusLabel;
-        private Label VersionLabel;
-        private TextBox VersionNumberTextBox;
-        private Button FormatFilesButton;
-        private Button InsertNewCheatButton;
-        private FormEntity.TextAreaEx CodeTextBox;
-        private FormEntity.TextAreaEx CodeModifiedTextBox;
-        private Button UpdateButton;
-        private Button SaveOriginalButton;
-        private Button SaveFormatedButton;
-        private GroupBox PathGroupBox;
-        private FormEntity.TextBoxEx PathTextBox;
-        private Button VersionFileModeUpdateButton;
-        private GroupBox CodeSelectorGroupBox;
-        private GroupBox CodeEditorGroupBox;
-        private GroupBox CodeModifierGroupBox;
-        private GroupBox SubCheatsGroupBox;
-        private GroupBox GameNameGroupBox;
-        private FormEntity.ComboBoxEx GameListComboBox;
-        private PictureBox PreviewImage;
-        private Button OpenFolderButton;
-        private Button CopyFolderButton;
-        private Button CopyFileButton;
-        private Button NewBlockButton;
-        private TextBox GameDBNameTextBox;
         private ImageList IconImageList;
-        private Button AscendingOrderButton;
-        private Button DescendingOrderButton;
+        private ImageList NavigationImageList;
+        private ImageList PreviewImageList;
+        private ToolTip ToolTip;
+
+        // NavigationFlowLayoutPanel
         private FlowLayoutPanel NavigationFlowLayoutPanel;
         private Button DefaultFileButton;
         private Button OpenFileButton;
-        private ImageList NavigationImageList;
-        private TextBox BuildIdTextBox;
+        private Button InsertNewCheatsButton;
+        private Button RemoveFolderButton;
+
+        // PathGroupBox
+        private GroupBox PathGroupBox;
+        private FormEntity.TextBoxEx PathTextBox;
+        private SearchTextBox FilterTextBox;
+        private FormEntity.ComboBoxEx GameListComboBox;
+        private Button OpenFolderButton;
+
+        // GameNameGroupBox
+        private GroupBox GameNameGroupBox;
+        private FormEntity.TextBoxEx GameNameTextBox;
+        private Button VersionFileModeUpdateButton;
         private TextBox GameDBTidTextBox;
+        private TextBox GameDBNameTextBox;
+        private Button CopyFolderButton;
+
+        // CodeSelectorGroupBox
+        private GroupBox CodeSelectorGroupBox;
+        private PictureBox PreviewImage;
+        private FormEntity.ListBoxEx CodeSelectorListBox;
+        private Label NumOfCheatsLabel;
+        private Button AscendingOrderButton;
+        private Button DescendingOrderButton;
+        private Button InsertNewCheatButton;
+        private Button RemoveCheatButton;
+        private Button FormatFilesButton;
+
+        // CodeEditorGroupBox
+        private GroupBox CodeEditorGroupBox;
+        private Label CodeStatusLabel;
         private Label BuildIdLabel;
-        private TextBox FilterTextBox;
+        private TextBox BuildIdTextBox;
+        private Label VersionLabel;
+        private TextBox VersionNumberTextBox;
+        private FormEntity.TextAreaEx CodeTextBox;
+        private Button SaveOriginalButton;
+        private Button CopyFileButton;
+        private Button CodeBuilderButton;
+        private Button NewBlockButton;
+        private Button UpdateButton;
+
+        // -Removed
+        private GroupBox CodeModifierGroupBox;
+        private FormEntity.TextAreaEx CodeModifiedTextBox;
+        private Button SaveFormatedButton;
+
+        // SubCheatsGroupBox
+        private GroupBox SubCheatsGroupBox;
+
+        // SwitchCheatCodeManager
         private StatusStrip StatusStrip;
         private ToolStripStatusLabel InputFolderPathLabelToolStripStatusLabel;
         private ToolStripStatusLabel OutputFolderPathLabelToolStripStatusLabel;
-        private Button InsertNewCheatsButton;
-        private ImageList PreviewImageList;
+        private Button CompareButton;
     }
 }
 

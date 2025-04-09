@@ -5,13 +5,14 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using SwitchCheatCodeManager.Mode;
 using DirectoryMode = SwitchCheatCodeManager.Mode.EnumMode.DirectoryMode;
+using Language = SwitchCheatCodeManager.Mode.EnumMode.Language;
 
 namespace SwitchCheatCodeManager.Helper
 {
     public class MainHelper
     {
-
         #region Getter        
         public String GetPath(string path) => path.EndsWith("\\") ? path : path + "\\";
         public String GetDirectoryPath(string path)
@@ -26,6 +27,16 @@ namespace SwitchCheatCodeManager.Helper
         }
         public string GetTxtFileBuildId(string filename) => filename.Length >= 4 && filename.EndsWith(Constants.TXT_FILE_SUFFIX)
             ? filename.Substring(0, filename.Length - 4) : filename;
+
+        public string GetTitleId(string path)
+        {
+            var rPath = path;
+            if (path.EndsWith("\\"))
+            {
+                rPath = path.Substring(0, path.Length - 1);
+            }
+            return rPath.Substring(rPath.LastIndexOf("\\") + 1);
+        }
         public string GetBuildId(string path)
         {
             var rPath = path;
@@ -42,14 +53,55 @@ namespace SwitchCheatCodeManager.Helper
         /// </summary>
         /// <param name="file"></param>
         /// <returns></returns>
-        public string GetInfoFileName(FileInfo file, int maxLength)
+        public string GetInfoFileName(FileInfo file)
         {
             var infoFileName = file != null ? " - " + GetTxtFileBuildId(file.Name) : string.Empty;
-            return (infoFileName.Length > 0 ? infoFileName.Substring(0, Math.Min(infoFileName.Length, maxLength)) : string.Empty);
+            if (infoFileName.Length == 0)
+            { 
+                return string.Empty;
+            }
+
+            return infoFileName.Length >= Constants.DEFAULT_DROPDOWNLIST_ITEM_MAX_LENGTH
+                ? infoFileName.Substring(0, Constants.DEFAULT_DROPDOWNLIST_ITEM_MAX_LENGTH - 3) + "..." 
+                : infoFileName;
         }
         public string GetTxtFileNameExtension(string filename) => !filename.EndsWith(Constants.TXT_FILE_SUFFIX)
             ? filename + Constants.TXT_FILE_SUFFIX : filename;
-        public string GetVersionNameSuffix(string version) => $" (v{ (version.Length <= 7 ? version : version.Substring(0, 7)) })";
+        public string GetVersionNameSuffix(string version)
+        {
+            if (version.Length <= 7)
+            { 
+                return $" (v{version})";
+            }
+            return $" (v{version.Substring(0, Constants.DEFAULT_SELECTORBOX_ITEM_MAX_LENGTH) + ".."}";
+        }
+
+        public string GetCorrectedFilename(string filename)
+        {
+            var correctedFilename = string.Empty;
+            foreach (char c in filename)
+            {
+                if (!Constants.FilenameIllegalChars.Contains(c))
+                {
+                    correctedFilename += c;
+                }   
+            }
+            return correctedFilename;
+        }
+
+        public string GetFileSizeInFormat(Int64 bytes)
+        {
+            string[] suffixes = { "Bytes", "KB", "MB", "GB", "TB", "PB" };
+
+            int counter = 0;
+            decimal number = (decimal)bytes;
+            while (Math.Round(number / 1024) >= 1)
+            {
+                number = number / 1024;
+                counter++;
+            }
+            return string.Format("{0:n1}{1}", number, suffixes[counter]);
+        }
         #endregion
 
         /// <summary>
@@ -148,93 +200,50 @@ namespace SwitchCheatCodeManager.Helper
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
-        public FileInfo CheckImageExist(string path)
+        public FileInfo CheckImageExist(string path, Language lang)
         {
             DirectoryInfo cheatFileDir = new DirectoryInfo(path);
 
             if (cheatFileDir.Exists)
             {
                 FileInfo[] titles = cheatFileDir.GetFiles();
-                var image = titles?.FirstOrDefault(t 
+                var images = titles?.Where(t 
                     => t.Extension.Equals(Constants.JPG_FILE_SUFFIX, StringComparison.OrdinalIgnoreCase) 
                     || t.Extension.Equals(Constants.PNG_FILE_SUFFIX, StringComparison.OrdinalIgnoreCase));
+
+                var image = images?.FirstOrDefault();
+                if (lang != Language.NotSet)
+                {
+                    var tImage = images?.Where(i => (i.Name.Contains(GetName(lang)))).FirstOrDefault();
+                    if (tImage?.Name?.Length > 4)
+                    {
+                        return tImage;
+                    }
+                    foreach (int i in Enum.GetValues(typeof(Language)))
+                    {
+                        var langName = GetName((Language)i);
+                        tImage = images?.Where(i => (i.Name.Contains(langName))).FirstOrDefault();
+                        if (tImage?.Name?.Length > 4)
+                        {
+                            return tImage;
+                        }
+                    }
+                }
+
                 if (image?.Name?.Length > 4)
                 {
                     return image;
                 }
+
             }
             return null;
         }
 
-        public ConfigSettings LoadDefinedPathsConfig()
-        {
-            var configSettings = new ConfigSettings();
-            var configFile = CheckCheatFileExist(Constants.DEFAULT_CONFIG_FILE_PATH);
-            if (configFile != null)
-            {
-                IEnumerable<string> contents = File.ReadLines(Constants.DEFAULT_CONFIG_FILE_PATH);
-                foreach (var line in contents)
-                {
-                    string[] parts;
-                    switch (line)
-                    {
-                        case string s when line.StartsWith(Constants.DEFAULT_INPUT_PATH_PREFIX):
-                            parts = line.Split(Constants.DEFAULT_INPUT_PATH_PREFIX);
-                            if (parts.Count() > 1 && !string.IsNullOrEmpty(parts[1]))
-                            {
-                                var inputPath = parts[1];
-                                DirectoryInfo cheatFileDir = new DirectoryInfo(inputPath);
-                                if (cheatFileDir.Exists)
-                                {
-                                    configSettings.InputFolder = inputPath;
-                                }
-                            }
-                            
-                            break;
-                        case string s when line.StartsWith(Constants.DEFAULT_OUTPUT_PATH_PREFIX):
-                            parts = line.Split(Constants.DEFAULT_OUTPUT_PATH_PREFIX);
-                            if (parts.Count() > 1 && !string.IsNullOrEmpty(parts[1]))
-                            {
-                                var outputPath = parts[1];
-                                DirectoryInfo cheatFileDir = new DirectoryInfo(outputPath);
-                                if (cheatFileDir.Exists)
-                                {
-                                    configSettings.OutputFolder = outputPath;
-                                }
-                                else
-                                {
-                                    // Try to scan each drive to see if the folder exists.
-                                    DriveInfo[] drives = DriveInfo.GetDrives();
-                                    foreach (var drive in drives)
-                                    {
-                                        var oPath = drive.Name + Constants.DEFAULT_OUTPUT_FOLDER_PATH_SUFFIX;
-                                        DirectoryInfo cfwPath = new DirectoryInfo(oPath);
-                                        if (cfwPath.Exists)
-                                        {
-                                            configSettings.OutputFolder = oPath;
-                                        }
-                                    }
-                                }
-                            }
-                            break;
-                        default:
-                            break;
-
-                    }
-                        
-                }
-            }
-            return configSettings;
-        }
-        public void SaveDefinedPathsConfig(ConfigSettings configs)
-        {
-            var configFile = CheckCheatFileExist(Constants.DEFAULT_CONFIG_FILE_PATH);
-            if (configFile != null)
-            {
-                File.WriteAllText(Constants.DEFAULT_CONFIG_FILE_PATH, configs.Output());
-            }
-        }
-
+        /// <summary>
+        /// Update Build ID - Version mapping and return.
+        /// </summary>
+        /// <param name="versions"></param>
+        /// <returns></returns>
         public Dictionary<string, string> UpdateVersionMapping(IDictionary<string, string>  versions)
         {
             var newVersions = new Dictionary<string, string>();
@@ -245,18 +254,31 @@ namespace SwitchCheatCodeManager.Helper
             return newVersions;
         }
 
+        /// <summary>
+        /// Function to validate the game name based on System naming rule.
+        /// </summary>
+        /// <param name="gameName"></param>
+        /// <returns></returns>
         public bool ValidateGameName(string gameName)
         {
-            if (string.IsNullOrEmpty(gameName) || gameName.Length < Constants.DEFAULT_GAMENAME_MIN_LENGTH)
+            if (string.IsNullOrEmpty(gameName)
+                || gameName.Length < Constants.DEFAULT_GAMENAME_MIN_LENGTH)
             {
                 return false;
             }
             return true;
         }
 
+        /// <summary>
+        /// Function to validate the game based on Nintendo Switch Title/Build ID rule
+        /// HEX 16-digit string i.e. 0123456789ABCDEF
+        /// </summary>
+        /// <param name="gameId"></param>
+        /// <returns></returns>
         public bool ValidateGameId(string gameId)
         {
-            if (string.IsNullOrEmpty(gameId) 
+            
+            if (string.IsNullOrEmpty(gameId)  
                 || gameId.Length < Constants.DEFAULT_GAMEID_MIN_LENGTH
                 || gameId.Length > Constants.DEFAULT_GAMEID_MAX_LENGTH)
             {
@@ -275,5 +297,109 @@ namespace SwitchCheatCodeManager.Helper
             Regex reg = new Regex(@"^([0-9]|[a-f]|[A-F]){16}$");
             return reg.IsMatch(buildId);
         }
+
+        public EnumMode.Language GetFormLanguageMode(string lang)
+        {
+            switch (lang)
+            {
+                case "en-us":
+                    return Language.English;
+                case "zh-cn":
+                    return Language.Chinese;
+                default:
+                    return Language.English;
+            }
+        }
+
+        public EnumMode.Language GetPreferredImageLanguageMode(string lang)
+        {
+            switch (lang)
+            {
+                case "English":
+                    return Language.English;
+                case "Japanese":
+                    return Language.Japanese;
+                case "Chinese":
+                    return Language.Chinese;
+                default:
+                    return Language.English;
+            }
+        }
+
+        public string GetLcid(Language lang)
+        {
+            var lcid = new LCID();
+            switch (lang)
+            {
+                case Language.English:
+                    return lcid.English.Name;
+                case Language.Chinese:
+                    return lcid.ChineseSimplified.Name;
+                default:
+                    return lcid.English.Name;
+            }
+        }
+        public string GetName(Language lang)
+        {
+            switch (lang)
+            {
+                case Language.English:
+                    return "English";
+                case Language.Chinese:
+                    return "Chinese";
+                case Language.Japanese:
+                    return "Japanese";
+                default:
+                    return "English";
+            }
+        }
+
+        #region SubViewForm
+        public string FormatHexAddressValue(string value, int maxlen)
+        {
+            if (value.Length > maxlen)
+            {
+                value = value.GetLast(maxlen);
+            }
+            string output = "";
+            for (int i = value.Length - 1; i >= 0 && output.Length <= maxlen + 1; i--)
+            {
+                if (output.Length == 8)
+                {
+                    output = " " + output;
+                }
+                output = value[i] + output;
+            }
+            for (int i = maxlen - value.Length; i > 0; i--)
+            {
+                if (output.Length == 8)
+                {
+                    output = " " + output;
+                }
+                output = "0" + output;
+            }
+            return output;
+        }
+
+        public string GetHexValueFormat(string value, int maxlen)
+        {
+            value = value.GetLast(maxlen);
+            var output = value;
+            if (output.Length > 8)
+            { 
+                output = output.Substring(0, output.Length - 8) + " " + output.GetLast(8);
+            }
+            for (int i = value.Length; i < maxlen; i++)
+            {
+                if (output.Length == 8)
+                {
+                    output = " " + output;
+                }
+                output = "0" + output;
+            }
+
+            return output;
+        }
+        #endregion
     }
 }

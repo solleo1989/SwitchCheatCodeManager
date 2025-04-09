@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SwitchCheatCodeManager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0cfb85f624f85d522498ef502d75aa419388314b")]
 [assembly: System.Reflection.AssemblyProductAttribute("SwitchCheatCodeManager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SwitchCheatCodeManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

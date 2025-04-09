@@ -22,7 +22,7 @@ namespace SwitchCheatCodeManager.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace SwitchCheatCodeManager.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SwitchCheatCodeManager.Properties.Resources", typeof(Resources).Assembly);
@@ -51,12 +51,1393 @@ namespace SwitchCheatCodeManager.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Github Link.
+        /// </summary>
+        public static string ABOUT_FORM_LINK_TEXT {
+            get {
+                return ResourceManager.GetString("ABOUT_FORM_LINK_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This application is designed and written by solleo1989. 
+        ///	You can check the releases at:.
+        /// </summary>
+        public static string ABOUT_FORM_MESSAGE_TEXT {
+            get {
+                return ResourceManager.GetString("ABOUT_FORM_MESSAGE_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to About.
+        /// </summary>
+        public static string ABOUT_FORM_TITLE {
+            get {
+                return ResourceManager.GetString("ABOUT_FORM_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to About.
+        /// </summary>
+        public static string ABOUT_FORM_TITLE_TEXT {
+            get {
+                return ResourceManager.GetString("ABOUT_FORM_TITLE_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ascending Order.
+        /// </summary>
+        public static string AscendingOrderButton_Text {
+            get {
+                return ResourceManager.GetString("AscendingOrderButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Build:.
+        /// </summary>
+        public static string BuildIdLabel_Text {
+            get {
+                return ResourceManager.GetString("BuildIdLabel_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Images.
+        /// </summary>
+        public static string ChoosePreviewImagesOpenDialogue_Title {
+            get {
+                return ResourceManager.GetString("ChoosePreviewImagesOpenDialogue_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Build.
+        /// </summary>
+        public static string CodeBuilderButton_Text {
+            get {
+                return ResourceManager.GetString("CodeBuilderButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Launch Code Builder to insert some lines of code.
+        /// </summary>
+        public static string CodeBuilderButton_Tooltip_Text {
+            get {
+                return ResourceManager.GetString("CodeBuilderButton_Tooltip_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cheats.
+        /// </summary>
+        public static string CodeEditorGroupBox_Text {
+            get {
+                return ResourceManager.GetString("CodeEditorGroupBox_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Updated Cheats.
+        /// </summary>
+        public static string CodeModifierGroupBox_Text {
+            get {
+                return ResourceManager.GetString("CodeModifierGroupBox_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cheats.
+        /// </summary>
+        public static string CodeSelectorGroupBox_Text {
+            get {
+                return ResourceManager.GetString("CodeSelectorGroupBox_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Compare Cheats.
+        /// </summary>
+        public static string CompareCheatsButton_Text {
+            get {
+                return ResourceManager.GetString("CompareCheatsButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Overwrite.
+        /// </summary>
+        public static string CopyFileButton_Text {
+            get {
+                return ResourceManager.GetString("CopyFileButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Overwrite Current File in Output Folder.
+        /// </summary>
+        public static string CopyFileButton_Tooltip_Text {
+            get {
+                return ResourceManager.GetString("CopyFileButton_Tooltip_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Copy.
+        /// </summary>
+        public static string CopyFolderButton_Text {
+            get {
+                return ResourceManager.GetString("CopyFolderButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Overwrite Current Cheat Folder in Output Folder.
+        /// </summary>
+        public static string CopyFolderButton_Tooltip_Text {
+            get {
+                return ResourceManager.GetString("CopyFolderButton_Tooltip_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Available Files !!!.
+        /// </summary>
+        public static string DEFAULT_CODE_SELECTOR_LIST_BOX_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_CODE_SELECTOR_LIST_BOX_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to --N/A--.
+        /// </summary>
+        public static string DEFAULT_CODE_STATUS_LABEL_TEXT {
+            get {
+                return ResourceManager.GetString("DEFAULT_CODE_STATUS_LABEL_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current folder is invalid, please refresh your game folder!.
+        /// </summary>
+        public static string DEFAULT_COMPARE_CURRENT_GAME_FOLDER_ERROR_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_COMPARE_CURRENT_GAME_FOLDER_ERROR_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to CREATE a version file name: &quot;{0}.txt&quot; ?.
+        /// </summary>
+        public static string DEFAULT_CONFIRM_MESSAGE_CREATE_NEW_VERSION_FILE {
+            get {
+                return ResourceManager.GetString("DEFAULT_CONFIRM_MESSAGE_CREATE_NEW_VERSION_FILE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create a new version index file..
+        /// </summary>
+        public static string DEFAULT_CONFIRM_MESSAGE_CREATE_NEW_VERSION_INDEX {
+            get {
+                return ResourceManager.GetString("DEFAULT_CONFIRM_MESSAGE_CREATE_NEW_VERSION_INDEX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you wanna copy current cheat?.
+        /// </summary>
+        public static string DEFAULT_CONFIRM_MESSAGE_FOR_COPY_FILE {
+            get {
+                return ResourceManager.GetString("DEFAULT_CONFIRM_MESSAGE_FOR_COPY_FILE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you wanna copy current set of cheats?.
+        /// </summary>
+        public static string DEFAULT_CONFIRM_MESSAGE_FOR_COPY_FOLDER {
+            get {
+                return ResourceManager.GetString("DEFAULT_CONFIRM_MESSAGE_FOR_COPY_FOLDER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you wanna formulate file names?.
+        /// </summary>
+        public static string DEFAULT_CONFIRM_MESSAGE_FOR_FORMAT_FILE_NAMES {
+            get {
+                return ResourceManager.GetString("DEFAULT_CONFIRM_MESSAGE_FOR_FORMAT_FILE_NAMES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to remove current game folder: {0}?.
+        /// </summary>
+        public static string DEFAULT_CONFIRM_MESSAGE_TO_REMOVE_CURRENT_CHEAT_FOLDER {
+            get {
+                return ResourceManager.GetString("DEFAULT_CONFIRM_MESSAGE_TO_REMOVE_CURRENT_CHEAT_FOLDER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to remove this selected cheat file: {0}?.
+        /// </summary>
+        public static string DEFAULT_CONFIRM_MESSAGE_TO_REMOVE_SELECTED_CHEAT {
+            get {
+                return ResourceManager.GetString("DEFAULT_CONFIRM_MESSAGE_TO_REMOVE_SELECTED_CHEAT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to UPDATE version file 
+        ///&quot;{0}&quot; =&gt; 
+        ///&quot;{1}&quot; ?.
+        /// </summary>
+        public static string DEFAULT_CONFIRM_MESSAGE_UPDATE_EXISTING_VERSION_FILE {
+            get {
+                return ResourceManager.GetString("DEFAULT_CONFIRM_MESSAGE_UPDATE_EXISTING_VERSION_FILE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successfully converted {0} files, failed {1} files..
+        /// </summary>
+        public static string DEFAULT_CONVERT_FILES_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_CONVERT_FILES_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your destination path does not exist!!!.
+        /// </summary>
+        public static string DEFAULT_COPY_FILE_DESTINATION_FAILURE {
+            get {
+                return ResourceManager.GetString("DEFAULT_COPY_FILE_DESTINATION_FAILURE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This file has been copied successfully to: {0}.
+        /// </summary>
+        public static string DEFAULT_COPY_FILE_DESTINATION_SUCCESS {
+            get {
+                return ResourceManager.GetString("DEFAULT_COPY_FILE_DESTINATION_SUCCESS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your file does not exist!!!.
+        /// </summary>
+        public static string DEFAULT_COPY_FILE_NOT_EXIST_FAILURE {
+            get {
+                return ResourceManager.GetString("DEFAULT_COPY_FILE_NOT_EXIST_FAILURE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your destination path does not exist!!!.
+        /// </summary>
+        public static string DEFAULT_COPY_FOLDER_DESTINATION_FAILURE {
+            get {
+                return ResourceManager.GetString("DEFAULT_COPY_FOLDER_DESTINATION_FAILURE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This folder has been copied successfully to: {0}.
+        /// </summary>
+        public static string DEFAULT_COPY_FOLDER_DESTINATION_SUCCESS {
+            get {
+                return ResourceManager.GetString("DEFAULT_COPY_FOLDER_DESTINATION_SUCCESS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your default folder path has not been set yet! Please open a folder contains the cheats!.
+        /// </summary>
+        public static string DEFAULT_DEFAULT_INPUT_FOLDER_NOT_SET_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_DEFAULT_INPUT_FOLDER_NOT_SET_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to N/A.
+        /// </summary>
+        public static string DEFAULT_DEFAULT_INPUT_FOLDER_NOT_SET_TEXT {
+            get {
+                return ResourceManager.GetString("DEFAULT_DEFAULT_INPUT_FOLDER_NOT_SET_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your output folder has not been detected nor set yet! Please have your SD card ready or manually set a output path!.
+        /// </summary>
+        public static string DEFAULT_DEFAULT_OUTPUT_FOLDER_NOT_SET_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_DEFAULT_OUTPUT_FOLDER_NOT_SET_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to N/A.
+        /// </summary>
+        public static string DEFAULT_DEFAULT_OUTPUT_FOLDER_NOT_SET_TEXT {
+            get {
+                return ResourceManager.GetString("DEFAULT_DEFAULT_OUTPUT_FOLDER_NOT_SET_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your files are not loaded correctly! Error folder(s): {0}.
+        /// </summary>
+        public static string DEFAULT_FILES_NOT_LOADED_CORRECTLY_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_FILES_NOT_LOADED_CORRECTLY_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Title not found.
+        /// </summary>
+        public static string DEFAULT_GAME_NAME_LABEL_TEXT {
+            get {
+                return ResourceManager.GetString("DEFAULT_GAME_NAME_LABEL_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Input folder: {0}.
+        /// </summary>
+        public static string DEFAULT_INPUT_FOLDER_LABEL_TEXT {
+            get {
+                return ResourceManager.GetString("DEFAULT_INPUT_FOLDER_LABEL_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New cheat already exists!.
+        /// </summary>
+        public static string DEFAULT_INSERT_NEW_CHEAT_FILE_EXISTS_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_INSERT_NEW_CHEAT_FILE_EXISTS_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successfully inserted {0}.txt as v{1}.
+        /// </summary>
+        public static string DEFAULT_INSERT_NEW_CHEAT_FILE_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_INSERT_NEW_CHEAT_FILE_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your input build ID name is invalid, please try again!.
+        /// </summary>
+        public static string DEFAULT_INSERT_NEW_CHEAT_FILE_NAME_INVALID_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_INSERT_NEW_CHEAT_FILE_NAME_INVALID_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your input game ID is invalid, please try again!.
+        /// </summary>
+        public static string DEFAULT_INSERT_NEW_CHEAT_GAMEID_INVALID_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_INSERT_NEW_CHEAT_GAMEID_INVALID_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your input game name is invalid, please try again!.
+        /// </summary>
+        public static string DEFAULT_INSERT_NEW_CHEAT_NAME_INVALID_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_INSERT_NEW_CHEAT_NAME_INVALID_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your input version name is invalid, please try again!.
+        /// </summary>
+        public static string DEFAULT_INSERT_NEW_CHEAT_VERSION_NAME_INVALID_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_INSERT_NEW_CHEAT_VERSION_NAME_INVALID_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New cheats folder already exists!.
+        /// </summary>
+        public static string DEFAULT_INSERT_NEW_CHEATS_FOLDER_EXISTS_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_INSERT_NEW_CHEATS_FOLDER_EXISTS_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successfully inserted {0} at {1}.txt under {2}.
+        /// </summary>
+        public static string DEFAULT_INSERT_NEW_CHEATS_FOLDER_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_INSERT_NEW_CHEATS_FOLDER_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your selected cheat file is invalid!.
+        /// </summary>
+        public static string DEFAULT_INVALID_CHEAT_FILE_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_INVALID_CHEAT_FILE_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your selected directory is invalid.
+        /// </summary>
+        public static string DEFAULT_INVALID_DIRECTORY_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_INVALID_DIRECTORY_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} cheat(s).
+        /// </summary>
+        public static string DEFAULT_NUMBER_OF_CHEATS_LOADED_LABEL {
+            get {
+                return ResourceManager.GetString("DEFAULT_NUMBER_OF_CHEATS_LOADED_LABEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Output folder: {0}.
+        /// </summary>
+        public static string DEFAULT_OUTPUT_FOLDER_LABEL_TEXT {
+            get {
+                return ResourceManager.GetString("DEFAULT_OUTPUT_FOLDER_LABEL_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current folder is invalid, please refresh your game folder!.
+        /// </summary>
+        public static string DEFAULT_REMOVE_CURRENT_GAME_FOLDER_ERROR_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_REMOVE_CURRENT_GAME_FOLDER_ERROR_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game folder has been removed!.
+        /// </summary>
+        public static string DEFAULT_REMOVE_CURRENT_GAME_FOLDER_SUCCESS_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_REMOVE_CURRENT_GAME_FOLDER_SUCCESS_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current selected cheat file is invalid, please refresh your list!.
+        /// </summary>
+        public static string DEFAULT_REMOVE_SELECTED_CHEAT_FILE_ERROR_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_REMOVE_SELECTED_CHEAT_FILE_ERROR_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cheat has been removed!.
+        /// </summary>
+        public static string DEFAULT_REMOVE_SELECTED_CHEAT_FILE_SUCCESS_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_REMOVE_SELECTED_CHEAT_FILE_SUCCESS_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current files size: {0}. This cheat file you saved reached the maximum size(32KB) allowed! In order to display all cheat codes, please abbreviate your cheat file!.
+        /// </summary>
+        public static string DEFAULT_SAVE_FILE_EXIST_MAX_LIMIT_ERROR_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_SAVE_FILE_EXIST_MAX_LIMIT_ERROR_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your file has changed, please save it first!.
+        /// </summary>
+        public static string DEFAULT_SAVE_FILE_FIRST_WARNING_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_SAVE_FILE_FIRST_WARNING_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your file successfully saved to:{0}.
+        /// </summary>
+        public static string DEFAULT_SAVE_NOTIFICATION_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_SAVE_NOTIFICATION_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Successfully updated {0}.txt to {1}.txt as v{2}..
+        /// </summary>
+        public static string DEFAULT_UPDATE_EXISTING_CHEAT_FILE_MESSAGE {
+            get {
+                return ResourceManager.GetString("DEFAULT_UPDATE_EXISTING_CHEAT_FILE_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to N/A.
+        /// </summary>
+        public static string DEFAULT_VERSION_NUMBER {
+            get {
+                return ResourceManager.GetString("DEFAULT_VERSION_NUMBER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open Default Cheat Files Folder.
+        /// </summary>
+        public static string DefaultFileButton_Tooltip_Text {
+            get {
+                return ResourceManager.GetString("DefaultFileButton_Tooltip_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Descending Order.
+        /// </summary>
+        public static string DescendingOrderButton_Text {
+            get {
+                return ResourceManager.GetString("DescendingOrderButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string DIALOGUE_BUTTON_TEXT_CANCEL {
+            get {
+                return ResourceManager.GetString("DIALOGUE_BUTTON_TEXT_CANCEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No.
+        /// </summary>
+        public static string DIALOGUE_BUTTON_TEXT_NO {
+            get {
+                return ResourceManager.GetString("DIALOGUE_BUTTON_TEXT_NO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        public static string DIALOGUE_BUTTON_TEXT_OK {
+            get {
+                return ResourceManager.GetString("DIALOGUE_BUTTON_TEXT_OK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yes.
+        /// </summary>
+        public static string DIALOGUE_BUTTON_TEXT_YES {
+            get {
+                return ResourceManager.GetString("DIALOGUE_BUTTON_TEXT_YES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Build ID (e.g. 3AB632DEE82D5944).
+        /// </summary>
+        public static string EDIT_BUILD_VERSION_DIALOGUE_BUILD_MESSAGE {
+            get {
+                return ResourceManager.GetString("EDIT_BUILD_VERSION_DIALOGUE_BUILD_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Version (Default 1.0.0).
+        /// </summary>
+        public static string EDIT_BUILD_VERSION_DIALOGUE_VERSION_MESSAGE {
+            get {
+                return ResourceManager.GetString("EDIT_BUILD_VERSION_DIALOGUE_VERSION_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Cheat Build ID and Version Number.
+        /// </summary>
+        public static string EDIT_BUILD_VERSION_DIALOGUE_VERSION_TITLE {
+            get {
+                return ResourceManager.GetString("EDIT_BUILD_VERSION_DIALOGUE_VERSION_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} is not a valid version..
+        /// </summary>
+        public static string EDIT_VERSION_BUILD_FORM_ERROR_MESSAGE {
+            get {
+                return ResourceManager.GetString("EDIT_VERSION_BUILD_FORM_ERROR_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error: {0}.
+        /// </summary>
+        public static string ERROR_MESSAGE_MESSAGE_PREFIX {
+            get {
+                return ResourceManager.GetString("ERROR_MESSAGE_MESSAGE_PREFIX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        public static string ERROR_MESSAGE_TITLE_ERROR {
+            get {
+                return ResourceManager.GetString("ERROR_MESSAGE_TITLE_ERROR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Format File Names (Capitalization).
+        /// </summary>
+        public static string FormatFilesButton_Text {
+            get {
+                return ResourceManager.GetString("FormatFilesButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string GameNameGroupBoxText {
+            get {
+                return ResourceManager.GetString("GameNameGroupBoxText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Result.
+        /// </summary>
+        public static string INFORMATION_MESSAGE_TITLE_RESULT {
+            get {
+                return ResourceManager.GetString("INFORMATION_MESSAGE_TITLE_RESULT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        public static string INFORMATION_MESSAGE_TITLE_SAVE {
+            get {
+                return ResourceManager.GetString("INFORMATION_MESSAGE_TITLE_SAVE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warning.
+        /// </summary>
+        public static string INFORMATION_MESSAGE_TITLE_WARNING {
+            get {
+                return ResourceManager.GetString("INFORMATION_MESSAGE_TITLE_WARNING", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Input folder: .
+        /// </summary>
+        public static string InputFolderPathLabelToolStripStatusLabel_Text {
+            get {
+                return ResourceManager.GetString("InputFolderPathLabelToolStripStatusLabel_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Insert new cheat.
+        /// </summary>
+        public static string INSERT_BUILD_VERSION_DIALOGUE_VERSION_TITLE {
+            get {
+                return ResourceManager.GetString("INSERT_BUILD_VERSION_DIALOGUE_VERSION_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BID.
+        /// </summary>
+        public static string INSERT_GAME_BUILD_DIALOGUE_BUILDID_MESSAGE {
+            get {
+                return ResourceManager.GetString("INSERT_GAME_BUILD_DIALOGUE_BUILDID_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to e.g. 3AB632DEE82D5944.
+        /// </summary>
+        public static string INSERT_GAME_BUILD_DIALOGUE_BUILDID_PLACEHOLDER_MESSAGE {
+            get {
+                return ResourceManager.GetString("INSERT_GAME_BUILD_DIALOGUE_BUILDID_PLACEHOLDER_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Insert new game cheats.
+        /// </summary>
+        public static string INSERT_GAME_BUILD_DIALOGUE_GAME_TITLE {
+            get {
+                return ResourceManager.GetString("INSERT_GAME_BUILD_DIALOGUE_GAME_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TID.
+        /// </summary>
+        public static string INSERT_GAME_BUILD_DIALOGUE_GAMEID_MESSAGE {
+            get {
+                return ResourceManager.GetString("INSERT_GAME_BUILD_DIALOGUE_GAMEID_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to e.g. 0100000000010000.
+        /// </summary>
+        public static string INSERT_GAME_BUILD_DIALOGUE_GAMEID_PLACEHOLDER_MESSAGE {
+            get {
+                return ResourceManager.GetString("INSERT_GAME_BUILD_DIALOGUE_GAMEID_PLACEHOLDER_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string INSERT_GAME_BUILD_DIALOGUE_GAMENAME_MESSAGE {
+            get {
+                return ResourceManager.GetString("INSERT_GAME_BUILD_DIALOGUE_GAMENAME_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to e.g. Super Mario Odyssey.
+        /// </summary>
+        public static string INSERT_GAME_BUILD_DIALOGUE_GAMENAME_PLACEHOLDER_MESSAGE {
+            get {
+                return ResourceManager.GetString("INSERT_GAME_BUILD_DIALOGUE_GAMENAME_PLACEHOLDER_MESSAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SubSection name:.
+        /// </summary>
+        public static string INSERT_SUBSECTION_DIALOGUE_LABEL {
+            get {
+                return ResourceManager.GetString("INSERT_SUBSECTION_DIALOGUE_LABEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Insert new subsection.
+        /// </summary>
+        public static string INSERT_SUBSECTION_DIALOGUE_TITLE {
+            get {
+                return ResourceManager.GetString("INSERT_SUBSECTION_DIALOGUE_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Insert New Cheat.
+        /// </summary>
+        public static string InsertNewCheatButton_Text {
+            get {
+                return ResourceManager.GetString("InsertNewCheatButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string InsertNewCheatsButton_Text {
+            get {
+                return ResourceManager.GetString("InsertNewCheatsButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Insert New Cheat Folder.
+        /// </summary>
+        public static string InsertNewCheatsButton_Tooltip_Text {
+            get {
+                return ResourceManager.GetString("InsertNewCheatsButton_Tooltip_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Keyword.
+        /// </summary>
+        public static string KeywordSearchPlaceholderText {
+            get {
+                return ResourceManager.GetString("KeywordSearchPlaceholderText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Menu Strip.
+        /// </summary>
+        public static string MenuStrip {
+            get {
+                return ResourceManager.GetString("MenuStrip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;About....
+        /// </summary>
+        public static string MenuStrip_About {
+            get {
+                return ResourceManager.GetString("MenuStrip_About", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Default.
+        /// </summary>
+        public static string MenuStrip_DefaultText {
+            get {
+                return ResourceManager.GetString("MenuStrip_DefaultText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to E&amp;xit.
+        /// </summary>
+        public static string MenuStrip_ExitText {
+            get {
+                return ResourceManager.GetString("MenuStrip_ExitText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;File.
+        /// </summary>
+        public static string MenuStrip_FileText {
+            get {
+                return ResourceManager.GetString("MenuStrip_FileText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Help.
+        /// </summary>
+        public static string MenuStrip_HelpText {
+            get {
+                return ResourceManager.GetString("MenuStrip_HelpText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Open.
+        /// </summary>
+        public static string MenuStrip_OpenText {
+            get {
+                return ResourceManager.GetString("MenuStrip_OpenText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Options.
+        /// </summary>
+        public static string MenuStrip_Options {
+            get {
+                return ResourceManager.GetString("MenuStrip_Options", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save &amp;As.
+        /// </summary>
+        public static string MenuStrip_SaveAsText {
+            get {
+                return ResourceManager.GetString("MenuStrip_SaveAsText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Save.
+        /// </summary>
+        public static string MenuStrip_SaveText {
+            get {
+                return ResourceManager.GetString("MenuStrip_SaveText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Tools.
+        /// </summary>
+        public static string MenuStrip_Tools {
+            get {
+                return ResourceManager.GetString("MenuStrip_Tools", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Section.
+        /// </summary>
+        public static string NewBlockButton_Text {
+            get {
+                return ResourceManager.GetString("NewBlockButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Insert a New SubSection Block.
+        /// </summary>
+        public static string NewBlockButton_Tooltip_Text {
+            get {
+                return ResourceManager.GetString("NewBlockButton_Tooltip_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open Cheat Files Folder.
+        /// </summary>
+        public static string OpenFileButton_Tooltip_Text {
+            get {
+                return ResourceManager.GetString("OpenFileButton_Tooltip_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open.
+        /// </summary>
+        public static string OpenFolderButton_Text {
+            get {
+                return ResourceManager.GetString("OpenFolderButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open Folder under Current Path.
+        /// </summary>
+        public static string OpenFolderButton_Tooltip_Text {
+            get {
+                return ResourceManager.GetString("OpenFolderButton_Tooltip_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Output folder: .
+        /// </summary>
+        public static string OutputFolderPathLabelToolStripStatusLabel_Text {
+            get {
+                return ResourceManager.GetString("OutputFolderPathLabelToolStripStatusLabel_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path.
+        /// </summary>
+        public static string PathGroupBox_Text {
+            get {
+                return ResourceManager.GetString("PathGroupBox_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm.
+        /// </summary>
+        public static string QUESTION_MESSAGE_TITLE_CONFIRM {
+            get {
+                return ResourceManager.GetString("QUESTION_MESSAGE_TITLE_CONFIRM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove Selected Cheat.
+        /// </summary>
+        public static string RemoveCheatButton_Text {
+            get {
+                return ResourceManager.GetString("RemoveCheatButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove Current Cheat Folder.
+        /// </summary>
+        public static string RemoveFolderButton_Text {
+            get {
+                return ResourceManager.GetString("RemoveFolderButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save a Text File.
+        /// </summary>
+        public static string SAVE_DIALOGUE_TITLE {
+            get {
+                return ResourceManager.GetString("SAVE_DIALOGUE_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        public static string SaveFormatedButton_Text {
+            get {
+                return ResourceManager.GetString("SaveFormatedButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        public static string SaveOriginalButton_Text {
+            get {
+                return ResourceManager.GetString("SaveOriginalButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save Current Cheat File.
+        /// </summary>
+        public static string SaveOriginalButton_Tooltip_Text {
+            get {
+                return ResourceManager.GetString("SaveOriginalButton_Tooltip_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Background Color.
+        /// </summary>
+        public static string SettingsForm_BackgroundColorGroupBox_Text {
+            get {
+                return ResourceManager.GetString("SettingsForm_BackgroundColorGroupBox_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [--SectionEnd:Items--].
+        /// </summary>
+        public static string SettingsForm_ColorSectionEndLabel_Text {
+            get {
+                return ResourceManager.GetString("SettingsForm_ColorSectionEndLabel_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [--SectionStart:Items--].
+        /// </summary>
+        public static string SettingsForm_ColorSectionStartLabel_Text {
+            get {
+                return ResourceManager.GetString("SettingsForm_ColorSectionStartLabel_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Moonjump (press B).
+        /// </summary>
+        public static string SettingsForm_ColorTitleDisabledLabel_Text {
+            get {
+                return ResourceManager.GetString("SettingsForm_ColorTitleDisabledLabel_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Moonjump (press B):ENABLED.
+        /// </summary>
+        public static string SettingsForm_ColorTitleEnabledLabel_Text {
+            get {
+                return ResourceManager.GetString("SettingsForm_ColorTitleEnabledLabel_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Directory.
+        /// </summary>
+        public static string SettingsForm_DirectoryGroupBox_Text {
+            get {
+                return ResourceManager.GetString("SettingsForm_DirectoryGroupBox_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select.
+        /// </summary>
+        public static string SettingsForm_InputPathButton_Text {
+            get {
+                return ResourceManager.GetString("SettingsForm_InputPathButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select.
+        /// </summary>
+        public static string SettingsForm_InputPathLabel_Text {
+            get {
+                return ResourceManager.GetString("SettingsForm_InputPathLabel_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Language.
+        /// </summary>
+        public static string SettingsForm_LanguageGroupBox_Text {
+            get {
+                return ResourceManager.GetString("SettingsForm_LanguageGroupBox_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Language.
+        /// </summary>
+        public static string SettingsForm_LanguageLabel_Text {
+            get {
+                return ResourceManager.GetString("SettingsForm_LanguageLabel_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select.
+        /// </summary>
+        public static string SettingsForm_OutputPathButton_Text {
+            get {
+                return ResourceManager.GetString("SettingsForm_OutputPathButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Output Path.
+        /// </summary>
+        public static string SettingsForm_OutputPathLabel_Text {
+            get {
+                return ResourceManager.GetString("SettingsForm_OutputPathLabel_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Preferred
+        ///	Image.
+        /// </summary>
+        public static string SettingsForm_PreferredImageLabel_Text {
+            get {
+                return ResourceManager.GetString("SettingsForm_PreferredImageLabel_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        public static string SettingsForm_Title {
+            get {
+                return ResourceManager.GetString("SettingsForm_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Status Strip.
+        /// </summary>
+        public static string StatusStrip_Text {
+            get {
+                return ResourceManager.GetString("StatusStrip_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cheat Sections.
+        /// </summary>
+        public static string SubCheatsGroupBox_Text {
+            get {
+                return ResourceManager.GetString("SubCheatsGroupBox_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SubSection name: (Max 30 chars).
+        /// </summary>
+        public static string UPDATE_SUBSECTION_DIALOGUE_LABEL {
+            get {
+                return ResourceManager.GetString("UPDATE_SUBSECTION_DIALOGUE_LABEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update current subsection.
+        /// </summary>
+        public static string UPDATE_SUBSECTION_DIALOGUE_TITLE {
+            get {
+                return ResourceManager.GetString("UPDATE_SUBSECTION_DIALOGUE_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Format.
+        /// </summary>
+        public static string UpdateButton_Text {
+            get {
+                return ResourceManager.GetString("UpdateButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update Current Cheat File into Formatted Form.
+        /// </summary>
+        public static string UpdateButton_Tooltip_Text {
+            get {
+                return ResourceManager.GetString("UpdateButton_Tooltip_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to !! Invalid !!.
+        /// </summary>
+        public static string VALIDATION_CHECK_FOR_CHEATS_INVALID {
+            get {
+                return ResourceManager.GetString("VALIDATION_CHECK_FOR_CHEATS_INVALID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Valid --.
+        /// </summary>
+        public static string VALIDATION_CHECK_FOR_CHEATS_VALID {
+            get {
+                return ResourceManager.GetString("VALIDATION_CHECK_FOR_CHEATS_VALID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Version Index Form.
+        /// </summary>
+        public static string VERSION_FORM_TITLE {
+            get {
+                return ResourceManager.GetString("VERSION_FORM_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Build ID.
+        /// </summary>
+        public static string VersionBuildIdDataGridView_BuildId_Text {
+            get {
+                return ResourceManager.GetString("VersionBuildIdDataGridView_BuildId_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Version.
+        /// </summary>
+        public static string VersionBuildIdDataGridView_Version_Text {
+            get {
+                return ResourceManager.GetString("VersionBuildIdDataGridView_Version_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Row (N).
+        /// </summary>
+        public static string VersionDataGridViewTextBoxColumn_AddRowButton_Text {
+            get {
+                return ResourceManager.GetString("VersionDataGridViewTextBoxColumn_AddRowButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Del Row (D).
+        /// </summary>
+        public static string VersionDataGridViewTextBoxColumn_DeleteRowButton_Text {
+            get {
+                return ResourceManager.GetString("VersionDataGridViewTextBoxColumn_DeleteRowButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save (S).
+        /// </summary>
+        public static string VersionDataGridViewTextBoxColumn_SaveButton_Text {
+            get {
+                return ResourceManager.GetString("VersionDataGridViewTextBoxColumn_SaveButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create.
+        /// </summary>
+        public static string VersionFileModeCreateButton_Text {
+            get {
+                return ResourceManager.GetString("VersionFileModeCreateButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string VersionFileModeEditButton_Text {
+            get {
+                return ResourceManager.GetString("VersionFileModeEditButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update.
+        /// </summary>
+        public static string VersionFileModeUpdateButton_Text {
+            get {
+                return ResourceManager.GetString("VersionFileModeUpdateButton_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Build Version File or Update Version File Name.
+        /// </summary>
+        public static string VersionFileModeUpdateButton_Tooltip_Text {
+            get {
+                return ResourceManager.GetString("VersionFileModeUpdateButton_Tooltip_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Version:.
+        /// </summary>
+        public static string VersionLabel_Text {
+            get {
+                return ResourceManager.GetString("VersionLabel_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to N/A.
+        /// </summary>
+        public static string VersionNumberTextBox_Text {
+            get {
+                return ResourceManager.GetString("VersionNumberTextBox_Text", resourceCulture);
             }
         }
     }

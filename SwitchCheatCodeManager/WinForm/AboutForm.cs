@@ -1,20 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using SwitchCheatCodeManager.Helper;
+using System;
 using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace SwitchCheatCodeManager.WinForm
 {
     public partial class AboutForm : Form
     {
-        public AboutForm()
+        private MainHelper Helper;
+        private ActionHelper Action;
+        private CultureInfo Culture;
+        public AboutForm(
+            MainHelper mainHelper,
+            ActionHelper actionHelper,
+            CultureInfo cultureInfo
+            )
         {
+            this.Helper = mainHelper;
+            this.Action = actionHelper;
+            this.Culture = cultureInfo;
+
+            ResetCultureInfo();
             InitializeComponent();
         }
 
@@ -31,6 +39,11 @@ namespace SwitchCheatCodeManager.WinForm
             {
                 Process.Start(new ProcessStartInfo(target) { UseShellExecute = true });
             }
+        }
+
+        private void ResetCultureInfo()
+        {
+            Thread.CurrentThread.CurrentUICulture = this.Culture;
         }
     }
 }
